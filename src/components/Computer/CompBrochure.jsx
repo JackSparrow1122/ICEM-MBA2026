@@ -17,13 +17,14 @@ function CompBrochure() {
         <div>
           {/* Anchor tag to trigger file download */}
           <a
-            href="/path/to/your/dummy/brochure.pdf" // Link to your dummy file
-            download="Brochure.pdf" // The file will be downloaded with this name
+            href="" // replace with your actual file path
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="bg-blue-900 border-2 border-blue-800 text-white px-6 py-3 rounded-3xl hover:bg-blue-800 transition duration-300 flex items-center space-x-2"
           >
             <FontAwesomeIcon icon={faDownload} />
             <span>Download Brochure</span>
           </a>
+
         </div>
       </div>
     </div>

@@ -6,9 +6,7 @@ import ItStudying from '../components/It/ItStudying';
 import ItBrochure from '../components/It/ItBrochure'
 import ItApply from '../components/It/ItApply';
 import ItTestimonials from '../components/It/ItTestimonials';
-// import AutoChatbot from '../components/AutoChatbot'; // Import AutoChatbot
 import ItInovation from '../components/It/ItInovation';
-// import ItOverview from '../components/It/ItOverview';
 import ItReasons from '../components/It/ItReasons';
 import ItPlacement from '../components/It/ItPlacement';
 import CompRecruter from '../components/Computer/CompRecruiter';

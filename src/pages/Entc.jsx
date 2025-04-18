@@ -10,8 +10,8 @@ import EntcInovation from "../components/Entc/EntcInovation"
 import EntcReasons from "../components/Entc/EntcReasons"
 import EntcPlacement from '../components/Entc/EntcPlacement'
 import EntcRecruiters from '../components/Entc/EntcRecruiters'
-import EntcAdmission from '../components/Entc/EntcAdmission'
-import EntcFooter from '../components/Entc/EntcFooter'
+import Footer from "../pages/Footer"
+import EntcBanner from '../components/Entc/EntcBanner'
 
 
 function Entc() {
@@ -20,21 +20,16 @@ function Entc() {
         <EntcHero /> 
         <EntcPlacement/>
         <EntcRecruiters/>
-        <EntcAdmission/> 
+        <EntcBanner/> 
         <EntcInovation/>
         <EntcReasons/>
         <EntcOfferings />
         <EntcBrochure />
         <EntcPointers />  
         <EntcStudying />
-        {/* <EntcOverview/> */}
-        
-         
-        
-        {/* <EntcHighlights/> */}
         <EntcTestimonials />
         <EntcApply />
-        <EntcFooter/>
+        <Footer/>
     </div>
   )
 }

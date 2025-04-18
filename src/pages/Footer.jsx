@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import logo from '../assets/images/logos/indirafooter.avif';
- 
+
 function Footer() {
   useEffect(() => {
     const link = document.createElement("link");
@@ -12,7 +12,7 @@ function Footer() {
       document.head.removeChild(link);
     };
   }, []);
- 
+
   return (
     <div className="font-baskerville-regular">
       <div className="bg-gray-100 px-4 md:px-10 py-6 rounded-tl-3xl rounded-tr-3xl">
@@ -22,7 +22,7 @@ function Footer() {
             <div className="mb-4">
               <img src={logo} alt="ICEM Logo" className="w-32 sm:w-40" />
             </div>
- 
+
             <div className="space-y-4 text-gray-700">
               <div className="flex items-start gap-2">
                 <i className="fas fa-map-marker-alt text-lg text-[#023b5e]" />
@@ -34,7 +34,7 @@ function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <i className="fas fa-phone-alt text-lg text-green-600" />
-                <p>91+ 7020512131</p>
+                <p>+91 7020512131</p>
               </div>
               <div className="flex items-center gap-2">
                 <i className="fas fa-envelope text-lg text-gray-500" />
@@ -52,7 +52,7 @@ function Footer() {
                 </a>
               </div>
             </div>
- 
+
             <div className="flex gap-4 text-lg mt-4">
               <a href="https://www.facebook.com/ICEM.AVIRAT" className="hover:text-blue-600">
                 <i className="fab fa-facebook-f" />
@@ -71,7 +71,7 @@ function Footer() {
               </a>
             </div>
           </div>
- 
+
           {/* Right Column */}
           <div className="sm:w-1/2">
             <h3 className="text-lg sm:text-xl text-[#023b5e] font-bold mb-4">
@@ -98,12 +98,13 @@ function Footer() {
           </div>
         </div>
       </div>
- 
+
       <div className="bg-[#023b5e] text-white text-xs sm:text-sm text-center py-3 px-4">
         © 2024. Indira College of Engineering and Management.
       </div>
     </div>
   );
 }
- 
+
 export default Footer;
+
