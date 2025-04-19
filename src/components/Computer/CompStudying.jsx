@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
 import {
-  FaTools,
-  FaIndustry,
-  FaCogs,
-  FaLightbulb,
-  FaHandsHelping,
+  FaLaptopCode ,
+  FaUserTie ,
+  FaBrain ,
+  FaMicrophoneAlt ,
+  FaApple ,
   FaChartLine,
-  FaLaptopCode,
+
   FaGraduationCap,
+  FaRocket 
 } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -19,12 +20,12 @@ function ComputerEngineering() {
   }, []);
 
   const cards = [
-    { icon: <FaTools className="text-[#134C93] mr-4 text-4xl" />, text: '2 Decades OF MECHANICAL EXCELLENCE' },
-    { icon: <FaIndustry className="text-[#134C93] mr-4 text-4xl" />, text: '450+ LEADING RECRUITERS' },
-    { icon: <FaCogs className="text-[#134C93] mr-4 text-4xl" />, text: 'INNOVATIVE R&D IN COMPUTER ENGINEERING' },
-    { icon: <FaLightbulb className="text-[#134C93] mr-4 text-4xl" />, text: 'EXPOSURE TO INDUSTRIAL GUEST LECTURES & MENTORSHIP' },
-    { icon: <FaHandsHelping className="text-[#134C93] mr-4 text-4xl" />, text: 'ADVANCED LABORATORIES' },
-    { icon: <FaChartLine className="text-[#134C93] mr-4 text-4xl" />, text: 'EXCEPTIONAL GROWTH OPPORTUNITIES' },
+    { icon: <FaLaptopCode  className="text-[#134C93] mr-4 text-4xl" />, text: '2 Decades OF MECHANICAL EXCELLENCE' },
+    { icon: <FaUserTie  className="text-[#134C93] mr-4 text-4xl" />, text: '450+ Leading Recruiters Hiring Software & Tech Talent' },
+    { icon: <FaBrain  className="text-[#134C93] mr-4 text-4xl" />, text: 'Innovative R&D in AI, ML, Cloud & Full Stack Development' },
+    { icon: <FaMicrophoneAlt  className="text-[#134C93] mr-4 text-4xl" />, text: 'Industry Exposure via Guest Lectures & Expert Mentorship' },
+    { icon: <FaApple  className="text-[#134C93] mr-4 text-4xl" />, text: 'Advanced Computing Labs & Apple-Powered Classrooms' },
+    { icon: <FaRocket  className="text-[#134C93] mr-4 text-4xl" />, text: 'Exceptional Career Growth in the Tech Industry' },
   ];
 
   return (

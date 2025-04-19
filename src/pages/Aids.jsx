@@ -25,8 +25,8 @@ function Aids() {
       <AidsBrochure /> 
       <AidsPointers />
       <AidsStudying/>
-      <AidsTestimonials />
       <AidsApply/>
+      <AidsTestimonials />
       <Footer/>
     </div>
   );

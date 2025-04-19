@@ -1,8 +1,8 @@
 function ItReasons() {
   return (
     <div className="px-6 md:px-10 lg:px-16 py-8 bg-[#F7F0FC]">
-      <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-center text-[#390161] mb-6">
-        Why Choose ICEM for Your IT Engineering Journey?
+      <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-center mb-6">
+        Why Choose <span className=" text-[#390161]">ICEM</span> for Your <span className=" text-[#390161]">IT Engineering</span> Journey?
       </h2>
 
       {/* Grid Container */}

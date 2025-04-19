@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import {
-  FaStar,
-  FaBuilding,
-  FaUsers,
-  FaLaptop,
+  FaLaptopCode ,
+  FaApple   ,
+  FaUserTie ,
+  FaChalkboardTeacher ,
   FaGraduationCap,
   FaChartLine,
-  FaLaptopCode,
+  FaUsers,
+  FaRocket
 } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -18,12 +19,12 @@ function ItStudying() {
   }, []);
 
   const cards = [
-    { icon: <FaStar className="text-[#390161] mr-4 text-4xl" />, text: '2 Decades OF MECHANICAL EXCELLENCE' },
-    { icon: <FaUsers className="text-[#390161] mr-4 text-4xl" />, text: '450+ LEADING RECRUITERS' },
-    { icon: <FaBuilding className="text-[#390161] mr-4 text-4xl" />, text: 'EXPOSURE TO INDUSTRIAL GUEST LECTURES & MENTORSHIP' },
-    { icon: <FaLaptop className="text-[#390161] mr-4 text-4xl" />, text: 'INNOVATIVE R&D IN IT' },
-    { icon: <FaGraduationCap className="text-[#390161] mr-4 text-4xl" />, text: 'IT and Apple Labs' },
-    { icon: <FaChartLine className="text-[#390161] mr-4 text-4xl" />, text: 'EXCEPTIONAL GROWTH OPPORTUNITIES' },
+    { icon: <FaLaptopCode  className="text-[#390161] mr-4 text-4xl" />, text: '2 Decades of Excellence in IT Education' },
+    { icon: <FaUserTie  className="text-[#390161] mr-4 text-4xl" />, text: '450+ Top Recruiters Hiring for IT & Software Roles' },
+    { icon: <FaChalkboardTeacher  className="text-[#390161] mr-4 text-5xl" />, text: 'Industry Guest Lectures & Corporate Mentorship Programs' },
+    { icon: <FaUsers  className="text-[#390161] mr-4 text-5xl" />, text: 'Innovative R&D in Cloud Computing, AI & Cybersecurity' },
+    { icon: <FaApple    className="text-[#390161] mr-4 text-3xl" />, text: 'State-of-the-Art IT Labs with Apple Ecosystem' },
+    { icon: <FaRocket  className="text-[#390161] mr-4 text-5xl" />, text: 'Exceptional Growth Opportunities in Tech & Innovation Fields' },
   ];
 
   return (

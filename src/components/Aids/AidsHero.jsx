@@ -21,7 +21,7 @@
               Decode Your Future with AI-DS at ICEM!
             </h1>
             <p className="hidden md:block md:text-xl lg:text-2xl font-semibold mt-4 ">
-              2 Decades of Excellence | 5 Specializations | 100% Placement Assistance
+              2 Decades of Excellence | 5 Specializations | 100% Guaranteed Placement Assistance
             </p>
             <p className="hidden md:block text-md md:text-lg lg:text-3xl font-semibold mt-4">
               Apply now for the exciting field of AI-DS Research & Development!

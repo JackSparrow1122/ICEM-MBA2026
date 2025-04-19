@@ -24,8 +24,8 @@ function Mechanical() {
       <MechBrochure />
       <MechPointers />  
       <MechStudying /> 
-      <MechTestimonials />
       <MechApply />
+      <MechTestimonials />
       <Footer/>
     </div>
   )

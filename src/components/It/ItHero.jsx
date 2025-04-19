@@ -52,7 +52,7 @@ function ItHero() {
           <div className="hidden lg:block">
           <p className=" md:text-xl py-4">
               2 Decades of Excellence in Education | 5 Specializations | 
-               <br /> <p className="text-[#A540FF] font-bold" >100%  Guarantee Placement Assistance</p>
+               <br /> <p className="text-[#A540FF] font-bold" >100%  Guaranteed Placement Assistance</p>
             </p>
             <p className="text-2xl md:text-3xl py-2">
               Transform the Digital World with <br /><span className='text-[#A540FF] font-bold'>IT Engineering</span> at ICEM!

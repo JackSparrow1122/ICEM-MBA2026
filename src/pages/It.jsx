@@ -25,8 +25,8 @@ function It() {
       <ItBrochure /> 
       <ItPointers />  
       <ItStudying /> 
-      <ItTestimonials />
-      <ItApply />  
+      <ItApply />
+      <ItTestimonials />  
       <Footer/>
     </div>
   );

@@ -27,8 +27,8 @@ function Entc() {
         <EntcBrochure />
         <EntcPointers />  
         <EntcStudying />
-        <EntcTestimonials />
         <EntcApply />
+        <EntcTestimonials />
         <Footer/>
     </div>
   )

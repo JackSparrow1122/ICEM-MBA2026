@@ -24,8 +24,8 @@ function Computer() {
       <CompBrochure />
       <CompPointers />
       <CompStudying />
-      <CompTestimonials/>
       <CompApply/>
+      <CompTestimonials/>
       <Footer/>
     </div>
   );

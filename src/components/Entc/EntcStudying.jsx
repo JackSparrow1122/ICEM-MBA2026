@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 import {
-  FaStar,
-  FaBuilding,
-  FaUsers,
-  FaLaptop,
+  
+  FaMicrophoneAlt ,
+  FaUserTie ,
+  FaBriefcase ,
   FaGraduationCap,
   FaChartLine,
   FaLaptopCode,
+  FaApple ,
+  FaRocket 
 } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -18,12 +20,12 @@ function ItStudying() {
   }, []);
 
   const cards = [
-    { icon: <FaStar className="text-[#36A5B9] mr-4 text-4xl" />, text: '2 Decades OF MECHANICAL EXCELLENCE' },
-    { icon: <FaUsers className="text-[#36A5B9] mr-4 text-4xl" />, text: '450+ LEADING RECRUITERS' },
-    { icon: <FaBuilding className="text-[#36A5B9] mr-4 text-4xl" />, text: 'EXPOSURE TO INDUSTRIAL GUEST LECTURES  & MENTORSHIP' },
-    { icon: <FaLaptop className="text-[#36A5B9] mr-4 text-4xl" />, text: 'HIGHEST PACKAGE OFFERED' },
-    { icon: <FaGraduationCap className="text-[#36A5B9] mr-4 text-4xl" />, text: 'IT and Apple Labs' },
-    { icon: <FaChartLine className="text-[#36A5B9] mr-4 text-4xl" />, text: 'EXCEPTIONAL GROWTH OPPORTUNITIES' },
+    { icon: <FaGraduationCap  className="text-[#36A5B9] mr-4 text-4xl" />, text: '2 Decades of Excellence in Engineering Education' },
+    { icon: <FaUserTie  className="text-[#36A5B9] mr-4 text-4xl" />, text: '450+ Top Recruiting Companies Across Domains' },
+    { icon: <FaMicrophoneAlt  className="text-[#36A5B9] mr-4 text-4xl" />, text: 'Expert Mentorship & Industry Guest Lectures in ENTC' },
+    { icon: <FaBriefcase  className="text-[#36A5B9] mr-4 text-4xl" />, text: 'Impressive Placement Records with Competitive Packages' },
+    { icon: <FaApple  className="text-[#36A5B9] mr-4 text-4xl" />, text: 'Advanced Electronics Labs, IoT, Embedded Systems & Apple Labs' },
+    { icon: <FaRocket  className="text-[#36A5B9] mr-4 text-4xl" />, text: 'Exceptional Growth in Telecom, Embedded, VLSI & Automation Fields' },
   ];
 
   return (

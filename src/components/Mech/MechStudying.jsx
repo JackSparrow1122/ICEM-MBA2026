@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import {
-  FaStar,
-  FaBuilding,
-  FaUsers,
-  FaLaptop,
-  FaGraduationCap,
+  FaWrench ,
+  FaHandshake ,
+  FaIndustry ,
+  FaGraduationCap ,
+  FaCog,
   FaChartLine,
   FaLaptopCode,
 } from 'react-icons/fa';
@@ -18,12 +18,14 @@ function MechStudying() {
   }, []);
 
   const cards = [
-    { icon: <FaStar className="text-[#01224f] mr-4 text-4xl" />, text: <span className="text-[#01224f]">2 Decades OF MECHANICAL EXCELLENCE</span> },
-    { icon: <FaUsers className="text-[#01224f] mr-4 text-4xl" />, text: <span className="text-[#01224f]">450+ LEADING RECRUITERS</span> },
-    { icon: <FaBuilding className="text-[#01224f] mr-4 text-4xl" />, text: <span className="text-[#01224f]">EXPOSURE TO INDUSTRIAL GUEST LECTURES & MENTORSHIP</span> },
-    { icon: <FaLaptop className="text-[#01224f] mr-4 text-4xl" />, text: <span className="text-[#01224f]">INNOVATIVE R&D IN IT</span> },
-    { icon: <FaGraduationCap className="text-[#01224f] mr-4 text-4xl" />, text: <span className="text-[#01224f]">IT and Apple Labs</span> },
-    { icon: <FaChartLine className="text-[#01224f] mr-4 text-4xl" />, text: <span className="text-[#01224f]">EXCEPTIONAL GROWTH OPPORTUNITIES</span> },
+    { icon: <FaWrench  className="text-[#01224f] mr-4 text-5xl" />, text: <span className="text-[#01224f]"> 2 Decades of Mechanical Engineering Excellence
+</span> },
+    { icon: <FaIndustry  className="text-[#01224f] mr-4 text-4xl" />, text: <span className="text-[#01224f]"> Hands-on Learning through Industry Visits, Labs & Projects
+</span> },
+    { icon: <FaHandshake  className="text-[#01224f] mr-4 text-5xl" />, text: <span className="text-[#01224f]">450+ Leading Recruiters in Core & Manufacturing Sectors</span> },
+    { icon: <FaGraduationCap   className="text-[#01224f] mr-4 text-5xl" />, text: <span className="text-[#01224f]">Expert Mentorship from Automotive & Industrial Professionals</span> },
+    { icon: <FaCog  className="text-[#01224f] mr-4 text-5xl" />, text: <span className="text-[#01224f]">Advanced Labs for CAD, CAM, Thermodynamics & Robotics</span> },
+    { icon: <FaChartLine className="text-[#01224f] mr-4 text-5xl" />, text: <span className="text-[#01224f]">Exceptional Career Growth in Design, Production & R&D</span> },
   ];
   return (
     <>

@@ -26,8 +26,8 @@ function ComReasons() {
         <img src={img2} alt="" className="object-cover w-50 h-50" />
       </div>
 
-      <h2 className="text-3xl md:text-4xl text-[#134C93] lg:text-4xl font-bold text-center mb-6 z-10 relative">
-        Why Choose ICEM for Your Computer Engineering Journey?
+      <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-center mb-6 z-10 relative">
+        Why Choose <span className=" text-[#134C93]">ICEM</span> for Your <span className=" text-[#134C93]">Computer Engineering</span> Journey?
       </h2>
 
       {/* Grid Container */}
