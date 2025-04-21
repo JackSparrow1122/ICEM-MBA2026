@@ -1,68 +1,83 @@
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function ItReasons() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
+  const reasons = [
+    {
+      icon: "🖥",
+      title: "Industry-Integrated Curriculum",
+      desc: "Learn trending tech like AI & Cloud computing!",
+    },
+    {
+      icon: "🚀",
+      title: "Live Projects & Internships",
+      desc: "Gain hands-on experience with real-world projects!",
+    },
+    {
+      icon: "🎓",
+      title: "Expert Faculty & Industry Mentors",
+      desc: "Learn from top professionals!",
+    },
+    {
+      icon: "💼",
+      title: "Top Placements",
+      desc: "Get hired by leading tech giants & startups!",
+    },
+    {
+      icon: "🌍",
+      title: "Global Career Prospects",
+      desc: "Opportunities in MNCs across the world!",
+    },
+    {
+      icon: "🏆",
+      title: "Hackathons & Coding Competitions",
+      desc: "Compete, innovate & build solutions!",
+    },
+    {
+      icon: "🏫",
+      title: "State-of-the-Art Labs",
+      desc: "High tech IT & Apple labs!",
+    },
+    {
+      icon: "🎉",
+      title: "Exciting Campus Life",
+      desc: "Sports, events & tech fests to fuel your passion!",
+    },
+  ];
+
   return (
-    <div className="px-6 md:px-10 lg:px-16 py-8 bg-[#F7F0FC]">
-      <h2 className="text-3xl md:text-4xl  font-bold text-center mb-6">
-        Why Choose <span className=" text-[#390161]">ICEM</span> for Your <span className=" text-[#390161]">IT Engineering</span> Journey?
+    <div className="px-6 md:px-10 lg:px-16 py-10 bg-[#F7F0FC]">
+      <h2
+        className="text-3xl md:text-4xl font-bold text-center mb-10"
+        data-aos="fade-up"
+      >
+        Why Choose <span className="text-[#390161]">ICEM</span> for Your{" "}
+        <span className="text-[#390161]">IT Engineering</span> Journey?
       </h2>
 
       {/* Grid Container */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 ">
-        
-        {/* Industry-Integrated Curriculum */}
-        <div className="bg-white shadow-md p-6 text-center rounded-lg hover:shadow-xl hover:border-2 hover:border-[#390161] transition-shadow">
-          <div className="text-4xl text-[#390161] mb-4">🖥</div>
-          <h3 className="text-xl font-semibold text-[#390161] mb-2">Industry-Integrated Curriculum</h3>
-          <p className="text-sm md:text-base text-gray-700">Learn trending tech like AI & Cloud computing!</p>
-        </div>
-
-        {/* Live Projects & Internships */}
-        <div className="bg-white shadow-md p-6 text-center rounded-lg hover:shadow-xl hover:border-2 hover:border-[#390161] transition-shadow">
-          <div className="text-4xl text-[#390161] mb-4">🚀</div>
-          <h3 className="text-xl font-semibold text-[#390161] mb-2">Live Projects & Internships</h3>
-          <p className="text-sm md:text-base text-gray-700">Gain hands-on experience with real-world projects!</p>
-        </div>
-
-        {/* Expert Faculty & Industry Mentors */}
-        <div className="bg-white shadow-md p-6 text-center rounded-lg hover:shadow-xl hover:border-2 hover:border-[#390161] transition-shadow">
-          <div className="text-4xl text-[#390161] mb-4">🎓</div>
-          <h3 className="text-xl font-semibold text-[#390161] mb-2">Expert Faculty & Industry Mentors</h3>
-          <p className="text-sm md:text-base text-gray-700">Learn from top professionals!</p>
-        </div>
-
-        {/* Top Placements */}
-        <div className="bg-white shadow-md p-6 text-center rounded-lg hover:shadow-xl  hover:border-2 hover:border-[#390161]transition-shadow">
-          <div className="text-4xl text-[#390161] mb-4">💼</div>
-          <h3 className="text-xl font-semibold text-[#390161] mb-2">Top Placements</h3>
-          <p className="text-sm md:text-base text-gray-700">Get hired by leading tech giants & startups!</p>
-        </div>
-
-        {/* Global Career Prospects */}
-        <div className="bg-white shadow-md p-6 text-center rounded-lg hover:shadow-xl hover:border-2 hover:border-[#390161] transition-shadow">
-          <div className="text-4xl text-[#390161] mb-4">🌍</div>
-          <h3 className="text-xl font-semibold text-[#390161] mb-2">Global Career Prospects</h3>
-          <p className="text-sm md:text-base text-gray-700">Opportunities in MNCs across the world!</p>
-        </div>
-
-        {/* Hackathons & Coding Competitions */}
-        <div className="bg-white shadow-md p-6 text-center rounded-lg hover:shadow-xl hover:border-2 hover:border-[#390161] transition-shadow">
-          <div className="text-4xl text-[#390161] mb-4">🏆</div>
-          <h3 className="text-xl font-semibold text-[#390161] mb-2">Hackathons & Coding Competitions</h3>
-          <p className="text-sm md:text-base text-gray-700">Compete, innovate & build solutions!</p>
-        </div>
-
-        {/* State-of-the-Art Labs */}
-        <div className="bg-white shadow-md p-6 text-center rounded-lg hover:shadow-xl hover:border-2 hover:border-[#390161] transition-shadow">
-          <div className="text-4xl text-[#390161] mb-4">🏫</div>
-          <h3 className="text-xl font-semibold text-[#390161] mb-2">State-of-the-Art Labs</h3>
-          <p className="text-sm md:text-base text-gray-700">High tech IT & Apple labs!</p>
-        </div>
-
-        {/* Exciting Campus Life */}
-        <div className="bg-white shadow-md p-6 text-center rounded-lg hover:shadow-xl hover:border-2 hover:border-[#390161] transition-shadow">
-          <div className="text-4xl text-[#390161] mb-4">🎉</div>
-          <h3 className="text-xl font-semibold text-[#390161] mb-2">Exciting Campus Life</h3>
-          <p className="text-sm md:text-base text-gray-700">Sports, events & tech fests to fuel your passion!</p>
-        </div>
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        {reasons.map((item, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-md p-6 text-center rounded-lg hover:shadow-xl hover:border-2 hover:border-[#390161] transition-all duration-300"
+          >
+            <div className="text-4xl text-[#390161] mb-4">{item.icon}</div>
+            <h3 className="text-xl font-semibold text-[#390161] mb-2">
+              {item.title}
+            </h3>
+            <p className="text-sm md:text-base text-gray-700">{item.desc}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

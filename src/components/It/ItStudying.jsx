@@ -1,30 +1,35 @@
 import React, { useEffect } from 'react';
 import {
-  FaLaptopCode ,
-  FaApple   ,
-  FaUserTie ,
-  FaChalkboardTeacher ,
+  FaLaptopCode,
+  FaApple,
+  FaUserTie,
+  FaChalkboardTeacher,
   FaGraduationCap,
   FaChartLine,
   FaUsers,
-  FaRocket
+  FaRocket,
 } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import MyImage from '../../assets/images/studying.avif';
 
-function ItStudying() {
+const ItStudying = React.memo(() => {
   useEffect(() => {
-    AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      debounceDelay: 50, // Optimize AOS for better performance
+    });
   }, []);
 
   const cards = [
-    { icon: <FaLaptopCode  className="text-[#390161] mr-4 text-4xl" />, text: '2 Decades of Excellence in IT Education' },
-    { icon: <FaUserTie  className="text-[#390161] mr-4 text-4xl" />, text: '450+ Top Recruiters Hiring for IT & Software Roles' },
-    { icon: <FaChalkboardTeacher  className="text-[#390161] mr-4 text-5xl" />, text: 'Industry Guest Lectures & Corporate Mentorship Programs' },
-    { icon: <FaUsers  className="text-[#390161] mr-4 text-5xl" />, text: 'Innovative R&D in Cloud Computing, AI & Cybersecurity' },
-    { icon: <FaApple    className="text-[#390161] mr-4 text-3xl" />, text: 'State-of-the-Art IT Labs with Apple Ecosystem' },
-    { icon: <FaRocket  className="text-[#390161] mr-4 text-5xl" />, text: 'Exceptional Growth Opportunities in Tech & Innovation Fields' },
+    { icon: <FaLaptopCode className="text-[#390161] mr-4 text-4xl" />, text: '2 Decades of Excellence in IT Education' },
+    { icon: <FaUserTie className="text-[#390161] mr-4 text-4xl" />, text: '450+ Top Recruiters Hiring for IT & Software Roles' },
+    { icon: <FaChalkboardTeacher className="text-[#390161] mr-4 text-5xl" />, text: 'Industry Guest Lectures & Corporate Mentorship Programs' },
+    { icon: <FaUsers className="text-[#390161] mr-4 text-5xl" />, text: 'Innovative R&D in Cloud Computing, AI & Cybersecurity' },
+    { icon: <FaApple className="text-[#390161] mr-4 text-3xl" />, text: 'State-of-the-Art IT Labs with Apple Ecosystem' },
+    { icon: <FaRocket className="text-[#390161] mr-4 text-5xl" />, text: 'Exceptional Growth Opportunities in Tech & Innovation Fields' },
   ];
 
   return (
@@ -62,7 +67,8 @@ function ItStudying() {
             <img
               src={MyImage}
               alt="Indira College"
-              className="w-full h-full object-cover object-bottom "
+              className="w-full h-full object-cover object-bottom"
+              loading="lazy" // Lazy loading for performance improvement
             />
           </div>
         </div>
@@ -104,6 +110,6 @@ function ItStudying() {
       </section>
     </>
   );
-}
+});
 
 export default ItStudying;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import bgImage from '../../assets/images/itbg.jpg';
 
-function ItHero() {
+const ItHero = () => {
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -38,36 +38,59 @@ function ItHero() {
       className="relative pt-8 h-auto bg-cover bg-center bg-no-repeat text-white flex items-start"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      {/* Black overlay */}
+      {/* Black Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70 z-10"></div>
 
       {/* Content Wrapper */}
       <div className="flex flex-col lg:flex-row items-center lg:items-start z-20 w-full px-4 md:px-8 py-8 gap-6">
         
-        {/* Left Side Text */}
+        {/* Left Content */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
-          <p className="font-semibold text-3xl  md:text-4xl lg:text-5xl leading-tight mb-4">
-            <span className='text-[#A540FF]'>Information Technology</span> at Indira College of Engineering & Management
+          <p className="font-semibold text-3xl md:text-4xl lg:text-5xl leading-tight mb-4">
+            <span className="text-[#A540FF]">Information Technology</span> at Indira College of Engineering & Management
           </p>
           <div className="hidden lg:block">
-          <p className=" md:text-xl py-4">
+            <p className="md:text-xl py-4">
               2 Decades of Excellence in Education | 5 Specializations | 
-               <br /> <p className="text-[#A540FF] font-bold" >100%  Guaranteed Placement Assistance</p>
+              <br />
+              <span className="text-[#A540FF] font-bold">100% Guaranteed Placement Assistance</span>
             </p>
             <p className="text-2xl md:text-3xl py-2">
-              Transform the Digital World with <br /><span className='text-[#A540FF] font-bold'>IT Engineering</span> at ICEM!
+              Transform the Digital World with <br />
+              <span className="text-[#A540FF] font-bold">IT Engineering</span> at ICEM!
             </p>
           </div>
         </div>
 
-        {/* Right Side Form */}
+        {/* Right Form */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-          <div className="p-6 w-[90%] sm:w-[80%] md:w-[60%] lg:w-[90%] xl:w-[80%] shadow-md rounded-md" style={{ backgroundColor: "rgba(139, 197, 255, 0.3)" }}>
+          <div
+            className="p-6 w-[90%] sm:w-[80%] md:w-[60%] lg:w-[90%] xl:w-[80%] shadow-md rounded-md"
+            style={{ backgroundColor: "rgba(139, 197, 255, 0.3)" }}
+          >
             <form className="space-y-3">
-              <input type="text" placeholder="Enter your name" required className="w-full p-2 bg-[#F7F0FC] text-black rounded border border-[#390161] focus:ring-2 focus:ring-[#390161] outline-none" />
-              <input type="email" placeholder="Enter your email" required className="w-full p-2 bg-[#F7F0FC] text-black rounded border border-[#390161] focus:ring-2 focus:ring-[#390161] outline-none" />
-              <input type="tel" placeholder="Enter your mobile number" required className="w-full p-2 bg-[#F7F0FC] text-black rounded border border-[#390161] focus:ring-2 focus:ring-[#390161] outline-none" />
-              <select required className="w-full p-2 bg-[#F7F0FC] text-black rounded border border-[#390161] focus:ring-2 focus:ring-[#390161] outline-none">
+              <input
+                type="text"
+                placeholder="Enter your name"
+                required
+                className="w-full p-2 bg-[#F7F0FC] text-black rounded border border-[#390161] focus:ring-2 focus:ring-[#390161] outline-none"
+              />
+              <input
+                type="email"
+                placeholder="Enter your email"
+                required
+                className="w-full p-2 bg-[#F7F0FC] text-black rounded border border-[#390161] focus:ring-2 focus:ring-[#390161] outline-none"
+              />
+              <input
+                type="tel"
+                placeholder="Enter your mobile number"
+                required
+                className="w-full p-2 bg-[#F7F0FC] text-black rounded border border-[#390161] focus:ring-2 focus:ring-[#390161] outline-none"
+              />
+              <select
+                required
+                className="w-full p-2 bg-[#F7F0FC] text-black rounded border border-[#390161] focus:ring-2 focus:ring-[#390161] outline-none"
+              >
                 <option value="">Select Course</option>
                 <option value="Mech">Mechanical Engineering</option>
                 <option value="AI">Artificial Intelligence</option>
@@ -75,7 +98,10 @@ function ItHero() {
                 <option value="CS">Computer Science</option>
                 <option value="AIDS">Artificial Intelligence and Data Science</option>
               </select>
-              <button type="submit" className="w-full py-2 bg-[#390161] text-white rounded-lg hover:bg-[#9002F5]">
+              <button
+                type="submit"
+                className="w-full py-2 bg-[#390161] text-white rounded-lg hover:bg-[#9002F5]"
+              >
                 Submit
               </button>
             </form>
@@ -84,6 +110,6 @@ function ItHero() {
       </div>
     </div>
   );
-}
+};
 
 export default ItHero;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Slider from 'react-slick';
 import vandar from '../../assets/images/MECH-images/abc.avif'; 
 import micro from '../../assets/images/MECH-images/Microsoft.avif'; 
@@ -25,11 +25,11 @@ const successors = [
   { id: 6, name: 'Apoorva Kakkar', image: apurv, details: (<>'Our alumni Apoorva Kakkar, a Mechanical Engineering passout works as a Business Data Modeller at <strong>ABN Amro Bank, Netherlands.</strong>'</>), location: 'Netherlands', degree: '(Mechanical Engineering)', companyLogo: abn },
 ];
 
-const MechJourny = () => {
+const MechJourny = memo(() => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 3,  // Show 2 cards per slide
+    slidesToShow: 3,  // Show 3 cards per slide
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -52,13 +52,15 @@ const MechJourny = () => {
   };
 
   return (
-    <div className="w-full h-full bg-white shadow-lg px-2 mt-6 overflow-hidden  ">
-      <h3 className="text-center font-bold text-3xl md:text-4xl mb-4 text-[#01224F] mb-2">Alumni <span className='text-[#9002F5]'>Journey</span></h3>
+    <div className="w-full h-full bg-white shadow-lg px-2 mt-6 overflow-hidden">
+      <h3 className="text-center font-bold text-3xl md:text-4xl mb-4 text-[#01224F] mb-2">
+        Alumni <span className='text-[#9002F5]'>Journey</span>
+      </h3>
       <Slider {...settings}>
         {successors.map((successor) => (
           <div key={successor.id} className="w-full bg-white rounded-lg shadow-lg p-4 flex items-center relative mb-8 border border-[#9002F5] mr-2">
             {/* Company Logo on left side */}
-            <div className="absolute top-4 left-4 p-2 bg-white ">
+            <div className="absolute top-4 left-4 p-2 bg-white">
               <img
                 src={successor.companyLogo}
                 alt={`${successor.name} Company Logo`}
@@ -67,17 +69,18 @@ const MechJourny = () => {
             </div>
 
             {/* Successor's Image (Centered within card) */}
-            <div className="flex justify-center items-center w-full h-30 rounded-lg overflow-hidden px-16 ">
+            <div className="flex justify-center items-center w-full h-30 rounded-lg overflow-hidden px-16">
               <img
                 src={successor.image}
                 alt={successor.name}
                 className="w-20 h-20 object-cover rounded-full shadow-lg"
+                loading="lazy" // Lazy load images
               />
             </div>
 
             {/* Successor's Name and Degree */}
             <div className="text-center font-bold mb-2">
-              <h3 className="text-lg font-semibold ">{successor.name}</h3>
+              <h3 className="text-lg font-semibold">{successor.name}</h3>
               <p className="text-xs text-gray-600">{successor.degree}</p>
               <p className="text-xs text-gray-600">{successor.location}</p>
             </div>
@@ -91,6 +94,6 @@ const MechJourny = () => {
       </Slider>
     </div>
   );
-};
+});
 
 export default MechJourny;
