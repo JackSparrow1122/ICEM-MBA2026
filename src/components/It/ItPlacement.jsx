@@ -52,7 +52,7 @@ function IntegratedBbaMbaPlacement() {
   return (
     <div className=" py-10 px-4 sm:px-6 md:px-8">
       {/* Heading */}
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 text-[#555555]">
+      <h1 className="text-3xl  md:text-4xl font-bold text-center mb-10 text-[#555555]">
         Our <span className="text-[#A540FF]">Top</span> Placements
       </h1>
 
@@ -63,7 +63,7 @@ function IntegratedBbaMbaPlacement() {
             <img
               src={profile.image}
               alt={profile.name}
-              className="rounded-full w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 border-4 border-[#A540FF] object-cover object-top"
+              className="rounded-full w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 border-4 border-[#A540FF] object-cover object-top"
             />
             <div className="text-sm sm:text-base font-semibold text-gray-800 whitespace-nowrap">
               {profile.name}

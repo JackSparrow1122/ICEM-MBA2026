@@ -2,10 +2,10 @@ import React from 'react';
 
 const ItBanner = () => {
   return (
-    <div className=" py-8 px-8 sm:px-12 rounded-lg shadow-lg transform transition-all duration-700 ease-in-out">
-      <div className="max-w-7xl mx-auto text-center">
+    <div className=" py-4 md:py-8 px-8 sm:px-12 rounded-lg shadow-lg transform transition-all duration-700 ease-in-out">
+      <div className="mx-auto text-center">
         {/* Title Section */}
-        <h1 className="text-3xl sm:text-3xl font-extrabold mb-4 animate__animated animate__fadeIn animate__delay-1s">
+        <h1 className="text-3xl md:text-4xl font-extrabold mb-4 animate__animated animate__fadeIn animate__delay-1s">
           Searching for the Best IT Engineering College in Pune?
         </h1>
         

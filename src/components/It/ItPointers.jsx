@@ -27,12 +27,12 @@ const data = [
 
 export default function ItPointers() {
   return (
-    <section className="bg-[#f3e6fc] py-4 md:py-12 px-8 md:px-16 font-sans">
+    <section className="bg-[#f3e6fc] py-6 md:py-12 px-8 md:px-16 font-sans">
       <div className="w-auto grid md:grid-cols-2 gap-2 items-center overflow-hidden">
         
         {/* Left content */}
         <div className="space-y-4">
-          <h2 className="text-2xl text-center md:text-left md:text-[44px] font-bold leading-tight text-gray-900">
+          <h2 className="text-3xl text-center md:text-left md:text-[44px] font-bold leading-tight text-gray-900">
             ICEM: The Gateway to
             <br />
             <span className="text-[#390161]">Exceptional Careers</span>

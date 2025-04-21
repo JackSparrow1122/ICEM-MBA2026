@@ -61,7 +61,7 @@ function ItOfferings() {
         className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1/2 md:w-2/3 lg:w-1/2 object-contain"
       />
 
-      <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-[#390161]" data-aos="fade-up">
+      <h2 className="text-3xl md:text-4xl  font-bold text-center mb-8 text-[#390161]" data-aos="fade-up">
         <span className="technology-text">
            <span style={techStyle}>Information Technology</span> Offerings
         </span>

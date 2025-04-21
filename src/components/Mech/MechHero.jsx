@@ -77,7 +77,7 @@ function MechHero() {
 
       <div className="flex flex-col md:flex-row items-center md:items-start z-30 w-full px-4 sm:px-8 md:px-16 mb-4 sm:mb-6">
         <div className="flex flex-col items-center md:items-start text-center md:text-left w-full">
-          <p className="mt-4 leading-tight font-bold text-2xl md:text-5xl">
+          <p className="mt-4 leading-tight font-bold text-3xl md:text-5xl">
             <span className="text-[#FAB701]">Mechanical Engineering</span> at Indira College of Engineering & Management
           </p>
 

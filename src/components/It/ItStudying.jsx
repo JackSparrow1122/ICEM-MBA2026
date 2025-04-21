@@ -11,7 +11,7 @@ import {
 } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import MyImage from '../../assets/images/infra.jpg';
+import MyImage from '../../assets/images/studying.avif';
 
 function ItStudying() {
   useEffect(() => {
@@ -70,7 +70,7 @@ function ItStudying() {
 
       {/* Highlights Section */}
       <section className="px-6 py-6 " data-aos="fade-up">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center text-[#390161] mb-6 md:mb-8">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#390161] mb-6 md:mb-8">
           ICEM Highlights
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

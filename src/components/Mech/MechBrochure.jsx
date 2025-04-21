@@ -16,8 +16,8 @@ function MechBrochure() {
     >
       <div className="w-full bg-[#01224F] p-4 rounded-3xl flex flex-col md:flex-row justify-between items-center">
         {/* Text Content */}
-        <div className="max-w-full md:max-w-2/3 mb-6 md:mb-0 text-center md:text-left">
-          <h2 className="text-2xl font-bold mb-4 m-0 text-white">Syllabus</h2>
+        <div className="max-w-full md:max-w-2/3 md:mb-0 text-center md:text-left">
+          <h2 className="text-3xl font-bold mb-4 m-0 text-white">Syllabus</h2>
           <p className="text-lg text-white hidden sm:block">
             Dive into core mechanical domains like robotics, thermodynamics, CAD/CAM, automotive systems, and advanced manufacturing techniques.
           </p>

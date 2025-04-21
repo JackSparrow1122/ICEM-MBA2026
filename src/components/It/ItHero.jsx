@@ -46,7 +46,7 @@ function ItHero() {
         
         {/* Left Side Text */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
-          <p className="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight mb-4">
+          <p className="font-semibold text-3xl  md:text-4xl lg:text-5xl leading-tight mb-4">
             <span className='text-[#A540FF]'>Information Technology</span> at Indira College of Engineering & Management
           </p>
           <div className="hidden lg:block">

@@ -53,7 +53,7 @@ const MechJourny = () => {
 
   return (
     <div className="w-full h-full bg-white shadow-lg px-2 mt-6 overflow-hidden  ">
-      <h3 className="text-center font-bold text-2xl text-[#01224F] mb-2">Alumni <span className='text-[#FFB700]'>Journey</span></h3>
+      <h3 className="text-center font-bold text-3xl md:text-4xl mb-4 text-[#01224F] mb-2">Alumni <span className='text-[#FFB700]'>Journey</span></h3>
       <Slider {...settings}>
         {successors.map((successor) => (
           <div key={successor.id} className="w-full bg-white rounded-lg shadow-lg p-4 flex items-center relative mb-8 border border-[#FFB700] mr-2">

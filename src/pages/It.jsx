@@ -9,7 +9,7 @@ import ItTestimonials from '../components/It/ItTestimonials';
 import ItInovation from '../components/It/ItInovation';
 import ItReasons from '../components/It/ItReasons';
 import ItPlacement from '../components/It/ItPlacement';
-import CompRecruter from '../components/Computer/CompRecruiter';
+import ItRecruiters from '../components/It/ItRecruiters'
 import ItBanner from '../components/It/ItBanner';
 import Footer from '../pages/Footer'
 function It() {
@@ -17,7 +17,7 @@ function It() {
     <div>
       <ItHero />
       <ItPlacement/>
-      <CompRecruter/>
+      <ItRecruiters/>
       <ItBanner/>  
       <ItInovation/>
       <ItReasons/>
