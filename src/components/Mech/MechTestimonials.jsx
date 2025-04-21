@@ -6,12 +6,12 @@ import ias from '../../assets/images/MECH-images/ias.avif';
 import tesla from '../../assets/images/MECH-images/tesla.avif'; 
 import army from '../../assets/images/MECH-images/army.avif'; 
 import abn from '../../assets/images/MECH-images/abn.avif'; 
-import hansala from '../../assets/images/Hansala.png';
-import arpita from '../../assets/images/Arpita.png';
-import nikhil from '../../assets/images/Nikhil.png';
-import ankur from '../../assets/images/Ankur.png';
-import nilesh from '../../assets/images/Nileshkumar.png';
-import apurv from '../../assets/images/Apoorva.png';
+import hansala from '../../assets/images/Hansala.avif';
+import arpita from '../../assets/images/Arpita.avif';
+import nikhil from '../../assets/images/Nikhil.avif';
+import ankur from '../../assets/images/Ankur.avif';
+import nilesh from '../../assets/images/Nileshkumar.avif';
+import apurv from '../../assets/images/Apoorva.avif';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
