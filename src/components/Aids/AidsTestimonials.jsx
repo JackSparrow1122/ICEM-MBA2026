@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import Slider from 'react-slick';
 import vandar from '../../assets/images/MECH-images/abc.avif'; 
 import micro from '../../assets/images/MECH-images/Microsoft.avif'; 
@@ -6,12 +6,12 @@ import ias from '../../assets/images/MECH-images/ias.avif';
 import tesla from '../../assets/images/MECH-images/tesla.avif'; 
 import army from '../../assets/images/MECH-images/army.avif'; 
 import abn from '../../assets/images/MECH-images/abn.avif'; 
-import hansala from '../../assets/images/Hansala.png';
-import arpita from '../../assets/images/Arpita.png';
-import nikhil from '../../assets/images/Nikhil.png';
-import ankur from '../../assets/images/Ankur.png';
-import nilesh from '../../assets/images/Nileshkumar.png';
-import apurv from '../../assets/images/Apoorva.png';
+import hansala from '../../assets/images/Hansala.avif';
+import arpita from '../../assets/images/Arpita.avif';
+import nikhil from '../../assets/images/Nikhil.avif';
+import ankur from '../../assets/images/Ankur.avif';
+import nilesh from '../../assets/images/Nileshkumar.avif';
+import apurv from '../../assets/images/Apoorva.avif';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -26,39 +26,40 @@ const successors = [
 ];
 
 const MechJourny = () => {
-  const settings = {
+  // Slider settings memoized to prevent unnecessary re-creation on each render
+  const settings = useMemo(() => ({
     infinite: true,
     speed: 500,
-    slidesToShow: 3,  // Show 2 cards per slide
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: true,
     dots: true,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2 } }, // For tablet and desktop
-      { breakpoint: 768, settings: { slidesToShow: 1 } }, // For mobile
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 768, settings: { slidesToShow: 1 } },
     ],
     prevArrow: (
       <div className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-600 text-white rounded-full">
-        <i className="fas fa-chevron-left"></i> {/* Left arrow icon */}
+        <i className="fas fa-chevron-left"></i>
       </div>
     ),
     nextArrow: (
       <div className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-600 text-white rounded-full">
-        <i className="fas fa-chevron-right"></i> {/* Right arrow icon */}
+        <i className="fas fa-chevron-right"></i>
       </div>
     ),
-  };
+  }), []);
 
   return (
-    <div className="w-full h-full bg-white shadow-lg px-2 mt-6 overflow-hidden  ">
+    <div className="w-full h-full bg-white shadow-lg px-2 mt-6 overflow-hidden">
       <h3 className="text-center font-bold text-2xl text-[#0c3249] mb-2">Alumni <span className='text-[#41b9d0]'>Journey</span></h3>
       <Slider {...settings}>
         {successors.map((successor) => (
           <div key={successor.id} className="w-full bg-white rounded-lg shadow-lg p-4 flex items-center relative mb-8 border border-[#41b9d0] mr-2">
             {/* Company Logo on left side */}
-            <div className="absolute top-4 left-4 p-2 bg-white ">
+            <div className="absolute top-4 left-4 p-2 bg-white">
               <img
                 src={successor.companyLogo}
                 alt={`${successor.name} Company Logo`}
@@ -67,7 +68,7 @@ const MechJourny = () => {
             </div>
 
             {/* Successor's Image (Centered within card) */}
-            <div className="flex justify-center items-center w-full h-30 rounded-lg overflow-hidden px-16 ">
+            <div className="flex justify-center items-center w-full h-30 rounded-lg overflow-hidden px-16">
               <img
                 src={successor.image}
                 alt={successor.name}
@@ -77,7 +78,7 @@ const MechJourny = () => {
 
             {/* Successor's Name and Degree */}
             <div className="text-center font-bold mb-2">
-              <h3 className="text-lg font-semibold ">{successor.name}</h3>
+              <h3 className="text-lg font-semibold">{successor.name}</h3>
               <p className="text-xs text-gray-600">{successor.degree}</p>
               <p className="text-xs text-gray-600">{successor.location}</p>
             </div>
