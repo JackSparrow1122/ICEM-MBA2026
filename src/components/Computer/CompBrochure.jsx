@@ -10,7 +10,7 @@ const CompBrochure = () => {
 
   return (
     <div
-      className="flex justify-between items-center bg-contain bg-center text-white shadow-lg h-48 px-8 md:px-16 poppins-regular"
+      className="flex justify-between items-center bg-contain bg-center text-white shadow-lg h-48 px-4 md:px-8 lg:px-16 poppins-regular"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="w-full bg-blue-700 p-6 rounded-3xl flex flex-col md:flex-row justify-between items-center">

@@ -55,7 +55,7 @@ function ComputerEngineering() {
   return (
     <>
       {/* Main Section */}
-      <div className="flex flex-col lg:flex-row px-6 md:px-12 py-8 gap-10 poppins-regular overflow-hidden">
+      <div className="flex flex-col lg:flex-row px-4 md:px-8 lg:px-16 py-8 gap-10 poppins-regular overflow-hidden">
         {/* Left Side */}
         <div className="w-full lg:w-3/5" data-aos="fade-right">
           <h1 className="text-3xl md:text-4xl font-semibold mb-4">Grow, Connect & Lead with ICEM!!</h1>
@@ -73,7 +73,7 @@ function ComputerEngineering() {
         </div>
 
         {/* Right Side */}
-        <div className="w-full lg:w-2/5 flex justify-center items-center mb-8 md:mb-0" data-aos="fade-left">
+        <div className="w-full lg:w-2/5 flex justify-center items-center md:mb-0" data-aos="fade-left">
           <div className="w-full h-full max-h-[600px]">
             <img
               src={MyImage}
@@ -86,11 +86,11 @@ function ComputerEngineering() {
       </div>
 
       {/* Highlights Section */}
-      <section className="px-6 py-6" data-aos="fade-up">
+      <section className="px-4 md:px-8 lg:px-16 py-6" data-aos="fade-up">
         <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#134C93] mb-6 md:mb-8">
           ICEM Highlights
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {/* Highlight 1 */}
           <HighlightCard
             icon={<FaChartLine className="text-[#134C93] text-5xl mb-4" />}

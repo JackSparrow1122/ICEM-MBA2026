@@ -46,7 +46,7 @@ function MechHero() {
 
   return (
     <div
-      className="relative lg:px-6 pt-6 h-auto bg-cover bg-right md:bg-center bg-no-repeat text-white flex items-start"
+      className="relative px-4 md:px-8 lg:px-16 pt-6 h-auto bg-cover bg-right md:bg-center bg-no-repeat text-white flex items-start"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <style>
@@ -69,7 +69,7 @@ function MechHero() {
       />
 
       {/* Content */}
-      <div className="flex flex-col lg:flex-row items-center lg:items-start z-20 w-full px-4 md:px-8 py-8 gap-6">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start z-20 w-full  py-8 gap-6">
         {/* Left Text */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           <p className="font-semibold text-3xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight mb-4">

@@ -27,7 +27,7 @@ const data = [
 
 export default function MechPointers() {
   return (
-    <section className="bg-[#e4ecf7] py-6 md:py-12 px-8 md:px-16 font-sans">
+    <section className="bg-[#e4ecf7] py-6 md:py-12 px-4 md:px-8 lg:px-16 font-sans">
       <div className="w-auto grid md:grid-cols-2 gap-2 items-center overflow-hidden">
         
         {/* Left content */}

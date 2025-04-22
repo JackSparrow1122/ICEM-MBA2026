@@ -8,7 +8,7 @@ const AdmissionProcess = () => {
 
   return (
     <div
-      className="bg-[#6095ff] px-8 md:px-16 py-10 text-center text-white shadow-lg relative bg-contain bg-no-repeat bg-center"
+      className="bg-[#6095ff] px-4 md:px-8 lg:px-16 py-10 text-center text-white shadow-lg relative bg-contain bg-no-repeat bg-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Overlay */}

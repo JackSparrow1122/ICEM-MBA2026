@@ -10,7 +10,7 @@ const MechBrochure = () => {
 
   return (
     <div
-      className="flex justify-between items-center bg-[#F7F0Fc] text-white shadow-lg h-auto px-8 md:px-16 py-2 md:py-4 poppins-regular relative"
+      className="flex justify-between items-center bg-[#F7F0Fc] text-white shadow-lg h-auto px-4 md:px-8 lg:px-16 py-2 md:py-4 poppins-regular relative"
       style={{
         backgroundImage: `url(${gearImage}), url(${gearImage})`,
         backgroundPosition: 'left bottom, right top',
