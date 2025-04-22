@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { FaCog, FaTools, FaRupeeSign, FaUsers, FaChalkboardTeacher, FaHourglassEnd } from "react-icons/fa";
+import {  FaRupeeSign, FaUsers, FaChalkboardTeacher, FaHourglassEnd } from "react-icons/fa";
 import { FaRegHourglassHalf } from "react-icons/fa6";
 
 const EntcPointers = () => {
