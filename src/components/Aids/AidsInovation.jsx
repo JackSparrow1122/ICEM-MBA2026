@@ -5,7 +5,7 @@ import HatImage from '../../assets/images/hat.avif'; // Red hat image
 
 const AidsInnovation = () => (
   <>
-    <div className="relative flex flex-col md:flex-row items-center justify-between px-6 sm:px-12 md:px-16 lg:px-24 py-6 md:py-12 bg-gradient-to-r from-[#104552] to-[#206b6e] text-white overflow-hidden">
+    <div className="relative flex flex-col md:flex-row items-center justify-between px-4 md:px-16 lg:px-16 py-6 md:py-12 bg-gradient-to-r from-[#104552] to-[#206b6e] text-white overflow-hidden">
       {/* Moving Satellite Icon */}
       <FaSatellite className="absolute top-6 left-0 text-6xl text-gray-400 animate-satellite" />
 

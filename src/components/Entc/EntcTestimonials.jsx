@@ -30,7 +30,9 @@ const MechJourny = () => {
   const settings = {
     infinite: true,
     speed: 500,
+
     slidesToShow: 3,
+
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -53,6 +55,7 @@ const MechJourny = () => {
   };
 
   return (
+
     <div className="w-full h-full bg-white shadow-lg py-8  overflow-hidden">
       <h3 className="text-center font-bold text-3xl md:text-4xl text-[#0c3249] mb-4">
         Alumni <span className="text-[#026670]">Journey</span>
@@ -91,6 +94,7 @@ const MechJourny = () => {
               <div className="text-center">
                 <p className="text-xs text-gray-600">{successor.details}</p>
               </div>
+
             </div>
           </div>
         ))}

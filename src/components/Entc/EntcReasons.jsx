@@ -61,7 +61,7 @@ const EntcReasons = () => {
         Why Choose <span className="text-[#36A5B9]">ICEM</span> for Your <span className="text-[#36A5B9]">ENTC</span> Journey?
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 z-10 relative px-6 md:px-10 lg:px-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 z-10 relative px-4 md:px-16 lg:px-16">
         {reasons.map((item, index) => (
           <div
             key={index}

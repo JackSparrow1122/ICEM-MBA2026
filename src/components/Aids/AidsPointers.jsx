@@ -44,7 +44,7 @@ const AidsPointersItem = memo(({ item }) => (
 
 const AidsPointers = memo(() => {
   return (
-    <section className="bg-[#f7fcfc] py-4 md:py-12 px-8 md:px-16 font-sans">
+    <section className="bg-[#f7fcfc] py-4 md:py-12 px-4 md:px-16 font-sans">
       <div className="w-auto grid md:grid-cols-2 gap-2 items-center overflow-hidden">
         {/* Left content */}
         <div className="space-y-4">
