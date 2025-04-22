@@ -1,9 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
-import gearImage from '../../assets/images/gears.png'; // Import the gear image
+import gearImage from '../../assets/images/gears.png';
 
 function MechBrochure() {
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div
       className="flex justify-between items-center bg-[#FFF8F0] text-white shadow-lg h-auto px-4 md:px-8 lg:px-16 py-2 md:py-4 poppins-regular relative"
@@ -25,14 +29,14 @@ function MechBrochure() {
 
         {/* Download Button */}
         <div className="mt-4 md:mt-4">
-          <a
-            href="" // replace with your actual file path
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="bg-[#FFC80] border-2 border-[#FFB700] text-white px-6 py-3 rounded-3xl hover:bg-[#FFB700] hover:text-black hover:border-white transition duration-300 flex items-center space-x-2"
-          >
-            <FontAwesomeIcon icon={faDownload} />
-            <span>Download Brochure</span>
-          </a>
+        <button
+          onClick={handleScrollToTop}
+          className="bg-[#FFC80] border-2 border-[#FFB700] text-white px-6 py-3 rounded-3xl hover:bg-[#FFB700] hover:text-black hover:border-white transition duration-300 flex items-center space-x-2 cursor-pointer"
+        >
+          <FontAwesomeIcon icon={faDownload} />
+          <span>Download Brochure</span>
+        </button>
+
         </div>
       </div>
     </div>

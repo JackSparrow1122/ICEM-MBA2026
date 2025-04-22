@@ -22,9 +22,8 @@ const CompBrochure = () => {
         </div>
 
         <a
-          href="" // TODO: Add brochure download link here
           onClick={handleScrollToTop}
-          className="bg-blue-900 border-2 border-blue-800 text-white px-6 py-3 rounded-3xl hover:bg-blue-800 transition duration-300 flex items-center space-x-2"
+          className="bg-blue-900 border-2 border-blue-800 text-white px-6 py-3 rounded-3xl hover:bg-blue-800 transition duration-300 flex items-center space-x-2 cursor-pointer"
         >
           <FontAwesomeIcon icon={faDownload} />
           <span>Download Brochure</span>

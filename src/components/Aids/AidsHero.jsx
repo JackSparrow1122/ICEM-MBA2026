@@ -38,14 +38,14 @@ function AidsHero() {
         {/* Left Text */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-4">
-            Decode Your Future with <span className="text-white">AI-DS</span> at ICEM!
+            Decode Your Future with <span className="text-[#41b9d0]">AI-DS</span> at ICEM!
           </h1>
           <p className="hidden md:block md:text-2xl py-4">
             2 Decades of Excellence | 5 Specializations <br />
-            <span className="text-white font-bold">100% Guaranteed Placement Assistance</span>
+            <span className="text-[#41b9d0] font-bold">100% Guaranteed Placement Assistance</span>
           </p>
           <p className="hidden md:block text-2xl md:text-3xl py-4">
-            Apply now for the exciting field of <br /><span className="text-white font-bold">AI-DS Research & Development</span>!
+            Apply now for the exciting field of <br /><span className="text-[#41b9d0] font-bold">AI-DS Research & Development</span>!
           </p>
         </div>
 
