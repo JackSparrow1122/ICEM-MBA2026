@@ -3,7 +3,7 @@ import ProgramImage from '../../assets/images/IT-Images/ITIovation.avif';
 
 const ItInovation = () => {
   return (
-    <div className="flex flex-col px-4 md:px-10 lg:px-16 py-6 mb-4">
+    <div className="flex flex-col px-4 md:px-8 lg:px-16 py-6 mb-4">
       {/* Content Section */}
       <div className="flex flex-col md:flex-row items-center justify-center gap-6">
         

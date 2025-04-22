@@ -3,7 +3,7 @@ import ProgramImage from '../../assets/images/Com-Images/Untitled design.avif'
 
 const ComCreative = () => {
   return (
-    <div className="flex flex-col px-4 md:px-10 lg:px-16 py-4 mb-2">
+    <div className="flex flex-col px-4 md:px-8 lg:px-16 py-4 mb-2">
       <div className="flex flex-col md:flex-row items-center justify-center">
         <div className="w-full sm:w-1/2 mb-4 sm:mb-0">
           <img

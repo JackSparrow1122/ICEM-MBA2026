@@ -12,7 +12,7 @@ import hansala from '../../assets/images/Hansala.avif';
 import arpita from '../../assets/images/Arpita.avif';
 import nikhil from '../../assets/images/Nikhil.avif';
 import ankur from '../../assets/images/Ankur.avif';
-import nilesh from '../../assets/images/Nileshkumar.avif';
+import nilesh from '../../assets/images/Nileshkumar.avif'; 
 import apurv from '../../assets/images/Apoorva.avif';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

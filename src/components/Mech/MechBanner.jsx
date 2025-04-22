@@ -7,7 +7,7 @@ const CompBanner = () => {
   };
 
   return (
-    <div className="py-4 md:py-8 px-8 sm:px-12 rounded-lg shadow-lg transform transition-all duration-700 ease-in-out">
+    <div className="py-4 md:py-8 px-4 md:px-8 lg:px-16 rounded-lg shadow-lg transform transition-all duration-700 ease-in-out">
       <div className="mx-auto text-center">
         {/* Banner Heading */}
         <h1 className="text-3xl md:text-4xl font-extrabold mb-4 animate__animated animate__fadeIn animate__delay-1s">

@@ -35,14 +35,14 @@ const ItHero = () => {
 
   return (
     <div
-      className="relative pt-8 h-auto bg-cover bg-center bg-no-repeat text-white flex items-start"
+      className="relative pt-8 h-auto bg-cover bg-center bg-no-repeat text-white flex items-start px-4 md:px-8 lg:px-16"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Black Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70 z-10"></div>
 
       {/* Content Wrapper */}
-      <div className="flex flex-col lg:flex-row items-center lg:items-start z-20 w-full px-4 md:px-8 py-8 gap-6">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start z-20 w-full py-8 ">
         
         {/* Left Content */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">

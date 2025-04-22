@@ -35,7 +35,7 @@ export default function ItPointers() {
   }, []);
 
   return (
-    <section className="bg-[#f3e6fc] py-10 px-6 md:px-16 font-sans">
+    <section className="bg-[#f3e6fc] py-10 px-4 md:px-8 lg:px-16 font-sans">
       <div className="grid md:grid-cols-2 gap-10 items-center overflow-hidden">
 
         {/* Left Content */}
