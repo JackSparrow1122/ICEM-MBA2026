@@ -7,7 +7,7 @@ import { BsDiagram3 } from "react-icons/bs";
 
 // Card component is memoized to prevent unnecessary re-renders
 const AidsReasonCard = memo(({ icon, title, description }) => (
-  <div className="bg-white shadow-md p-6 flex flex-col items-center text-center rounded-lg hover:shadow-xl hover:border-2 hover:scale-105 hover:border-[#117577] transition-shadow">
+  <div className="bg-white shadow-md p-6  flex flex-col items-center text-center rounded-lg hover:shadow-xl hover:border-2 hover:scale-105 hover:border-[#117577] transition-shadow">
     <div className="text-[#0c3249] text-6xl mb-4">{icon}</div>
     <h3 className="text-xl font-semibold text-[#117577]">{title}</h3>
     <p className="text-sm md:text-base text-gray-700">{description}</p>
@@ -16,12 +16,12 @@ const AidsReasonCard = memo(({ icon, title, description }) => (
 
 function AidsReasons() {
   return (
-    <div className="relative py-8 bg-[#F6FBFF]">
+    <div className="relative py-8 bg-[#F6FBFF] px-4 md:px-16">
       <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-center mb-6 z-10 relative">
-        Why Choose <span className="text-[#117577]">ICEM</span> for Your <span className="text-[#117577]">AIDS</span> Engineering Journey?
+        Why Choose <span className="text-[#117577]">ICEM</span> for Your <span className="text-[#117577]">AI-DS</span> Engineering Journey?
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 z-10 relative px-6 md:px-10 lg:px-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 md:gap-6 relative  ">
         {/* AI & Machine Learning */}
         <AidsReasonCard
           icon={<GiArtificialIntelligence />}

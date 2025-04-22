@@ -6,7 +6,7 @@ function EntcBanner() {
   }, []);
 
   return (
-    <div className="text-white py-8 px-6 text-center flex flex-col items-center justify-center">
+    <div className="text-white py-8 px-4 md:px-16 text-center flex flex-col items-center justify-center">
       <h1 className="text-2xl md:text-4xl font-extrabold text-black mb-2">
         Searching for the Best ENTC Engineering College in Pune?
       </h1>

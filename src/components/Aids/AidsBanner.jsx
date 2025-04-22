@@ -9,7 +9,7 @@ function AidsBanner() {
   }, []);
 
   return (
-    <div className="text-white py-8 md:px-6 text-center flex flex-col items-center justify-center">
+    <div className="text-white py-8 px-4 md:px-16 text-center flex flex-col items-center justify-center">
       <h1 className="text-2xl md:text-4xl font-extrabold text-black mb-2">
         Searching for the Best AI-DS Engineering College in Pune?
       </h1>
@@ -22,7 +22,7 @@ function AidsBanner() {
       <a
         href="#apply"
         onClick={handleClick}
-        className="bg-[#41b9d0] text-[#0c3249] py-4 px-8 rounded-full text-xl font-semibold shadow-md hover:bg-gray-200 hover:scale-105 hover:shadow-lg transition-transform duration-300 ease-in-out mt-8"
+        className="bg-[#41b9d0] text-[#0c3249] py-3 md:py-4 px-4 md:px-8 rounded-full text-xl font-semibold shadow-md hover:bg-gray-200 hover:scale-105 hover:shadow-lg transition-transform duration-300 ease-in-out mt-4 md:mt-8"
       >
         Apply Now
       </a>

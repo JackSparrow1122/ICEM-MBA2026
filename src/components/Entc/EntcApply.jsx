@@ -22,15 +22,15 @@ const EntcApply = () => {
       <div className="absolute inset-0 bg-[#F7F0FC] opacity-60 z-0" />
 
       <div className="relative z-10">
-        <h2 className="text-3xl font-semibold text-[#026670] mb-6">
+        <h2 className="text-3xl md:text-4xl font-semibold text-[#026670] mb-6">
           Admission Process: Get Started Today!
         </h2>
-        <p className="text-sm md:text-lg mb-6 text-gray-700">
+        <p className="text-lg md:text-xl mb-6 text-gray-700">
           Follow these simple steps to apply for the Electrical & Telecommunication
           programme at ICEM College Pune:
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-8 mx-auto mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-8 mx-auto ">
           {steps.map((step, index) => (
             <div
               key={index}
@@ -46,7 +46,7 @@ const EntcApply = () => {
 
         <button
           onClick={handleClick}
-          className="bg-[#41b9d0] text-[#0c3249] py-4 px-8 rounded-full text-xl font-semibold shadow-md hover:bg-gray-200 hover:scale-105 hover:shadow-lg transition-transform duration-300 ease-in-out mt-8"
+          className="bg-[#41b9d0] text-[#0c3249] py-2 md:py-4 px-4 md:px-8 rounded-full text-xl font-semibold shadow-md hover:bg-gray-200 hover:scale-105 hover:shadow-lg transition-transform duration-300 ease-in-out mt-8"
         >
           Apply Now
         </button>

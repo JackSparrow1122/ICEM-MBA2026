@@ -38,8 +38,8 @@ function EntcOfferings() {
   }, []);
 
   return (
-    <div className="px-8 md:px-16 py-6 md:py-8 bg-[#ffffff] poppins-regular overflow-hidden">
-      <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 text-[#36A5B9]" data-aos="fade-up">
+    <div className="px-4 md:px-16 py-6 md:py-8 bg-[#ffffff] poppins-regular overflow-hidden">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-[#36A5B9]" data-aos="fade-up">
         Electrical & Telecommunication Engineering Offerings
       </h2>
 

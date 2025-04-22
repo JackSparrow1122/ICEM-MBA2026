@@ -29,7 +29,7 @@ const MechJourny = () => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 3,  // Show 2 cards per slide
+    slidesToShow: 3,  // Show 3 cards per slide
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -52,39 +52,39 @@ const MechJourny = () => {
   };
 
   return (
-    <div className="w-full h-full bg-white shadow-lg px-2 mt-6 overflow-hidden  ">
+    <div className="w-full h-full bg-white shadow-lg px-4 mt-6 overflow-hidden ">
       <h3 className="text-center font-bold text-2xl text-[#0c3249] mb-2">Alumni <span className='text-[#026670]'>Journey</span></h3>
       <Slider {...settings}>
         {successors.map((successor) => (
-          <div key={successor.id} className="w-full bg-white rounded-lg shadow-lg p-4 flex items-center relative mb-8 border border-[#026670] mr-2">
+          <div key={successor.id} className="w-full bg-white rounded-lg shadow-lg p-4 flex items-center relative mb-8 border border-[#026670] mx-4 ">
             {/* Company Logo on left side */}
             <div className="absolute top-4 left-4 p-2 bg-white ">
               <img
                 src={successor.companyLogo}
                 alt={`${successor.name} Company Logo`}
-                className="w-16 h-10 object-contain"
+                className="w-20 h-12 object-contain"
               />
             </div>
 
             {/* Successor's Image (Centered within card) */}
-            <div className="flex justify-center items-center w-full h-30 rounded-lg overflow-hidden px-16 ">
+            <div className="flex justify-center items-center w-full h-40 rounded-lg overflow-hidden px-8 ">
               <img
                 src={successor.image}
                 alt={successor.name}
-                className="w-20 h-20 object-cover rounded-full shadow-lg"
+                className="w-24 h-24 object-cover rounded-full shadow-lg"
               />
             </div>
 
             {/* Successor's Name and Degree */}
             <div className="text-center font-bold mb-2">
-              <h3 className="text-lg font-semibold ">{successor.name}</h3>
-              <p className="text-xs text-gray-600">{successor.degree}</p>
-              <p className="text-xs text-gray-600">{successor.location}</p>
+              <h3 className="text-xl font-semibold">{successor.name}</h3>
+              <p className="text-sm text-gray-600">{successor.degree}</p>
+              <p className="text-sm text-gray-600">{successor.location}</p>
             </div>
 
             {/* Successor's Details */}
             <div className="text-center">
-              <p className="text-xs text-gray-600">{successor.details}</p>
+              <p className="text-sm text-gray-600">{successor.details}</p>
             </div>
           </div>
         ))}

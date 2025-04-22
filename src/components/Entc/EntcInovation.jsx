@@ -3,7 +3,7 @@ import entc from "../../assets/images/Entc-Images/ennovation.avif";
 
 export default function EntcInovataion() {
   return (
-    <div className="relative flex flex-col md:flex-row items-center p-4 md:px-16 shadow-lg overflow-hidden">
+    <div className="relative flex flex-col md:flex-row items-center px-4 md:px-16 shadow-lg overflow-hidden">
       
       {/* Image Section */}
       <img
@@ -15,7 +15,7 @@ export default function EntcInovataion() {
 
       {/* Text Section */}
       <div className="w-full md:w-2/3 md:pl-6 mt-4 md:mt-0">
-        <h1 className="text-2xl md:text-3xl font-bold text-[#36A5B9] mb-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-[#36A5B9] mb-4">
           Where Innovation Meets Connectivity!
         </h1>
         <p className="text-base md:text-xl text-gray-700 leading-relaxed">
