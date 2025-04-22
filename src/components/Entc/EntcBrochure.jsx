@@ -33,9 +33,8 @@ function AidsBrochure() {
         {/* Right Section */}
         <div className="mt-4 md:mt-4">
         <a
-            href="" // replace with actual file path
             onClick={handleScrollTop}
-            className="bg-[#41b9d0] border-2 border-[#0c3249] text-white px-6 py-3 rounded-3xl hover:bg-[#1e5f76] hover:text-white hover:border-white transition duration-300 flex items-center space-x-2"
+            className="bg-[#41b9d0] border-2 border-[#0c3249] text-white px-6 py-3 rounded-3xl hover:bg-[#1e5f76] hover:text-white hover:border-white transition duration-300 flex items-center space-x-2 cursor-pointer"
           >
             <FontAwesomeIcon icon={faDownload} />
             <span>Download Brochure</span>

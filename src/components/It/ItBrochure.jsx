@@ -30,9 +30,9 @@ const MechBrochure = () => {
         {/* Download Button */}
         <div className="mt-2 md:mt-4">
           <a
-            href="" // Replace with actual download link
+          
             onClick={handleDownloadClick}
-            className="bg-[#390161] border-2 border-white text-white px-6 py-3 rounded-3xl hover:border-white transition duration-300 flex items-center space-x-2"
+            className="bg-[#390161] border-2 border-white text-white px-6 py-3 rounded-3xl hover:border-white transition duration-300 flex items-center space-x-2 cursor-pointer"
           >
             <FontAwesomeIcon icon={faDownload} />
             <span>Download Brochure</span>
