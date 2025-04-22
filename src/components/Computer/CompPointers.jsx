@@ -1,6 +1,6 @@
 import React from "react";
 // Import React Icons
-import { FaChalkboardTeacher, FaHourglassHalf , FaRupeeSign, FaUsers } from 'react-icons/fa';
+import { FaChalkboardTeacher, FaHourglassHalf, FaRupeeSign, FaUsers } from 'react-icons/fa';
 
 const data = [
   {
@@ -9,7 +9,7 @@ const data = [
     description: "Offline",
   },
   {
-    icon: <FaHourglassHalf  className="text-[#134C93] text-4xl" />, // Calendar icon for Duration
+    icon: <FaHourglassHalf className="text-[#134C93] text-4xl" />, // Calendar icon for Duration
     value: "Duration",
     description: "4 Years",
   },
@@ -32,7 +32,7 @@ export default function CompPointers() {
         
         {/* Left content */}
         <div className="space-y-4">
-          <h2 className="text-2xl text-center md:text-left md:text-[44px] font-bold leading-tight text-gray-900">
+          <h2 className="text-3xl md:text-4xl text-center md:text-left md:text-[44px] font-bold leading-tight text-gray-900">
             ICEM: The Gateway to
             <br />
             <span className="text-[#134C93]">Exceptional Careers</span>
@@ -48,19 +48,14 @@ export default function CompPointers() {
           {/* Grid of icons */}
           <div className="grid grid-cols-2 gap-8 w-full">
             {data.map((item, index) => (
-              <div key={index} className="flex  items-center space-x-6 md:space-x-4">
+              <div key={index} className="flex items-center space-x-6 md:space-x-4">
                 <div className="w-8 md:w-12 h-8 md:h-12 mb-2 md:mb-0">
                   {item.icon}
                 </div>
                 <div>
                   <div className="text-lg md:text-xl font-bold text-gray-800">{item.value}</div>
                   <div className="text-sm text-gray-600 font-medium">
-                    {item.description.split("\n").map((line, idx) => (
-                      <React.Fragment key={idx}>
-                        {line}
-                        {idx < item.description.split("\n").length - 1 && <br />}
-                      </React.Fragment>
-                    ))}
+                    {item.description}
                   </div>
                 </div>
               </div>

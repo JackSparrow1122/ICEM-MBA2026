@@ -1,16 +1,16 @@
 import React from "react";
 
-import img1 from '../../assets/images/Com-Images/7.png';
-import img2 from '../../assets/images/Com-Images/6.png';
-import img3 from '../../assets/images/Com-Images/5.png';
-import img4 from '../../assets/images/Com-Images/1 (2).png';
-import img5 from '../../assets/images/Com-Images/2.png';
-import img6 from '../../assets/images/Com-Images/3.png';
-import img7 from '../../assets/images/Com-Images/4.png';
-import img8 from '../../assets/images/Com-Images/8.png';
-import img9 from '../../assets/images/5.png';
-import img10 from '../../assets/images/6.png';
-import img11 from '../../assets/images/7.png';
+import img1 from '../../assets/images/Com-Images/7.avif';
+import img2 from '../../assets/images/Com-Images/6.avif';
+import img3 from '../../assets/images/Com-Images/5.avif';
+import img4 from '../../assets/images/Com-Images/1 (2).avif';
+import img5 from '../../assets/images/Com-Images/2.avif';
+import img6 from '../../assets/images/Com-Images/3.avif';
+import img7 from '../../assets/images/Com-Images/4.avif';
+import img8 from '../../assets/images/Com-Images/8.avif';
+import img9 from '../../assets/images/5.avif';
+import img10 from '../../assets/images/6.avif';
+import img11 from '../../assets/images/7.avif';
 
 function ComReasons() {
   return (
@@ -26,7 +26,7 @@ function ComReasons() {
         <img src={img2} alt="" className="object-cover w-50 h-50" />
       </div>
 
-      <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-center mb-6 z-10 relative">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 z-10 relative">
         Why Choose <span className=" text-[#134C93]">ICEM</span> for Your <span className=" text-[#134C93]">Computer Engineering</span> Journey?
       </h2>
 

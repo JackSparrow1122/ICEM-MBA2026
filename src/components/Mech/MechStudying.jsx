@@ -10,7 +10,7 @@ import {
 } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import MyImage from '../../assets/images/infra.jpg';
+import MyImage from '../../assets/images/studying.avif';
 
 function MechStudying() {
   useEffect(() => {
@@ -58,11 +58,11 @@ function MechStudying() {
 
         {/* Right Side */}
         <div className="w-full lg:w-2/5 flex justify-center items-center mb-8 md:mb-0" data-aos="fade-left">
-          <div className="w-full h-full max-h-[600px]">
+          <div className="w-full h-full max-h-[700px]">
             <img
               src={MyImage}
               alt="Indira College"
-              className="w-full h-full object-cover object-bottom "
+              className="w-full h-full object-container object-bottom "
             />
           </div>
         </div>
@@ -70,7 +70,7 @@ function MechStudying() {
 
       {/* Highlights Section */}
       <section className="px-6 py-6 " data-aos="fade-up">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center text-[#01224f] mb-6 md:mb-8">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#01224f] mb-6 md:mb-8">
           ICEM Highlights
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
