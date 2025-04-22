@@ -31,13 +31,13 @@ const AidsApply = () => {
 
   return (
     <div
-      className="relative bg-[#0c3249] py-8 px-8 md:px-16 text-center text-white bg-contain bg-no-repeat bg-center"
+      className="relative bg-[#0c3249] py-8 px-4 md:px-16 text-center text-white bg-contain bg-no-repeat bg-center"
       style={backgroundStyle}
     >
       <div className="absolute inset-0 bg-[#0c3249] opacity-60 z-0"></div>
 
       <div className="relative z-10">
-        <h2 className="text-3xl md:text-3xl font-semibold mb-6">
+        <h2 className="text-3xl md:text-4xl font-semibold mb-6">
           Admission Process: Get Started Today!
         </h2>
         <p className="text-lg mb-6">
@@ -45,7 +45,7 @@ const AidsApply = () => {
           programme at ICEM College Pune
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-8 mx-auto">
           {steps.map((text, index) => (
             <div
               key={index}

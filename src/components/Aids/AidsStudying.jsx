@@ -30,7 +30,7 @@ function ItStudying() {
   return (
     <>
       {/* Main Section */}
-      <div className="flex flex-col lg:flex-row px-6 md:px-12 py-8 gap-10 poppins-regular overflow-hidden">
+      <div className="flex flex-col lg:flex-row px-4 md:px-16 py-8 gap-10 poppins-regular overflow-hidden">
         {/* Left Side */}
         <div className="w-full lg:w-3/5" data-aos="fade-right">
           <h1 className="text-3xl md:text-4xl font-semibold mb-4">Grow, Connect & Lead with ICEM!!</h1>
@@ -61,7 +61,7 @@ function ItStudying() {
         </div>
 
         {/* Right Side */}
-        <div className="w-full lg:w-2/5 flex justify-center items-center mb-8 md:mb-0" data-aos="fade-left">
+        <div className="w-full lg:w-2/5 flex justify-center items-center " data-aos="fade-left">
           <div className="w-full h-full max-h-[700px]">
             <img
               src={MyImage}
@@ -73,13 +73,13 @@ function ItStudying() {
       </div>
 
       {/* Highlights Section */}
-      <section className="px-6 py-6 " data-aos="fade-up">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center text-[#117577] mb-6 md:mb-8">
+      <section className="px-4 md:px-16 py-2 md:py-6 " data-aos="fade-up">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#117577] mb-6 md:mb-8">
           ICEM Highlights
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {/* Highlight 1 */}
-          <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center h-full border-1 hover:border-[#117577]">
+          <div className="bg-white rounded-xl shadow-md border border-gray-200 p-4 hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center h-full border-1 hover:border-[#117577]">
             <FaChartLine className="text-[#117577] text-5xl mb-4" />
             <h3 className="text-lg font-bold text-[#117577] mb-2">National Rankings</h3>
             <p className="text-gray-700 text-base">
@@ -92,7 +92,7 @@ function ItStudying() {
             <FaLaptopCode className="text-[#117577] text-5xl mb-4" />
             <h3 className="text-lg font-bold text-[#117577] mb-2">Smart India Hackathon</h3>
             <p className="text-gray-700 text-base">
-              Winners of <span className="text-[#117577]">Smart India Hackathon</span> for 3 consecutive years organized by <span className="text-[#117577]">Ministry of HRD, AICTE</span> & <span className="font-semibold text-[#117577]">NASSCOM</span>.
+              Winners of <span className="text-[#117577] font-semibold">Smart India Hackathon</span> for 3 consecutive years organized by <span className="text-[#117577] font-semibold">Ministry of HRD, AICTE</span> & <span className="font-semibold text-[#117577]">NASSCOM</span>.
             </p>
           </div>
 

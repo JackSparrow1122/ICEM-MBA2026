@@ -17,7 +17,7 @@ function AidsOfferings() {
   }, []);
 
   return (
-    <div className="px-8 md:px-16 py-6 md:py-8 poppins-regular mt-4">
+    <div className="px-4 md:px-16 py-6 md:py-8 poppins-regular ">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-[#117577]" data-aos="fade-up">
         AI-DS Engineering Offerings
       </h2>

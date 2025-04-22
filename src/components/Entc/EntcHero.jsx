@@ -24,16 +24,14 @@ function EntcHero() {
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
 
       {/* Content Container */}
-      <div className="relative z-10 flex flex-col md:flex-row justify-between items-center h-full p-4 md:px-16 md:py-8">
+      <div className="relative z-10 flex flex-col md:flex-row justify-between items-center h-full p-4 px-4 md:px-16 md:py-8">
         {/* Left Side: Text Content */}
         <div className="w-full md:w-1/2 flex flex-col justify-center text-left">
-          <h1 className="text-2xl md:text-5xl text-white font-bold leading-tight mb-4 md:mb-8">
+          <h1 className="text-3xl md:text-4xl text-white font-bold leading-tight mb-4 md:mb-8">
             ENTC Engineering at Indira College of Engineering & Management
           </h1>
-          <p className="text-base sm:hidden text-white leading-relaxed mb-4">
-            20+ Years of Excellence | 5 Specializations | 100% Placement Support
-          </p>
-          <p className="hidden sm:flex text-lg md:text-3xl text-white leading-relaxed mb-4">
+          
+          <p className=" sm:flex text-xl md:text-4xl text-white leading-relaxed mb-4">
             2 Decades of Excellence in Education | 5 Specializations | 100% Guaranteed Placement Assistance
           </p>
           <p className="hidden sm:flex text-md md:text-2xl text-white leading-relaxed mb-8">
