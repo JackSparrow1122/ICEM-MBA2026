@@ -61,21 +61,6 @@ function EntcHero() {
       {/* Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 z-10"></div>
 
-<<<<<<< HEAD
-      {/* Content Container */}
-      <div className="relative z-10 flex flex-col md:flex-row justify-between items-center h-full p-4 px-4 md:px-16 md:py-8">
-        {/* Left Side: Text Content */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center text-left">
-          <h1 className="text-3xl md:text-4xl text-white font-bold leading-tight mb-4 md:mb-8">
-            ENTC Engineering at Indira College of Engineering & Management
-          </h1>
-          
-          <p className=" sm:flex text-xl md:text-4xl text-white leading-relaxed mb-4">
-            2 Decades of Excellence in Education | 5 Specializations | 100% Guaranteed Placement Assistance
-          </p>
-          <p className="hidden sm:flex text-md md:text-2xl text-white leading-relaxed mb-8">
-            ENTC at ICEM - Powering the Future with <br /> Electronics & Telecommunication!
-=======
       {/* Half Gear */}
       <img
         src={gearImage}
@@ -89,7 +74,7 @@ function EntcHero() {
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           <p className="font-semibold text-3xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight mb-4">
             <span className="text-[#36A5B9]">Electronics & Telecommunication Engineering</span> at Indira College of Engineering & Management
->>>>>>> 1b62aa6 (push)
+
           </p>
           <div className="hidden lg:block">
             <p className="md:text-xl py-4">
