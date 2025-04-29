@@ -1,28 +1,27 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 const CompBanner = () => {
-  // Function to scroll to the top of the page when the button is clicked
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <div className="py-4 md:py-8 px-8 sm:px-12 rounded-lg shadow-lg transform transition-all duration-700 ease-in-out">
+    <div className="py-4 md:py-8 px-4 md:px-8 lg:px-16 sm:px-12 rounded-lg shadow-lg transform transition-all duration-700 ease-in-out">
       <div className="mx-auto text-center">
-        {/* Banner Heading */}
-        <h1 className="text-2xl md:text-3xl font-extrabold mb-4 animate__animated animate__fadeIn animate__delay-1s">
+        {/* Heading */}
+        <h1 className="text-3xl md:text-4xl font-extrabold mb-4 animate__animated animate__fadeIn animate__delay-1s">
           Looking for the Best Computer Engineering College in Pune?
         </h1>
-        
+
         {/* Subheading */}
-        <p className="text-lg sm:text-xl font-semibold mb-2 md:mb-8 animate__animated animate__fadeIn animate__delay-2s">
-          Your search ends at <span className='text-[#134C93] font-bold'>ICEM!</span>
+        <p className="text-2xl md:text-3xl font-semibold mb-2 md:mb-8 animate__animated animate__fadeIn animate__delay-2s">
+          Your search ends at <span className="text-[#134C93] font-bold">ICEM!</span>
         </p>
-        
-        {/* Button to Learn More */}
+
+        {/* CTA Button */}
         <div className="flex justify-center mb-4">
           <button
-            onClick={scrollToTop} // Call scrollToTop when the button is clicked
+            onClick={scrollToTop}
             className="bg-[#F7F0FC] text-[#161e3a] font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#2241ac] hover:text-[#F7F0FC] transition-all duration-300 ease-in-out"
           >
             Apply Now
@@ -33,4 +32,4 @@ const CompBanner = () => {
   );
 };
 
-export default CompBanner;
+export default memo(CompBanner);

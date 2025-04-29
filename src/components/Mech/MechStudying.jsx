@@ -10,7 +10,7 @@ import {
 } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import MyImage from '../../assets/images/infra.jpg';
+import MyImage from '../../assets/images/studying.avif';
 
 function MechStudying() {
   useEffect(() => {
@@ -30,13 +30,13 @@ function MechStudying() {
   return (
     <>
       {/* Main Section */}
-      <div className="flex flex-col lg:flex-row px-6 md:px-12 py-8 gap-10 poppins-regular overflow-hidden">
+      <div className="flex flex-col lg:flex-row px-4 md:px-8 lg:px-16 py-8 gap-10 poppins-regular overflow-hidden">
         {/* Left Side */}
         <div className="w-full lg:w-3/5" data-aos="fade-right">
           <h1 className="text-3xl md:text-4xl font-semibold mb-4">Grow, Connect & Lead with ICEM!!</h1>
           <h2 className="text-xl md:text-2xl font-semibold text-[#FFC805] mb-4">Mechnical Engineering</h2>
           <p className="text-md md:text-lg mb-4" data-aos="fade-up">
-          Indira College of Engineering & Management offers a comprehensive mechanical engineering program that blends theoretical knowledge with hands-on experience. Nestled within a vast, vibrant, and lush green campus, the institute provides an inspiring learning environment where innovation meets excellence. The fresh, open spaces and state-of-the-art infrastructure create the perfect setting for students to thrive academically and personally. Our students gain exposure to cutting-edge technologies, industrial practices, and expert mentoring, preparing them for a successful career in the engineering field.
+          Indira College of Engineering & Management offers a comprehensive mechanical engineering programme that blends theoretical knowledge with hands-on experience. Nestled within a vast, vibrant, and lush green campus, the institute provides an inspiring learning environment where innovation meets excellence. The fresh, open spaces and state-of-the-art infrastructure create the perfect setting for students to thrive academically and personally. Our students gain exposure to cutting-edge technologies, industrial practices, and expert mentoring, preparing them for a successful career in the engineering field.
           </p>
 
           {/* Info Cards */}
@@ -57,20 +57,20 @@ function MechStudying() {
         </div>
 
         {/* Right Side */}
-        <div className="w-full lg:w-2/5 flex justify-center items-center mb-8 md:mb-0" data-aos="fade-left">
-          <div className="w-full h-full max-h-[600px]">
+        <div className="w-full lg:w-2/5 flex justify-center items-center md:mb-0" data-aos="fade-left">
+          <div className="w-full h-full max-h-[700px]">
             <img
               src={MyImage}
               alt="Indira College"
-              className="w-full h-full object-cover object-bottom "
+              className="w-full h-full object-container object-bottom "
             />
           </div>
         </div>
       </div>
 
       {/* Highlights Section */}
-      <section className="px-6 py-6 " data-aos="fade-up">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center text-[#01224f] mb-6 md:mb-8">
+      <section className="px-4 md:px-16 md:py-6 " data-aos="fade-up">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#01224f] mb-6 md:mb-8">
           ICEM Highlights
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

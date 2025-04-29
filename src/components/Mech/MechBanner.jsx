@@ -7,15 +7,15 @@ const CompBanner = () => {
   };
 
   return (
-    <div className="py-4 md:py-8 px-8 sm:px-12 rounded-lg shadow-lg transform transition-all duration-700 ease-in-out">
+    <div className="py-4 md:py-8 px-4 md:px-8 lg:px-16 rounded-lg shadow-lg transform transition-all duration-700 ease-in-out">
       <div className="mx-auto text-center">
         {/* Banner Heading */}
-        <h1 className="text-2xl md:text-3xl font-extrabold mb-4 animate__animated animate__fadeIn animate__delay-1s">
+        <h1 className="text-3xl md:text-4xl font-extrabold mb-4 animate__animated animate__fadeIn animate__delay-1s">
           Looking for the Best Mechanical Engineering College in Pune?
         </h1>
         
         {/* Subheading */}
-        <p className="text-lg sm:text-xl font-semibold mb-2 md:mb-8 animate__animated animate__fadeIn animate__delay-2s">
+        <p className="text-2xl font-semibold mb-2 md:mb-8 animate__animated animate__fadeIn animate__delay-2s">
           Your search ends at <span className='text-[#062652] font-bold'>ICEM!</span>
         </p>
         

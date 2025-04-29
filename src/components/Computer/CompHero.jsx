@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import backgroundImage from "../../assets/images/Com-Images/herocomp-e.avif";
 import gearImage from "../../assets/images/gears.png";
 
@@ -6,36 +6,47 @@ function MechHero() {
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const requestRef = useRef();
+  const words = useMemo(() => ["Innovation", "Automation", "Precision", "Revolution"], []);
 
   useEffect(() => {
-    const words = ["Innovation", "Automation", "Precision", "Revolution"];
+    let lastTime = Date.now();
 
-    const handleTyping = () => {
-      const currentWord = words[currentWordIndex];
+    const animate = () => {
+      const now = Date.now();
+      const delta = now - lastTime;
 
-      if (!isDeleting) {
-        if (currentText === currentWord) {
-          setTimeout(() => setIsDeleting(true), 1000);
-          return;
+      if (delta >= (isDeleting ? 80 : 120)) {
+        const currentWord = words[currentWordIndex];
+
+        if (!isDeleting) {
+          if (currentText === currentWord) {
+            setTimeout(() => setIsDeleting(true), 1000);
+          } else {
+            setCurrentText(currentWord.substring(0, currentText.length + 1));
+          }
+        } else {
+          if (currentText === "") {
+            setIsDeleting(false);
+            setCurrentWordIndex((prev) => (prev + 1) % words.length);
+          } else {
+            setCurrentText(currentWord.substring(0, currentText.length - 1));
+          }
         }
-        setCurrentText(currentWord.substring(0, currentText.length + 1));
-      } else {
-        if (currentText === "") {
-          setIsDeleting(false);
-          setCurrentWordIndex((prev) => (prev + 1) % words.length);
-          return;
-        }
-        setCurrentText(currentWord.substring(0, currentText.length - 1));
+
+        lastTime = now;
       }
+
+      requestRef.current = requestAnimationFrame(animate);
     };
 
-    const timeout = setTimeout(handleTyping, isDeleting ? 80 : 120);
-    return () => clearTimeout(timeout);
-  }, [currentText, isDeleting, currentWordIndex]);
+    requestRef.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(requestRef.current);
+  }, [currentText, isDeleting, currentWordIndex, words]);
 
   return (
     <div
-      className="relative lg:px-6 pt-6 h-auto bg-cover bg-right md:bg-center bg-no-repeat text-white flex items-start"
+      className="relative px-4 md:px-8 lg:px-16 pt-6 h-auto bg-cover bg-right md:bg-center bg-no-repeat text-white flex items-start"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <style>
@@ -58,16 +69,15 @@ function MechHero() {
       />
 
       {/* Content */}
-      <div className="flex flex-col lg:flex-row items-center lg:items-start z-20 w-full px-4 md:px-8 py-8 gap-6">
-
+      <div className="flex flex-col lg:flex-row items-center lg:items-start z-20 w-full  py-8 gap-6">
         {/* Left Text */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
-          <p className="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight mb-4">
+          <p className="font-semibold text-3xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight mb-4">
             <span className="text-[#155DFC]">Computer Engineering</span> at Indira College of Engineering & Management
           </p>
           <div className="hidden lg:block">
             <p className="md:text-xl py-4">
-              2 Decades of Excellence in Education | 5 Specializations | <br />
+              2 Decades of Excellence in Education | 5 Specializations <br />
               <span className="text-[#155DFC] font-bold">100% Guaranteed Placement Assistance</span>
             </p>
             <p className="text-2xl md:text-3xl py-2">

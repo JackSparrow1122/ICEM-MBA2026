@@ -1,36 +1,41 @@
 import React, { useEffect } from 'react';
 import {
-  FaLaptopCode ,
-  FaApple   ,
-  FaUserTie ,
-  FaChalkboardTeacher ,
+  FaLaptopCode,
+  FaApple,
+  FaUserTie,
+  FaChalkboardTeacher,
   FaGraduationCap,
   FaChartLine,
   FaUsers,
-  FaRocket
+  FaRocket,
 } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import MyImage from '../../assets/images/infra.jpg';
+import MyImage from '../../assets/images/studying.avif';
 
-function ItStudying() {
+const ItStudying = React.memo(() => {
   useEffect(() => {
-    AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      debounceDelay: 50, // Optimize AOS for better performance
+    });
   }, []);
 
   const cards = [
-    { icon: <FaLaptopCode  className="text-[#390161] mr-4 text-4xl" />, text: '2 Decades of Excellence in IT Education' },
-    { icon: <FaUserTie  className="text-[#390161] mr-4 text-4xl" />, text: '450+ Top Recruiters Hiring for IT & Software Roles' },
-    { icon: <FaChalkboardTeacher  className="text-[#390161] mr-4 text-5xl" />, text: 'Industry Guest Lectures & Corporate Mentorship Programs' },
-    { icon: <FaUsers  className="text-[#390161] mr-4 text-5xl" />, text: 'Innovative R&D in Cloud Computing, AI & Cybersecurity' },
-    { icon: <FaApple    className="text-[#390161] mr-4 text-3xl" />, text: 'State-of-the-Art IT Labs with Apple Ecosystem' },
-    { icon: <FaRocket  className="text-[#390161] mr-4 text-5xl" />, text: 'Exceptional Growth Opportunities in Tech & Innovation Fields' },
+    { icon: <FaLaptopCode className="text-[#390161] mr-4 text-4xl" />, text: '2 Decades of Excellence in IT Education' },
+    { icon: <FaUserTie className="text-[#390161] mr-4 text-4xl" />, text: '450+ Top Recruiters Hiring for IT & Software Roles' },
+    { icon: <FaChalkboardTeacher className="text-[#390161] mr-4 text-5xl" />, text: 'Industry Guest Lectures & Corporate Mentorship Programs' },
+    { icon: <FaUsers className="text-[#390161] mr-4 text-5xl" />, text: 'Innovative R&D in Cloud Computing, AI & Cybersecurity' },
+    { icon: <FaApple className="text-[#390161] mr-4 text-3xl" />, text: 'State-of-the-Art IT Labs with Apple Ecosystem' },
+    { icon: <FaRocket className="text-[#390161] mr-4 text-5xl" />, text: 'Exceptional Growth Opportunities in Tech & Innovation Fields' },
   ];
 
   return (
     <>
       {/* Main Section */}
-      <div className="flex flex-col lg:flex-row px-6 md:px-12 py-8 gap-10 poppins-regular overflow-hidden">
+      <div className="flex flex-col lg:flex-row px-4 md:px-8 lg:px-16 py-8 gap-10 poppins-regular overflow-hidden">
         {/* Left Side */}
         <div className="w-full lg:w-3/5" data-aos="fade-right">
           <h1 className="text-3xl md:text-4xl font-semibold mb-4">Grow, Connect & Lead with ICEM!!</h1>
@@ -58,22 +63,23 @@ function ItStudying() {
 
         {/* Right Side */}
         <div className="w-full lg:w-2/5 flex justify-center items-center mb-8 md:mb-0" data-aos="fade-left">
-          <div className="w-full h-full max-h-[600px]">
+          <div className="w-full h-full max-h-[700px]">
             <img
               src={MyImage}
               alt="Indira College"
-              className="w-full h-full object-cover object-bottom "
+              className="w-full h-full object-container"
+              loading="lazy" // Lazy loading for performance improvement
             />
           </div>
         </div>
       </div>
 
       {/* Highlights Section */}
-      <section className="px-6 py-6 " data-aos="fade-up">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center text-[#390161] mb-6 md:mb-8">
+      <section className="px-4 md:px-16 py-6 " data-aos="fade-up">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#390161] mb-6 md:mb-8">
           ICEM Highlights
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {/* Highlight 1 */}
           <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center h-full  border-1 hover:border-[#390161]">
             <FaChartLine className="text-[#390161] text-5xl mb-4" />
@@ -104,6 +110,6 @@ function ItStudying() {
       </section>
     </>
   );
-}
+});
 
 export default ItStudying;

@@ -5,7 +5,7 @@ import { FaChalkboardTeacher, FaHourglassHalf , FaRupeeSign, FaUsers } from 'rea
 const data = [
   {
     icon: <FaChalkboardTeacher className="text-[#FFC80F] text-4xl" />, // Notepad icon for Program Format
-    value: "Program Format",
+    value: "Programme Format",
     description: "Offline",
   },
   {
@@ -15,8 +15,8 @@ const data = [
   },
   {
     icon: <FaRupeeSign className="text-[#FFC80F] text-4xl" />, // Money icon for Fees
-    value: "Program Fees",
-    description: "Rs.77,368.00/-",
+    value: "Programme Fees",
+    description: "Rs.1,02,868 /-",
   },
   {
     icon: <FaUsers className="text-[#FFC80F] text-4xl" />, // Users icon for Recruiters
@@ -27,12 +27,12 @@ const data = [
 
 export default function MechPointers() {
   return (
-    <section className="bg-[#e4ecf7] py-4 md:py-12 px-8 md:px-16 font-sans">
+    <section className="bg-[#e4ecf7] py-6 md:py-12 px-4 md:px-8 lg:px-16 font-sans">
       <div className="w-auto grid md:grid-cols-2 gap-2 items-center overflow-hidden">
         
         {/* Left content */}
         <div className="space-y-4">
-          <h2 className="text-2xl text-center md:text-left md:text-[44px] font-bold leading-tight text-gray-900">
+          <h2 className="text-3xl text-center md:text-left md:text-[44px] font-bold leading-tight text-gray-900">
             ICEM: The Gateway to
             <br />
             <span className="text-[#FFC80F]">Exceptional Careers</span>

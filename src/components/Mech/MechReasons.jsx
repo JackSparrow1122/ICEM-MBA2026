@@ -46,7 +46,7 @@ const reasons = [
 
 function MechReasons() {
   return (
-    <div className="px-6 md:px-10 lg:px-16 py-8" style={{ backgroundColor: '#01224F' }}>
+    <div className="px-4 md:px-8 lg:px-16 py-8" style={{ backgroundColor: '#01224F' }}>
       <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-center text-white mb-6">
         Why Choose <span className=" text-[#ffc80f] ">ICEM</span> for Your <span className=" text-[#ffc80f] ">Mechanical Engineering</span>  Journey?
       </h2>

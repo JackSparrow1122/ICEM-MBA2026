@@ -58,8 +58,8 @@ const CompRecruiter = () => {
   return (
     <div className="logo-slider-section py-4 roboto-regular">
       <div className="text-center mb-4">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-4xl font-bold">
-          <span >Top Recruiters</span> 
+        <h2 className="text-3xl  lg:text-4xl xl:text-4xl font-bold">Top  
+          <span className='text-[#FAB701]'> Recruiters</span> 
         </h2>
       </div>
       <div className="logo-slider relative overflow-hidden w-full">
