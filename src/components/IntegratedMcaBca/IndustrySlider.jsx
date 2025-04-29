@@ -59,6 +59,7 @@ const LifeAtICEM = () => {
                 src={`https://www.youtube.com/embed/-rAt2kuZN1E/${videos[0].id}`}
                 title={videos[0].title}
                 allowFullScreen
+                loading="lazy"
                 className="w-full h-full"
               />
             </div>
@@ -97,6 +98,7 @@ const LifeAtICEM = () => {
                 src={`https://www.youtube.com/embed/fiIYjIaeEQg/${videos[1].id}`}
                 title={videos[1].title}
                 allowFullScreen
+                loading="lazy"
                 className="w-full h-full scale-x-[-1]"
               />
             </div>
