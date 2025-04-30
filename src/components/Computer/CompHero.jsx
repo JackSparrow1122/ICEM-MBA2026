@@ -77,7 +77,7 @@ function MechHero() {
           </p>
           <div className="hidden lg:block">
             <p className="md:text-xl py-4">
-              2 Decades of Excellence in Education | 5 Specializations <br />
+              2 Decades of Excellence in Education |  <br />
               <span className="text-[#155DFC] font-bold">100% Guaranteed Placement Assistance</span>
             </p>
             <p className="text-2xl md:text-3xl py-2">

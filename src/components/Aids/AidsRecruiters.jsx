@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 
 import logo1 from '../../../public/logos/schlumberger.avif';
 import logo2 from  '../../../public/logos/sas-min.avif';

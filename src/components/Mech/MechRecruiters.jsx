@@ -5,8 +5,8 @@ import logo2 from  '../../../public/logos/sas-min.avif';
 import logo3 from  '../../../public/logos/yash-min.avif';
 import logo4 from  '../../../public/logos/philips-min.avif';
 import logo5 from  '../../../public/logos/jaspay-min.avif';
-import logo6 from  '../../../public/logos/veritas-min.avif';
-import logo7 from '../../../public/logos/fis-min.avif'; 
+import logo6 from  '../../../public/logos/emerson.avif';
+import logo7 from '../../../public/logos/vander.avif';
 import logo8 from '../../../public/logos/infosys-min.avif'; 
 import logo9 from '../../../public/logos/kpit-min.avif'; 
 import logo10 from '../../../public/logos/nttdata-min.avif'; 
@@ -36,11 +36,11 @@ const CompRecruiter = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   const logos = [
-    logo1, logo2, logo3, logo4, logo5, logo6,
+    logo19, logo6, logo22, logo23, logo29, logo20,
     logo7, logo8, logo9, logo10, logo11, logo12,
-    logo13, logo14, logo15, logo16, logo17, logo18,logo19,
-    logo20, logo21, logo22, logo23, logo24, logo25,
-    logo26, logo27,logo28,logo29, logo30,logo31
+    logo13, logo14, logo15, logo16, logo17, logo18,logo1,
+    logo2, logo21, logo3, logo4, logo24, logo25,
+    logo26, logo27,logo28,logo5, logo30,logo31
   ];
 
   useEffect(() => {

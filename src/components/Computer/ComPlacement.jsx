@@ -51,7 +51,7 @@ function IntegratedBbaMbaPlacement() {
     <div className="py-10 px-4 sm:px-6 md:px-8">
       {/* Heading */}
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#555555]">
-        Our <span className="text-[#006BB3]">Top</span> Placements
+        College <span className="text-[#006BB3]">Top</span> Placements
       </h1>
 
       {/* Responsive Profiles Grid */}

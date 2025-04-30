@@ -51,7 +51,7 @@ const ItHero = () => {
           </p>
           <div className="hidden lg:block">
             <p className="md:text-xl py-4">
-              2 Decades of Excellence in Education | 5 Specializations | 
+              2 Decades of Excellence in Education |  
               <br />
               <span className="text-[#A540FF] font-bold">100% Guaranteed Placement Assistance</span>
             </p>
