@@ -41,11 +41,11 @@ function AidsHero() {
             Decode Your Future with <span className="text-[#41b9d0]">AI-DS</span> at ICEM!
           </h1>
           <p className="hidden md:block md:text-2xl py-4">
-            2 Decades of Excellence | 5 Specializations <br />
+            2 Decades of Excellence |  <br />
             <span className="text-[#41b9d0] font-bold">100% Guaranteed Placement Assistance</span>
           </p>
           <p className="hidden md:block text-2xl md:text-3xl py-4">
-            Apply now for the exciting field of <br /><span className="text-[#41b9d0] font-bold">AI-DS Research & Development</span>!
+            Apply now for the exciting field of <br /><span className="text-[#41b9d0] font-bold">Artificial Intelligence & Data Science </span> !
           </p>
         </div>
 

@@ -62,7 +62,7 @@ function ItPlacement() {
         className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#555555]"
         data-aos="fade-up"
       >
-        Our <span className="text-[#A540FF]">Top</span> Placements
+        College <span className="text-[#A540FF]">Top</span> Placements
       </h1>
 
       {/* Responsive Profiles Grid */}
