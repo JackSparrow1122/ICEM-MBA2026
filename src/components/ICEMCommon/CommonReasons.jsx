@@ -11,64 +11,65 @@ const features = [
   {
     title: "Guaranteed Placement Assistance",
     description: "Secure your career with top recruiters!",
-    icon: <FaBullseye className="text-[#259CA8] w-10 h-10 mx-auto" />,
+    Icon: FaBullseye,
   },
   {
     title: "State-of-the-Art Infrastructure",
     description: "Apple Labs, research centers, and cutting-edge tech!",
-    icon: <FaTrophy className="text-[#259CA8] w-10 h-10 mx-auto" />,
+    Icon: FaTrophy,
   },
   {
     title: "Industry-Tied Programs",
     description: "Get hands-on experience with live projects!",
-    icon: <FaSatelliteDish className="text-[#259CA8] w-10 h-10 mx-auto" />,
+    Icon: FaSatelliteDish,
   },
   {
     title: "Vibrant Campus Life",
     description: "Hackathons, Tech Fests, and Sports!",
-    icon: <FaFire className="text-[#259CA8] w-10 h-10 mx-auto" />,
+    Icon: FaFire,
   },
   {
     title: "Holistic Learning",
     description: "A mix of technical, soft skills, and leadership training!",
-    icon: <FaGraduationCap className="text-[#259CA8] w-10 h-10 mx-auto" />,
+    Icon: FaGraduationCap,
   },
 ];
 
 export default function WhyChooseICEM() {
   return (
-    <section className="bg-white py-2 rounded-t-[100px] px-4  md:px-16 mt-8">
-      <div className="text-center mb-10 px-4">
+    <section className="bg-white py-12 rounded-t-[100px] px-4 md:px-16 mt-12">
+      <div className="text-center mb-12 px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-[#135783] mb-4">
-          Why Choose <span className="text-[#259CA8]">ICEM</span> for Your <span className="text-[#259CA8]">Engineering</span> Journey?
+          Why Choose <span className="text-[#259CA8]">ICEM</span> for Your{" "}
+          <span className="text-[#259CA8]">Engineering</span> Journey?
         </h2>
         <p className="max-w-3xl mx-auto text-gray-700 text-lg">
-          At Indira College of Engineering and Management (ICEM) an Autonomous institute, we empower
-          innovators, problem solvers, and leaders! With world-class faculty,
-          industry-aligned curriculum, and top-notch placements, ICEM is the
-          place where your engineering dreams take flight.
+          At Indira College of Engineering and Management (ICEM), an Autonomous
+          institute, we empower innovators, problem solvers, and leaders! With
+          world-class faculty, industry-aligned curriculum, and top-notch
+          placements, ICEM is where your engineering dreams take flight.
         </p>
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 px-6">
-  {features.map((feature, index) => (
-    <div key={index} className="text-left relative">
-      <div className="mb-3">
-        {React.cloneElement(feature.icon, { className: "text-[#259CA8] w-10 h-10" })}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 px-6">
+        {features.map(({ title, description, Icon }, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-start text-left relative group"
+          >
+            <Icon className="text-[#259CA8] w-10 h-10 mb-3 transition-transform duration-300 group-hover:scale-110" />
+            <h3 className="font-semibold text-lg text-[#135783] mb-2">
+              {title}
+            </h3>
+            <p className="text-sm text-gray-600">{description}</p>
+
+            {/* Vertical Dotted Line (Desktop Only) */}
+            {index < features.length - 1 && (
+              <div className="hidden lg:block absolute top-0 right-[-20px] h-full border-r-2 border-dotted border-gray-300"></div>
+            )}
+          </div>
+        ))}
       </div>
-      <h3 className="font-semibold text-lg text-[#135783] mb-2">
-        {feature.title}
-      </h3>
-      <p className="text-sm text-gray-600">{feature.description}</p>
-      {index < features.length - 1 && (
-        <div className="hidden md:block absolute right-0 top-0 h-full border-r-4 border-gray-300 border-dotted"></div>
-
-
-      )}
-    </div>
-  ))}
-</div>
-
     </section>
   );
 }
