@@ -120,7 +120,7 @@ function MechHero() {
               >
                 <option value="">Select Course</option>
                 <option value="Mech">Mechanical Engineering</option>
-                <option value="AI">Electronics and Telicomunication Engineering</option>
+                <option value="AI">Electronics and Telecomunication Engineering</option>
                 <option value="IT">Information Technology</option>
                 <option value="CS">Computer Science</option>
                 <option value="AIDS">Artificial Intelligence and Data Science</option>
