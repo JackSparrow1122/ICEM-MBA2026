@@ -9,7 +9,7 @@ import {
 
 const features = [
   {
-    title: "100% Placement Assistance",
+    title: "Guaranteed Placement Assistance",
     description: "Secure your career with top recruiters!",
     icon: <FaBullseye className="text-[#259CA8] w-10 h-10 mx-auto" />,
   },
@@ -43,7 +43,7 @@ export default function WhyChooseICEM() {
           Why Choose <span className="text-[#259CA8]">ICEM</span> for Your <span className="text-[#259CA8]">Engineering</span> Journey?
         </h2>
         <p className="max-w-3xl mx-auto text-gray-700 text-lg">
-          At Indira College of Engineering and Management (ICEM), we empower
+          At Indira College of Engineering and Management (ICEM) an Autonomous institute, we empower
           innovators, problem solvers, and leaders! With world-class faculty,
           industry-aligned curriculum, and top-notch placements, ICEM is the
           place where your engineering dreams take flight.
