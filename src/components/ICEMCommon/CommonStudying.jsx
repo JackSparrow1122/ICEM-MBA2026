@@ -47,7 +47,7 @@ function ComputerEngineering() {
   const cards = [
     {
       icon: <FaUniversity className="text-[#259CA8] mr-4 text-5xl" />,
-      text: '20+ Years of Academic Excellence in Engineering Education',
+      text: '2 Decades of Academic Excellence in Engineering Education',
     },
     {
       icon: <FaTools className="text-[#259CA8] mr-4 text-5xl" />,
@@ -67,7 +67,7 @@ function ComputerEngineering() {
     },
     {
       icon: <FaRocket className="text-[#259CA8] mr-4 text-5xl" />,
-      text: 'State-of-the-Art Infrastructure with Advanced Labs, Sports Facilities & Vibrant Campus Life',
+      text: 'State-of-the-Art Infrastructure with Advanced Labs & Apple Labs, Sports Facilities & Vibrant Campus Life',
     },
   ];
   
