@@ -49,7 +49,6 @@ const CompOffringICEM = () => {
       bg: 'bg-gradient-to-b from-[#41B9D0] to-[white]',
       image: img,
     },
-   
   ];
 
   return (
@@ -60,7 +59,6 @@ const CompOffringICEM = () => {
       >
         Engineering Specializations Offered at ICEM
       </h2>
-     
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4">
         {specializations.map((item, index) => (
