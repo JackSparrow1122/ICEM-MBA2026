@@ -39,7 +39,7 @@ const LifeAtICEM = () => {
           style={{ height: leftHeight || "auto" }}
         >
           <iframe
-            src="https://www.youtube.com/embed/sU3FkzUKHXU"
+            src="https://www.youtube.com/embed/-rAt2kuZN1E"
             title="Life At ICEM"
             allowFullScreen
             className="w-full h-full"
