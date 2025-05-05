@@ -25,7 +25,7 @@ import CommonBanner from '../components/ICEMCommon/CommonBanner'
 // import CommonInovation from '../components/ICEMCommon/CommonInovation'
 import CommonReasons from '../components/ICEMCommon/CommonReasons'
 import CommonTestimonials from '../components/ICEMCommon/CommonTestimonials'
-import FutureWithIcem from '../components/ICEMCommon/FutureWithIcem'
+import FutureWithIcem from '../components/ICEMCommon/FutureCommon'
 import Footer from '../pages/Footer'
 const ICEMCommon = () => {
   return (
