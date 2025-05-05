@@ -1,16 +1,3 @@
-{/* <EntcHero /> 
-<EntcPlacement/>
-<EntcRecruiters/>
-<EntcBanner/> 
-<EntcInovation/>
-<EntcReasons/>
-<EntcOfferings />
-<EntcBrochure />
-<EntcPointers />  
-<EntcStudying />
-<EntcApply />
-<EntcTestimonials />
-<Footer/> */}
 import React from 'react'
 import CommonHero from '../components/ICEMCommon/CommonHero'
 import CommonPlacement from '../components/ICEMCommon/CommonPlacement'
