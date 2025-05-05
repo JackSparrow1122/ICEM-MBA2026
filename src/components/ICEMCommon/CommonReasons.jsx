@@ -38,6 +38,7 @@ const features = [
 export default function WhyChooseICEM() {
   return (
     <section className="bg-white py-12 rounded-t-[100px] px-4 md:px-16 mt-12">
+      {/* Heading Section */}
       <div className="text-center mb-12 px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-[#135783] mb-4">
           Why Choose <span className="text-[#259CA8]">ICEM</span> for Your{" "}
@@ -51,6 +52,7 @@ export default function WhyChooseICEM() {
         </p>
       </div>
 
+      {/* Features Grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 px-6">
         {features.map(({ title, description, Icon }, index) => (
           <div
@@ -58,9 +60,7 @@ export default function WhyChooseICEM() {
             className="flex flex-col items-start text-left relative group"
           >
             <Icon className="text-[#259CA8] w-10 h-10 mb-3 transition-transform duration-300 group-hover:scale-110" />
-            <h3 className="font-semibold text-lg text-[#135783] mb-2">
-              {title}
-            </h3>
+            <h3 className="font-semibold text-lg text-[#135783] mb-2">{title}</h3>
             <p className="text-sm text-gray-600">{description}</p>
 
             {/* Vertical Dotted Line (Desktop Only) */}

@@ -42,8 +42,6 @@ function ComputerEngineering() {
     return () => clearTimeout(debounceAOS);
   }, []);
 
-
-  
   const cards = [
     {
       icon: <FaUniversity className="text-[#259CA8] mr-4 text-5xl" />,
@@ -70,16 +68,20 @@ function ComputerEngineering() {
       text: 'State-of-the-Art Infrastructure with Advanced Labs & Apple Labs, Sports Facilities & Vibrant Campus Life',
     },
   ];
-  
 
   return (
     <>
       <div className="flex flex-col lg:flex-row px-4 md:px-8 lg:px-16 py-8 gap-10 poppins-regular overflow-hidden">
         <div className="w-full lg:w-3/5" data-aos="fade-right">
-          <h1 className="text-3xl md:text-5xl font-semibold mb-4">Your Gateway to the Best Engineering College in Pune! </h1>
-          <h2 className="text-xl md:text-2xl font-semibold text-[#259CA8] mb-4">Build, Innovate & Excel with ICEM Engineering! </h2>
+          <h1 className="text-3xl md:text-5xl font-semibold mb-4">
+            Your Gateway to the Best Engineering College in Pune!
+          </h1>
+          <h2 className="text-xl md:text-2xl font-semibold text-[#259CA8] mb-4">
+            Build, Innovate & Excel with ICEM Engineering!
+          </h2>
           <p className="text-md md:text-lg mb-4" data-aos="fade-up">
-          Indira College of Engineering & Management (ICEM) is one of the top engineering colleges in Pune, offering AICTE-approved B.E. programs in Computer, IT, Mechanical, ENTC, and AI & Data Science. With 450+ recruiters, industry-aligned curriculum, and a campus equipped with Apple Labs, smart classrooms, R&D zones, and sports facilities—ICEM ensures holistic development. Students gain hands-on training, expert mentorship, and real-time exposure through industrial visits, internships, and placement support.      </p>
+            Indira College of Engineering & Management (ICEM) is one of the top engineering colleges in Pune, offering AICTE-approved B.E. programs in Computer, IT, Mechanical, ENTC, and AI & Data Science. With 450+ recruiters, industry-aligned curriculum, and a campus equipped with Apple Labs, smart classrooms, R&D zones, and sports facilities—ICEM ensures holistic development. Students gain hands-on training, expert mentorship, and real-time exposure through industrial visits, internships, and placement support.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-6">
             {cards.map((card, index) => (
               <InfoCard key={index} icon={card.icon} text={card.text} />
