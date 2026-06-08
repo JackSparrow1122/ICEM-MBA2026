@@ -6,6 +6,7 @@ import CommonSpecialization from '../components/ICEMCommon/CommonSpecialization'
 import CommonBrochure from '../components/ICEMCommon/CommonBrochure'
 import CommonPointers from '../components/ICEMCommon/CommonPointes'
 import CommonStudying from '../components/ICEMCommon/CommonStudying'
+import CommonPossibilities from '../components/ICEMCommon/CommonPossibilities'
 import CommonApply from '../components/ICEMCommon/CommonApply'
 import Headline from '../components/ICEMCommon/Headling'
 import CommonBanner from '../components/ICEMCommon/CommonBanner'
@@ -27,6 +28,7 @@ const ICEMCommon = () => {
       <CommonBrochure/>
       <CommonPointers/>
       <CommonStudying/>
+      <CommonPossibilities/>
       <CommonApply/>
       <FutureWithIcem/>
       <Headline/>
