@@ -1,47 +1,40 @@
 import React, { useEffect, useState } from 'react';
 
-// Importing logo images
-import logo1 from '../../../public/logos/schlumberger.avif';
-import logo2 from  '../../../public/logos/sas-min.avif';
-import logo3 from  '../../../public/logos/yash-min.avif';
-import logo4 from  '../../../public/logos/philips-min.avif';
-import logo5 from  '../../../public/logos/jaspay-min.avif';
-import logo6 from  '../../../public/logos/veritas-min.avif';
-import logo7 from '../../../public/logos/fis-min.avif'; 
-import logo8 from '../../../public/logos/infosys-min.avif'; 
-import logo9 from '../../../public/logos/kpit-min.avif'; 
-import logo10 from '../../../public/logos/nttdata-min.avif'; 
-import logo11 from '../../../public/logos/palo-min.avif'; 
-import logo12 from '../../../public/logos/Persistent-min.avif'; 
-import logo13 from '../../../public/logos/Tcs-min.avif'; 
-import logo14 from '../../../public/logos/dataaxle-min.avif'; 
-import logo15 from '../../../public/logos/tetrapak.avif'; 
-import logo16 from '../../../public/logos/thermax.avif'; 
-import logo17 from '../../../public/logos/mastercard.avif'; 
-import logo18 from '../../../public/logos/nutanix.avif'; 
-import logo19 from '../../../public/logos/faurecia.avif'; 
-import logo20 from '../../../public/logos/force.avif'; 
-import logo21 from '../../../public/logos/techM.avif'; 
-import logo22 from '../../../public/logos/bridgestone.avif'; 
-import logo23 from '../../../public/logos/thy.avif'; 
-import logo24 from '../../../public/logos/bluestar.avif'; 
-import logo25 from '../../../public/logos/jade.avif'; 
-import logo26 from '../../../public/logos/Servicenow.avif'; 
-import logo27 from '../../../public/logos/clsa.avif'; 
-import logo28 from '../../../public/logos/Datamatics.avif'; 
-import logo29 from '../../../public/logos/piaggio.avif'; 
-import logo30 from '../../../public/logos/mantruck_.avif'; 
-import logo31 from '../../../public/logos/kinatic.avif';  
-
 const CompRecruiter = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   const logos = [
-    logo1, logo2, logo3, logo4, logo5, logo6,
-    logo7, logo8, logo9, logo10, logo11, logo12,
-    logo13, logo14, logo15, logo16, logo17, logo18, logo19,
-    logo20, logo21, logo22, logo23, logo24, logo25,
-    logo26, logo27, logo28, logo29, logo30, logo31
+    '/logos/schlumberger.avif',
+    '/logos/sas-min.avif',
+    '/logos/yash-min.avif',
+    '/logos/philips-min.avif',
+    '/logos/jaspay-min.avif',
+    '/logos/veritas-min.avif',
+    '/logos/fis-min.avif',
+    '/logos/infosys-min.avif',
+    '/logos/kpit-min.avif',
+    '/logos/nttdata-min.avif',
+    '/logos/palo-min.avif',
+    '/logos/Persistent-min.avif',
+    '/logos/Tcs-min.avif',
+    '/logos/dataaxle-min.avif',
+    '/logos/tetrapak.avif',
+    '/logos/thermax.avif',
+    '/logos/mastercard.avif',
+    '/logos/nutanix.avif',
+    '/logos/faurecia.avif',
+    '/logos/force.avif',
+    '/logos/techM.avif',
+    '/logos/bridgestone.avif',
+    '/logos/thy.avif',
+    '/logos/bluestar.avif',
+    '/logos/jade.avif',
+    '/logos/Servicenow.avif',
+    '/logos/clsa.avif',
+    '/logos/Datamatics.avif',
+    '/logos/piaggio.avif',
+    '/logos/mantruck_.avif',
+    '/logos/kinatic.avif'
   ];
 
   useEffect(() => {
