@@ -1,19 +1,24 @@
 import React from 'react';
 import placementImage from '../../assets/images/topplace.avif';
+import placementImageMobile from '../../assets/images/homemobile.avif';
 
 function IntegratedBbaMbaPlacement() {
   return (
-    <div className="py-10 w-full flex flex-col items-center">
-      {/* Heading */}
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#555555]">
-        College <span className="text-[#259CA8]">Top</span> Placements
-      </h1>
-
-      {/* Single Placement Image */}
-      <div className="w-full">
+    <div className="w-full flex flex-col items-center">
+      {/* Desktop Placement Image */}
+      <div className="hidden md:block w-full">
         <img
           src={placementImage}
           alt="College Top Placements"
+          className="w-full h-auto"
+        />
+      </div>
+
+      {/* Mobile Placement Image */}
+      <div className="block md:hidden w-full">
+        <img
+          src={placementImageMobile}
+          alt="College Top Placements Mobile"
           className="w-full h-auto"
         />
       </div>
