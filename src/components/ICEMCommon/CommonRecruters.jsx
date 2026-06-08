@@ -1,40 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import soeL13 from '../../assets/images/SOE L13.jpg';
+import soeL14 from '../../assets/images/SOE L14.jpg';
+import soeL15 from '../../assets/images/SOE L15.jpg';
 
 const CompRecruiter = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   const logos = [
-    '/logos/schlumberger.avif',
-    '/logos/sas-min.avif',
-    '/logos/yash-min.avif',
-    '/logos/philips-min.avif',
-    '/logos/jaspay-min.avif',
-    '/logos/veritas-min.avif',
-    '/logos/fis-min.avif',
-    '/logos/infosys-min.avif',
-    '/logos/kpit-min.avif',
-    '/logos/nttdata-min.avif',
-    '/logos/palo-min.avif',
-    '/logos/Persistent-min.avif',
-    '/logos/Tcs-min.avif',
-    '/logos/dataaxle-min.avif',
-    '/logos/tetrapak.avif',
-    '/logos/thermax.avif',
-    '/logos/mastercard.avif',
-    '/logos/nutanix.avif',
-    '/logos/faurecia.avif',
-    '/logos/force.avif',
-    '/logos/techM.avif',
-    '/logos/bridgestone.avif',
-    '/logos/thy.avif',
-    '/logos/bluestar.avif',
-    '/logos/jade.avif',
-    '/logos/Servicenow.avif',
-    '/logos/clsa.avif',
-    '/logos/Datamatics.avif',
-    '/logos/piaggio.avif',
-    '/logos/mantruck_.avif',
-    '/logos/kinatic.avif'
+    soeL13,
+    soeL14,
+    soeL15
   ];
 
   useEffect(() => {
@@ -68,7 +43,7 @@ const CompRecruiter = () => {
               />
             </div>
           ))}
-          
+
           {/* Duplicate set for seamless loop */}
           {logos.map((logo, index) => (
             <div key={`duplicate-${index}`} className="logo-slide flex-none mx-3 sm:mx-4 md:mx-5">
