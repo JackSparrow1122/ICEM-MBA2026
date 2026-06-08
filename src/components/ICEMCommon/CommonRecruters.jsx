@@ -50,6 +50,7 @@ const CompRecruiter = () => {
                 src={logo}
                 alt={`Recruiter Logo ${index + 1}`}
                 className="h-16 sm:h-20 max-w-[120px] object-contain"
+                loading="lazy"
               />
             </div>
           ))}
@@ -61,6 +62,7 @@ const CompRecruiter = () => {
                 src={logo}
                 alt={`Recruiter Logo ${index + 1}`}
                 className="h-16 sm:h-20 max-w-[120px] object-contain"
+                loading="lazy"
               />
             </div>
           ))}

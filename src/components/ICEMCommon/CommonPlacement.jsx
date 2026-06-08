@@ -11,6 +11,7 @@ function IntegratedBbaMbaPlacement() {
           src={placementImage}
           alt="College Top Placements"
           className="w-full h-auto"
+          loading="lazy"
         />
       </div>
 
@@ -20,6 +21,7 @@ function IntegratedBbaMbaPlacement() {
           src={placementImageMobile}
           alt="College Top Placements Mobile"
           className="w-full h-auto"
+          loading="lazy"
         />
       </div>
     </div>

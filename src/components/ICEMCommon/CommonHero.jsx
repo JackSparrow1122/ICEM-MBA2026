@@ -11,6 +11,28 @@ function MechHero() {
     []
   );
 
+  const [showSkeleton, setShowSkeleton] = useState(true);
+  const [message, setMessage] = useState("Loading form...");
+  const timerRef = useRef(null);
+
+  const handleIframeLoad = () => {
+    setShowSkeleton(false);
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
+  };
+
+  useEffect(() => {
+    timerRef.current = setTimeout(() => {
+      if (showSkeleton) {
+        setMessage("NPF form not supported on this domain");
+      }
+    }, 5000);
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, [showSkeleton]);
+
   useEffect(() => {
     let frameId;
     let timeoutId;
@@ -106,47 +128,45 @@ function MechHero() {
           </div>
         </div>
 
-        {/* Right Form with premium Glassmorphism */}
+        {/* Right Form */}
         <div className="w-full lg:w-5/12 flex justify-center lg:justify-end">
-          <div className="p-8 w-full max-w-md backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl rounded-2xl">
-            <h3 className="text-2xl font-bold text-center mb-6 text-white tracking-wide">Inquire Now</h3>
-            <form className="space-y-4">
-              <Input type="text" placeholder="Enter your name" />
-              <Input type="email" placeholder="Enter your email" />
-              <Input type="tel" placeholder="Enter your mobile number" />
-              <select
-                required
-                className="w-full px-4 py-3 bg-white/10 hover:bg-white/15 focus:bg-gray-950 text-white rounded-xl border border-white/20 focus:border-[#259CA8] focus:ring-2 focus:ring-[#259CA8]/20 outline-none transition-all duration-200 cursor-pointer"
-              >
-                <option value="" className="text-gray-900">Select Course</option>
-                <option value="Mech" className="text-gray-900">Mechanical Engineering</option>
-                <option value="AI" className="text-gray-900">Electronics and Telecommunication Engineering</option>
-                <option value="IT" className="text-gray-900">Information Technology</option>
-                <option value="CS" className="text-gray-900">Computer Science</option>
-                <option value="AIDS" className="text-gray-900">Artificial Intelligence and Data Science</option>
-              </select>
-              <button
-                type="submit"
-                className="w-full py-3 bg-[#259CA8] text-white font-semibold rounded-xl hover:bg-[#1f828d] active:scale-[0.98] shadow-lg shadow-[#259CA8]/20 transition-all duration-200"
-              >
-                Submit Application
-              </button>
-            </form>
+          <div
+            className="p-4 w-full max-w-md shadow-2xl rounded-2xl relative bg-white text-black min-h-[530px]"
+          >
+            <h3 className="text-lg font-bold text-center mb-2 text-[#003c84]">
+              Enquire Now
+            </h3>
+            {showSkeleton && (
+              <div className="absolute inset-x-4 top-14 bottom-4 bg-gray-100 rounded-lg p-4 animate-pulse z-10 flex flex-col justify-center items-center">
+                <div className="space-y-4 w-full">
+                  <div className="h-4 bg-gray-300 rounded w-3/4 mx-auto"></div>
+                  <div className="h-4 bg-gray-300 rounded w-1/2 mx-auto"></div>
+                  <div className="h-8 bg-gray-300 rounded w-full"></div>
+                  <div className="h-8 bg-gray-300 rounded w-full"></div>
+                  <div className="h-8 bg-gray-300 rounded w-full"></div>
+                </div>
+                <div className={`mt-4 text-center text-sm font-semibold ${message === "Loading form..." ? "text-gray-500" : "text-red-500"}`}>
+                  {message}
+                </div>
+              </div>
+            )}
+            <iframe
+              src="https://widgets.nopaperforms.com/register?&r=https://indiraicem.ac.in/thank-you/&w=9fa0f32fe4f405fa68dc3df39ef6a11b"
+              width="100%"
+              height="490"
+              frameBorder="0"
+              allowFullScreen
+              title="NPF Enquiry Form"
+              className="rounded-lg overflow-hidden"
+              scrolling="no"
+              style={{ overflow: "hidden" }}
+              onLoad={handleIframeLoad}
+            ></iframe>
           </div>
         </div>
       </div>
     </div>
   );
 }
-
-// Reusable premium input component
-const Input = ({ type, placeholder }) => (
-  <input
-    type={type}
-    placeholder={placeholder}
-    required
-    className="w-full px-4 py-3 bg-white/10 hover:bg-white/15 text-white placeholder-gray-400 rounded-xl border border-white/20 focus:border-[#259CA8] focus:ring-2 focus:ring-[#259CA8]/20 outline-none transition-all duration-200"
-  />
-);
 
 export default MechHero;

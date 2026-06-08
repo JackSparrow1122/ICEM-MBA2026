@@ -146,6 +146,7 @@ const MechJourny = () => {
                   src={successor.companyLogo}
                   alt={`${successor.name} Company Logo`}
                   className="max-w-full max-h-full object-contain"
+                  loading="lazy"
                 />
               </div>
 
@@ -156,6 +157,7 @@ const MechJourny = () => {
                   src={successor.image}
                   alt={successor.name}
                   className="w-24 h-24 object-cover rounded-full shadow-md border-4 border-white relative z-10"
+                  loading="lazy"
                 />
               </div>
 
