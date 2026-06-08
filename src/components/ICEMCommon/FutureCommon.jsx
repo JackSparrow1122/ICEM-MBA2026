@@ -69,7 +69,7 @@ const LifeAtICEM = () => {
         >
           {loadVideo && (
             <iframe
-              src="https://www.youtube.com/embed/-rAt2kuZN1E"
+              src="https://www.youtube.com/watch?v=gEXvD4OVyXg"
               title="Life At ICEM"
               allowFullScreen
               loading="lazy"

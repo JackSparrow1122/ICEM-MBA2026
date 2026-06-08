@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Headling = () => {
-  const message = "Admissions Open for 2025 – Don’t wait, apply now and take your first step toward a brighter future!";
+  const message = "Admissions Open for 2026 – Don’t wait, apply now and take your first step toward a brighter future!";
 
   return (
     <div className="overflow-hidden w-full bg-gradient-to-r from-[#003C84] via-[#018697] to-[#018697] py-2">
