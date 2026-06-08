@@ -214,7 +214,7 @@ const FAQ = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-white via-[#F1F5F9] to-[#F1F5F9] py-16 md:py-24 px-4 md:px-8">
+        <div className="min-h-screen bg-gradient-to-b from-white via-[#F1F5F9] to-[#F1F5F9]  px-4 md:px-8">
             <div className="max-w-7xl mx-auto">
 
                 {/* Header Section */}
@@ -269,8 +269,8 @@ const FAQ = () => {
                                                 setActiveIndex(0);
                                             }}
                                             className={`w-full px-4 py-2 text-left flex items-center gap-2 transition-all duration-300 group text-xs ${activeCategory === cat.id
-                                                    ? 'bg-gradient-to-r from-[#259CA8]/10 to-[#259CA8]/5 text-[#135783] border-l-4 border-[#259CA8] font-semibold'
-                                                    : 'text-[#4B5563] hover:bg-[#F9FAFB]'
+                                                ? 'bg-gradient-to-r from-[#259CA8]/10 to-[#259CA8]/5 text-[#135783] border-l-4 border-[#259CA8] font-semibold'
+                                                : 'text-[#4B5563] hover:bg-[#F9FAFB]'
                                                 }`}
                                         >
                                             <IconComp className={`w-3 h-3 flex-shrink-0 transition-colors duration-300 ${activeCategory === cat.id ? 'text-[#259CA8]' : 'text-[#9CA3AF] group-hover:text-[#259CA8]'}`} />

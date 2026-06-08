@@ -4,7 +4,7 @@ import './index.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Navbar from './pages/Navbar';
-import ApplyNowButton from './components/ApplyNowButton'; 
+import ApplyNowButton from './components/ApplyNowButton';
 import ICEMVanila from './pages/ICEMVanilla';
 import Lenis from "lenis";
 import gsap from "gsap";
@@ -44,7 +44,7 @@ function App() {
         <Helmet>
           <title>ICEM | ICEMVanilla</title>
         </Helmet>
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<ICEMVanila title="icemvanilla" />} />
           <Route path="/icemvanilla" element={<ICEMVanila title="icemvanilla" />} />

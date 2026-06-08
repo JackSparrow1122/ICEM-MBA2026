@@ -35,7 +35,7 @@ const ICEMCommon = () => {
       <Headline />
       <CommonTestimonials />
       <FAQ />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
