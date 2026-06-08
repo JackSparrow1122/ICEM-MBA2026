@@ -1,144 +1,142 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from 'react';
 
-// Import images from assets
-import compLab from "../../assets/images/comLab.jpg";
-import aidsLab from "../../assets/images/aidslab.avif";
-import mechLab from "../../assets/images/MechB1.jpg";
-import appleLab from "../../assets/images/sp3.avif";
-import canteenImg from "../../assets/images/came/3.png";
-import gymImg from "../../assets/images/came/10.png";
-import wellnessImg from "../../assets/images/came/11.png";
+// Import images from assets - using available images
+import iMacLab from '../../assets/Comp.jpg';
+import spaceLab from '../../assets/AIDS.webp';
+import mechanicalLab from '../../assets/Mech.webp';
+import innovationLab from '../../assets/IT.webp';
+import swimmingPool from '../../assets/Canteen1.webp';
+import gymFacility from '../../assets/Gym4.webp';
+import uniMall from '../../assets/health.webp';
 
-const facilitiesTop = [
-  {
-    title: "Computer Engineering Lab",
-    description: "State-of-the-art computer lab",
-    image: compLab,
-    accentColor: "text-[#FAB701]"
-  },
-  {
-    title: "Artificial Intelligence & Data Science",
-    description: "Advanced computing and AI-ML lab",
-    image: aidsLab,
-    accentColor: "text-white"
-  },
-  {
-    title: "Mechanical Lab",
-    description: "Modern mechanical tooling and machinery lab",
-    image: mechLab,
-    accentColor: "text-white"
-  }
-];
-
-const facilitiesBottom = [
-  {
-    title: "Apple Lab",
-    description: "iOS app design and Apple ecosystem training",
-    image: appleLab,
-  },
-  {
-    title: "Canteen",
-    description: "Hygienic and spacious campus cafeteria",
-    image: canteenImg,
-  },
-  {
-    title: "Gym Facility",
-    description: "Equipped fitness and strength center",
-    image: gymImg,
-  },
-  {
-    title: "Health & Wellness Center",
-    description: "First-aid, nurse assistance, and wellness care",
-    image: wellnessImg,
-  }
-];
-
-function CommonPossibilities() {
-  useEffect(() => {
-    AOS.init({ duration: 800, once: true });
-  }, []);
+const Tour = () => {
+  const facilities = [
+    {
+      id: 1,
+      title: 'Computer Engineering Lab',
+      image: iMacLab,
+      description: 'State-of-the-art computer lab'
+    },
+    {
+      id: 2,
+      title: 'Artificial Intelligence & Data Science',
+      image: spaceLab,
+      description: 'Advanced research facility'
+    },
+    {
+      id: 3,
+      title: 'Mechanical Lab',
+      image: mechanicalLab,
+      description: 'Cutting-edge machinery and tools'
+    },
+    {
+      id: 4,
+      title: 'Apple Lab',
+      image: innovationLab,
+      description: 'Where ideas come to life'
+    },
+    {
+      id: 5,
+      title: 'Canteen',
+      image: swimmingPool,
+      description: 'Professional sports facility'
+    },
+    {
+      id: 6,
+      title: 'Gym Facility',
+      image: gymFacility,
+      description: 'Modern fitness center'
+    },
+    {
+      id: 7,
+      title: 'Health & Wellness Center',
+      image: uniMall,
+      description: 'Student entrepreneurship hub'
+    },
+  ];
 
   return (
-    <section className="w-full bg-[#fbfbfa] px-4 md:px-16 py-12 poppins-regular overflow-hidden flex flex-col gap-10">
-      {/* Header */}
-      <div className="text-center space-y-2" data-aos="fade-up">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-[#135783] leading-tight">
-          Where <span className="text-[#259CA8]">Possibilities</span> Are Infinite
-        </h2>
-        <p className="text-sm md:text-base text-gray-500 font-medium">
-          From tech labs to wellness centers, we have it all
-        </p>
-      </div>
+    <section className="relative px-4 md:px-8 lg:px-16 py-12 md:py-16 overflow-hidden bg-gradient-to-b from-white via-[#F1F5F9] to-[#F1F5F9]">
+      {/* Decorative elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#2563EB]/5 rounded-full blur-3xl -mr-48 -mt-48 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#1F2937]/5 rounded-full blur-3xl -ml-48 -mb-48 pointer-events-none"></div>
 
-      {/* Grid Content */}
-      <div className="max-w-7xl mx-auto w-full space-y-6">
-        
-        {/* Top Row: 3 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {facilitiesTop.map((item, index) => (
+      <div className="relative z-10 max-w-7xl mx-auto">
+        {/* Heading Section */}
+        <div className="text-center mb-12">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight">
+            Where <span className="bg-gradient-to-r from-[#2563EB] to-[#1F2937] bg-clip-text text-transparent">Possibilities Are Infinite</span>
+          </h1>
+          <p className="text-gray-600 text-sm md:text-base lg:text-lg max-w-3xl mx-auto">
+            From tech labs to wellness centers, we have it all
+          </p>
+        </div>
+
+        {/* Facilities Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-5 mb-8">
+          {/* First 3 cards - larger */}
+          {facilities.slice(0, 3).map((facility, index) => (
             <div
-              key={`top-${index}`}
-              className="relative h-64 sm:h-72 rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 group cursor-pointer"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
+              key={facility.id}
+              className="group relative h-[300px] md:h-[280px] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer"
             >
-              {/* Background Image */}
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                style={{ backgroundImage: `url(${item.image})` }}
-              ></div>
-              
+              {/* Image Background */}
+              <img
+                src={facility.image}
+                alt={facility.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+
               {/* Dark Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
-              
-              {/* Text */}
-              <div className="absolute bottom-6 left-6 right-6 space-y-1">
-                <h3 className={`text-xl font-bold ${item.accentColor} transition-colors duration-300`}>
-                  {item.title}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+
+              {/* Text Content at Bottom */}
+              <div className="absolute inset-0 flex flex-col justify-end p-5 md:p-6">
+                <h3 className="text-lg md:text-xl font-bold text-white mb-1 group-hover:text-[#F59E0B] transition-colors duration-300">
+                  {facility.title}
                 </h3>
-                <p className="text-xs text-gray-300 font-medium">
-                  {item.description}
+                <p className="text-xs md:text-sm text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {facility.description}
                 </p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom Row: 4 Columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {facilitiesBottom.map((item, index) => (
+        {/* Second Row - 4 cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mb-8">
+          {facilities.slice(3).map((facility, index) => (
             <div
-              key={`bottom-${index}`}
-              className="relative h-60 sm:h-64 rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 group cursor-pointer"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
+              key={facility.id}
+              className="group relative h-[250px] md:h-[240px] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer"
             >
-              {/* Background Image */}
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                style={{ backgroundImage: `url(${item.image})` }}
-              ></div>
-              
+              {/* Image Background */}
+              <img
+                src={facility.image}
+                alt={facility.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+
               {/* Dark Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
-              
-              {/* Text */}
-              <div className="absolute bottom-6 left-6 right-6 space-y-1">
-                <h3 className="text-lg font-bold text-white transition-colors duration-300 group-hover:text-[#259CA8]">
-                  {item.title}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+
+              {/* Text Content at Bottom */}
+              <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-5">
+                <h3 className="text-base md:text-lg font-bold text-white mb-1 group-hover:text-[#F59E0B] transition-colors duration-300">
+                  {facility.title}
                 </h3>
-                <p className="text-xs text-gray-300 font-medium">
-                  {item.description}
+                <p className="text-xs text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {facility.description}
                 </p>
               </div>
             </div>
           ))}
         </div>
+
+
       </div>
     </section>
   );
-}
+};
 
-export default CommonPossibilities;
+export default Tour;

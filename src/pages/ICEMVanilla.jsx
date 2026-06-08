@@ -7,10 +7,10 @@ import CommonBrochure from '../components/ICEMCommon/CommonBrochure'
 import CommonPointers from '../components/ICEMCommon/CommonPointes'
 import CommonStudying from '../components/ICEMCommon/CommonStudying'
 import CommonPossibilities from '../components/ICEMCommon/CommonPossibilities'
+import CommonHighlights from '../components/ICEMCommon/CommonHighlights'
 import CommonApply from '../components/ICEMCommon/CommonApply'
 import Headline from '../components/ICEMCommon/Headling'
 import CommonBanner from '../components/ICEMCommon/CommonBanner'
-// import CommonInovation from '../components/ICEMCommon/CommonInovation'
 import CommonReasons from '../components/ICEMCommon/CommonReasons'
 import CommonTestimonials from '../components/ICEMCommon/CommonTestimonials'
 import FutureWithIcem from '../components/ICEMCommon/FutureCommon'
@@ -18,22 +18,22 @@ import Footer from './Footer'
 const ICEMCommon = () => {
   return (
     <div>
-      <CommonHero/>
-      <CommonPlacement/>
-      <CommonRecruters/>
-      <CommonBanner/>
-      {/* <CommonInovation/> */}
-      <CommonReasons/>
-      <CommonSpecialization/>
-      <CommonBrochure/>
-      <CommonPointers/>
-      <CommonStudying/>
-      <CommonPossibilities/>
-      <CommonApply/>
-      <FutureWithIcem/>
-      <Headline/>
-      <CommonTestimonials/>
-      <Footer/>
+      <CommonHero />
+      <CommonPlacement />
+      <CommonRecruters />
+      <CommonBanner />
+      <CommonReasons />
+      <CommonSpecialization />
+      <CommonBrochure />
+      <CommonPointers />
+      <CommonStudying />
+      <CommonPossibilities />
+      <CommonHighlights />
+      <CommonApply />
+      <FutureWithIcem />
+      <Headline />
+      <CommonTestimonials />
+      <Footer />
     </div>
   )
 }
