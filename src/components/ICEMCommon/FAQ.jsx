@@ -1,31 +1,25 @@
 import React, { useState, useMemo } from 'react';
-import { ChevronDown, Search, HelpCircle, Zap, Users, DollarSign, Briefcase, Building2, BookOpen, Globe } from 'lucide-react';
+import { ChevronDown, Search, HelpCircle, Users, DollarSign, Briefcase, Building2, Globe } from 'lucide-react';
 
 const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [activeCategory, setActiveCategory] = useState('about');
     const [searchTerm, setSearchTerm] = useState('');
 
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     const faqData = {
         about: {
-            title: 'About the Program',
+            title: 'About ICEM',
             icon: HelpCircle,
             color: 'from-[#135783] to-[#259CA8]',
             questions: [
                 {
                     id: 1,
-                    question: 'What is the B.E. CSE with Specialization in AI and ML at ICEM?',
-                    answer: 'The B.E. CSE with Specialization in AI and ML is a cutting-edge undergraduate program designed to equip students with advanced knowledge in Artificial Intelligence and Machine Learning. This 4-year program combines core computer science fundamentals with specialized AI/ML coursework, industry collaborations, and hands-on project experience.'
-                },
-                {
-                    id: 2,
-                    question: 'What are the core subjects and technologies taught in this AI-focused program?',
-                    answer: 'The CSE AI and ML syllabus includes Artificial Intelligence, Data Structures, Algorithms, Operating Systems, Natural Language Processing, and Deep Learning. Students gain hands-on experience with Microsoft tools such as Azure, Power BI, and Cognitive Services, making this one of the top Artificial Intelligence and Machine Learning courses in India.'
-                },
-                {
-                    id: 3,
-                    question: 'How does this program differ from a standard CSE degree?',
-                    answer: 'Unlike standard CSE programs, our AI/ML specialization integrates AI concepts into core subjects, provides industry partnerships, focuses on emerging technologies, includes real-world projects, and offers Microsoft certification pathways. This specialized approach ensures students are industry-ready from day one.'
+                    question: 'Is ICEM affiliated and approved?',
+                    answer: 'Yes, ICEM is an Autonomous Institute affiliated to Savitribai Phule Pune University (SPPU) and approved by AICTE, New Delhi.'
                 }
             ]
         },
@@ -35,63 +29,21 @@ const FAQ = () => {
             color: 'from-[#135783] to-[#259CA8]',
             questions: [
                 {
-                    id: 4,
-                    question: 'What is the eligibility criteria for admission?',
-                    answer: 'Candidates must have passed 12th grade with Physics, Chemistry, and Mathematics. Admission is based on merit, entrance exam scores (JEE Main), or college admission tests. Specific cutoff scores vary annually based on intake capacity.'
-                },
-                {
-                    id: 5,
-                    question: 'What documents are required during the admission process?',
-                    answer: 'Required documents include: 12th mark sheet, proof of identity, proof of address, birth certificate, category certificate (if applicable), medical certificate, and passport-size photographs. All documents should be submitted in both original and photocopied formats.'
-                },
-                {
-                    id: 6,
-                    question: 'What is the application deadline?',
-                    answer: 'Application deadlines typically fall in June-July for the academic year starting in August. However, we accept rolling admissions until all seats are filled. Early application is recommended to secure your spot.'
-                }
-            ]
-        },
-        eligibility: {
-            title: 'Eligibility & Requirements',
-            icon: BookOpen,
-            color: 'from-[#259CA8] to-[#135783]',
-            questions: [
-                {
-                    id: 7,
-                    question: 'What are the minimum marks required for eligibility?',
-                    answer: 'Candidates should have minimum 50% aggregate marks in 12th standard (Physics, Chemistry, Mathematics). Candidates from reserved categories may have relaxation as per government norms.'
-                },
-                {
-                    id: 8,
-                    question: 'Do I need to appear for entrance exams?',
-                    answer: 'Yes, JEE Main is the primary admission pathway. We also consider college-level entrance examinations and merit-based admissions. Your performance in these exams is crucial for admission and scholarship eligibility.'
-                },
-                {
-                    id: 9,
-                    question: 'Are there any special eligibility criteria for NRI/International students?',
-                    answer: 'Yes, NRI and international students have separate admission procedures. They are required to provide equivalent qualification certificates and English proficiency proof. Special counseling and guidance are provided for international admissions.'
+                    id: 2,
+                    question: 'Can I visit the campus before applying?',
+                    answer: 'Absolutely. ICEM welcomes prospective students and parents to visit the campus. Please contact the admission office to schedule a campus tour.'
                 }
             ]
         },
         fees: {
-            title: 'Fee Structure & Scholarships',
+            title: 'Scholarships',
             icon: DollarSign,
             color: 'from-[#135783] to-[#135783]',
             questions: [
                 {
-                    id: 10,
-                    question: 'What is the total fee for the 4-year program?',
-                    answer: 'The annual tuition fee is competitive and varies based on category. Detailed fee breakdown including tuition, infrastructure, and examination fees will be provided during admission. We also offer installment payment options.'
-                },
-                {
-                    id: 11,
-                    question: 'What scholarship opportunities are available?',
-                    answer: 'We offer merit-based scholarships up to 50% tuition fee waiver, government scholarships for SC/ST/OBC categories, sports scholarships, and need-based financial assistance. Eligible students can apply for multiple scholarships.'
-                },
-                {
-                    id: 12,
-                    question: 'Are there any additional fees beyond tuition?',
-                    answer: 'Additional fees may include hostel charges (if applicable), student activity fees, library fees, and examination fees. These are nominal and are clearly outlined in the fee prospectus provided at admission.'
+                    id: 3,
+                    question: 'Are there scholarships available?',
+                    answer: 'Yes, scholarships are available for eligible students under government schemes and merit-based scholarships offered by the institute.'
                 }
             ]
         },
@@ -101,41 +53,31 @@ const FAQ = () => {
             color: 'from-[#259CA8] to-[#135783]',
             questions: [
                 {
-                    id: 13,
-                    question: 'What is the placement rate for CSE AI/ML graduates?',
-                    answer: 'Our CSE AI/ML program boasts a 95%+ placement rate. Graduates are recruited by top companies across IT, AI, data science, and software development sectors. Average package offered is competitive with industry standards.'
+                    id: 4,
+                    question: 'What is the placement record at ICEM?',
+                    answer: 'ICEM has a consistent placement record with top recruiters including Emerson, CrowdStrike, Tetra Pak, Infosys, TCS, Accenture, and many more. The highest package offered has been up to 27 LPA.'
                 },
                 {
-                    id: 14,
-                    question: 'Which companies recruit from this program?',
-                    answer: 'Top recruiters include Infosys, TCS, Wipro, Capgemini, IBM, Accenture, Google, Microsoft, Amazon, and various AI-focused startups. Our strong industry partnerships ensure continuous recruitment opportunities.'
+                    id: 5,
+                    question: 'Does ICEM have a dedicated placement cell?',
+                    answer: 'Yes, ICEM has a proactive Training and Placement Cell that provides soft skills training, aptitude preparation, technical grooming, and connects students with recruiters throughout the year.'
                 },
                 {
-                    id: 15,
-                    question: 'What kind of internship opportunities are available?',
-                    answer: 'Students are encouraged to pursue internships from the second year onwards. Our industry partnerships provide summer internships, winter internships, and full-time opportunities in AI/ML roles, data science, and software development.'
+                    id: 6,
+                    question: 'Are internships mandatory?',
+                    answer: 'Yes, students are required to complete internships during their course of study. The placement cell assists in securing internships with reputed organizations.'
                 }
             ]
         },
         infrastructure: {
-            title: 'Infrastructure & Labs',
+            title: 'Infrastructure & Facilities',
             icon: Building2,
             color: 'from-[#135783] to-[#259CA8]',
             questions: [
                 {
-                    id: 16,
-                    question: 'What are the computing facilities available?',
-                    answer: 'We have state-of-the-art computer labs with high-performance GPUs, dedicated AI/ML lab with TensorFlow and PyTorch setup, cloud computing labs (AWS, Azure), and collaborative workspaces for students.'
-                },
-                {
-                    id: 17,
-                    question: 'Are there specialized labs for AI/ML coursework?',
-                    answer: 'Yes, our dedicated AI/ML laboratory is equipped with GPUs, cloud access, and enterprise-level software tools. Students have 24/7 access to these labs to work on projects and research.'
-                },
-                {
-                    id: 18,
-                    question: 'What networking and connectivity options are available?',
-                    answer: 'Campus-wide high-speed Wi-Fi (1 Gbps), dedicated internet connectivity, smart classrooms with Video conferencing capabilities, and access to online learning platforms ensure seamless connectivity.'
+                    id: 7,
+                    question: 'What facilities are available on campus?',
+                    answer: 'ICEM offers state-of-the-art infrastructure including - Apple Labs and high-performance computing labs, smart digital classrooms, central library with online resources, indoor and outdoor sports facilities, separate hostels for boys and girls, canteen, gym, and transport facilities'
                 }
             ]
         },
@@ -145,55 +87,21 @@ const FAQ = () => {
             color: 'from-[#135783] to-[#259CA8]',
             questions: [
                 {
-                    id: 19,
-                    question: 'What extracurricular activities are available?',
-                    answer: 'Students can participate in coding clubs, AI/ML hackathons, tech forums, sports, cultural events, entrepreneurship cells, and various student organizations. We believe in holistic development beyond academics.'
-                },
-                {
-                    id: 20,
-                    question: 'Is hostel accommodation available?',
-                    answer: 'Yes, we provide safe and comfortable hostel facilities with modern amenities including Wi-Fi, mess, recreational areas, and security. Priority is given to outstation students. Hostel fees are separate from tuition.'
-                },
-                {
-                    id: 21,
-                    question: 'What student support services are provided?',
-                    answer: 'Comprehensive support includes academic counseling, career guidance, mental health services, accessibility services for differently-abled students, and 24/7 campus security for student safety and well-being.'
-                }
-            ]
-        },
-        specializations: {
-            title: 'Specializations & Curriculum',
-            icon: Zap,
-            color: 'from-[#259CA8] to-[#135783]',
-            questions: [
-                {
-                    id: 22,
-                    question: 'What specialization paths are available within AI/ML?',
-                    answer: 'Students can specialize in Deep Learning, Natural Language Processing, Computer Vision, Reinforcement Learning, and DataScience. Electives and projects allow customization based on career goals.'
-                },
-                {
-                    id: 23,
-                    question: 'Are there industry-recognized certifications included?',
-                    answer: 'Yes, the program includes Microsoft AI/ML certifications, AWS cloud certifications, and industry partnerships that provide additional verified credentials enhancing employability.'
-                },
-                {
-                    id: 24,
-                    question: 'Can students pursue research or thesis?',
-                    answer: 'Absolutely! We encourage research through our final year thesis/capstone projects. Students can collaborate with faculty on published research, present at conferences, and contribute to real-world AI solutions.'
+                    id: 8,
+                    question: 'Does ICEM organize events and fests?',
+                    answer: 'Yes, ICEM hosts annual cultural and technical fests along with sports meets, hackathons, and guest lectures throughout the year.'
                 }
             ]
         }
     };
 
     const categories = [
-        { id: 'about', label: 'About Program', icon: HelpCircle },
+        { id: 'about', label: 'About ICEM', icon: HelpCircle },
         { id: 'admissions', label: 'Admissions', icon: Users },
-        { id: 'eligibility', label: 'Eligibility', icon: BookOpen },
-        { id: 'fees', label: 'Fees & Scholarships', icon: DollarSign },
+        { id: 'fees', label: 'Scholarships', icon: DollarSign },
         { id: 'placements', label: 'Placements', icon: Briefcase },
         { id: 'infrastructure', label: 'Infrastructure', icon: Building2 },
-        { id: 'studentlife', label: 'Student Life', icon: Globe },
-        { id: 'specializations', label: 'Specializations', icon: Zap }
+        { id: 'studentlife', label: 'Student Life', icon: Globe }
     ];
 
     const currentCategory = faqData[activeCategory];
@@ -228,7 +136,7 @@ const FAQ = () => {
                         Frequently Asked Questions
                     </h1>
                     <p className="text-sm md:text-base text-[#111827] max-w-2xl mx-auto leading-relaxed">
-                        Find answers to common questions about our B.E. CSE with AI & ML program
+                        Find answers to common questions about Indira College of Engineering and Management (ICEM)
                     </p>
                 </div>
 
@@ -352,7 +260,10 @@ const FAQ = () => {
                         {/* Additional CTA */}
                         <div className="mt-4 bg-gradient-to-r from-[#259CA8]/10 via-white to-[#135783]/10 rounded-2xl border-2 border-[#259CA8]/20 p-4 text-center shadow-md">
                             <p className="text-[#4B5563] mb-2 text-sm font-medium">Can't find your answer?</p>
-                            <button className="bg-gradient-to-r from-[#259CA8] to-[#135783] text-white font-bold py-2 px-6 rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300 text-sm">
+                            <button
+                                onClick={scrollToTop}
+                                className="bg-gradient-to-r from-[#259CA8] to-[#135783] text-white font-bold py-2 px-6 rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300 text-sm"
+                            >
                                 Contact Our Team
                             </button>
                         </div>
