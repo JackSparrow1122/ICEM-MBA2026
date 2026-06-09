@@ -100,10 +100,7 @@ function MechHero() {
             <span className="text-[#259CA8]">Engineering</span> School
           </p>
 
-          <p className="text-xl sm:text-2xl font-light text-gray-300">
-            Driven by <span className="text-[#259CA8] font-semibold">{currentText}</span>
-            <span className="typewriter-cursor text-[#259CA8]">|</span>
-          </p>
+
 
           <div className="space-y-4">
             <p className="text-lg md:text-xl text-gray-200">

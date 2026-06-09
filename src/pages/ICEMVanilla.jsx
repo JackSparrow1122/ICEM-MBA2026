@@ -15,6 +15,7 @@ import CommonReasons from '../components/ICEMCommon/CommonReasons'
 import CommonTestimonials from '../components/ICEMCommon/CommonTestimonials'
 import FutureWithIcem from '../components/ICEMCommon/FutureCommon'
 import FAQ from '../components/ICEMCommon/FAQ'
+import Footer from '../pages/Footer'
 const ICEMCommon = () => {
   return (
     <div>
@@ -34,6 +35,7 @@ const ICEMCommon = () => {
       <Headline />
       <CommonTestimonials />
       <FAQ />
+      <Footer />
     </div>
   )
 }

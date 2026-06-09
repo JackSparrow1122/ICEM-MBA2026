@@ -44,7 +44,7 @@ function App() {
         <Helmet>
           <title>ICEM | ICEMVanilla</title>
         </Helmet>
-        {/* <Navbar /> */}
+        <Navbar />
         <Routes>
           <Route path="/" element={<ICEMVanila title="icemvanilla" />} />
           <Route path="/icemvanilla" element={<ICEMVanila title="icemvanilla" />} />
