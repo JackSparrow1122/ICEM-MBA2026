@@ -96,8 +96,8 @@ function MechHero() {
         {/* Left Text */}
         <div className="w-full lg:w-7/12 text-center lg:text-left space-y-6">
           <p className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight">
-            Shape Your Future with ICEM’s Top{" "}
-            <span className="text-[#259CA8]">Engineering</span> Programmes
+            Join One of India's Most Trusted   {" "}
+            <span className="text-[#259CA8]">Engineering</span> School
           </p>
 
           <p className="text-xl sm:text-2xl font-light text-gray-300">
@@ -107,12 +107,10 @@ function MechHero() {
 
           <div className="space-y-4">
             <p className="text-lg md:text-xl text-gray-200">
-              2 Decades of Excellence in Education
-            </p>
+              2 Decades of Excellence | 100% Placement Assistance | SPPU Affiliated            </p>
             <div className="inline-block px-4 py-2 bg-[#259CA8]/20 border border-[#259CA8]/30 rounded-full">
               <span className="text-[#259CA8] font-bold text-sm sm:text-base tracking-wide">
-                100% Placement Assistance
-              </span>
+                Admissions Open 2026              </span>
             </div>
             <p className="text-xl md:text-2xl font-semibold tracking-wide text-gray-300">Build. Innovate. Lead</p>
           </div>
