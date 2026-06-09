@@ -97,7 +97,7 @@ function MechHero() {
         <div className="w-full lg:w-7/12 text-center lg:text-left space-y-6">
           <p className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight">
             Join One of India's Most Trusted   {" "}
-            <span className="text-[#259CA8]">Engineering</span> School
+            <span className="text-[#259CA8]">Engineering</span> Programme
           </p>
 
 
@@ -109,7 +109,6 @@ function MechHero() {
               <span className="text-[#259CA8] font-bold text-sm sm:text-base tracking-wide">
                 Admissions Open 2026              </span>
             </div>
-            <p className="text-xl md:text-2xl font-semibold tracking-wide text-gray-300">Build. Innovate. Lead</p>
           </div>
 
           {/* Apply Now Button */}
