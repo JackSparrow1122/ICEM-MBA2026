@@ -140,22 +140,7 @@ const FAQ = () => {
                     </p>
                 </div>
 
-                {/* Search Bar */}
-                <div className="mb-6 md:mb-8">
-                    <div className="relative max-w-3xl mx-auto">
-                        <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#259CA8] w-4 h-4" />
-                        <input
-                            type="text"
-                            placeholder="Search FAQs..."
-                            value={searchTerm}
-                            onChange={(e) => {
-                                setSearchTerm(e.target.value);
-                                setActiveIndex(0);
-                            }}
-                            className="w-full pl-10 pr-4 py-2 rounded-xl border-2 border-[#259CA8]/20 focus:border-[#259CA8] focus:outline-none transition-all duration-300 bg-white shadow-md text-[#1F2937] placeholder-[#9CA3AF] font-medium text-sm"
-                        />
-                    </div>
-                </div>
+
 
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-6">
 
