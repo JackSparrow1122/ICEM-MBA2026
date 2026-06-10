@@ -122,35 +122,33 @@ const FAQ = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-white via-[#F1F5F9] to-[#F1F5F9]  px-4 md:px-8">
-            <div className="max-w-7xl mx-auto">
+        <div className="py-8 md:py-12 bg-gradient-to-b from-white via-[#F1F5F9] to-[#F1F5F9] px-4 sm:px-6 md:px-8">
+            <div className="max-w-6xl mx-auto">
 
                 {/* Header Section */}
-                <div className="text-center mb-6 md:mb-8">
-                    <div className="inline-block mb-2">
-                        <div className="bg-gradient-to-r from-[#135783] via-[#259CA8] to-[#135783] p-2 rounded-full inline-block shadow-lg">
-                            <HelpCircle className="w-6 h-6 text-white" />
+                <div className="text-center mb-5 md:mb-7">
+                    <div className="inline-block mb-1.5">
+                        <div className="bg-gradient-to-r from-[#135783] via-[#259CA8] to-[#135783] p-1.5 rounded-full inline-block shadow-md">
+                            <HelpCircle className="w-5 h-5 text-white" />
                         </div>
                     </div>
-                    <h1 className="text-3xl md:text-4xl font-bold mb-2 font-poppins bg-gradient-to-r from-[#135783] via-[#259CA8] to-[#135783] bg-clip-text text-transparent">
+                    <h1 className="text-2xl md:text-3xl font-bold mb-1.5 font-poppins bg-gradient-to-r from-[#135783] via-[#259CA8] to-[#135783] bg-clip-text text-transparent">
                         Frequently Asked Questions
                     </h1>
-                    <p className="text-sm md:text-base text-[#111827] max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-xs md:text-sm text-[#111827] max-w-xl mx-auto leading-relaxed">
                         Find answers to common questions about Indira College of Engineering and Management (ICEM)
                     </p>
                 </div>
 
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-4">
 
-
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-6">
-
-                    {/* Category Sidebar */}
+                    {/* Category Selector */}
                     <div className="lg:col-span-1">
-                        <div className="bg-white rounded-2xl shadow-lg overflow-hidden sticky top-20 border border-[#E5E7EB]">
-                            <div className="bg-gradient-to-r from-[#135783] to-[#0d3f61] p-3">
+                        <div className="bg-white rounded-xl lg:rounded-2xl shadow-md overflow-hidden lg:sticky lg:top-24 border border-[#E5E7EB]">
+                            <div className="hidden lg:block bg-gradient-to-r from-[#135783] to-[#0d3f61] p-3">
                                 <h2 className="text-white font-bold text-sm tracking-wide">Categories</h2>
                             </div>
-                            <nav className="divide-y divide-[#F0F0F0]">
+                            <nav className="flex lg:flex-col overflow-x-auto lg:overflow-x-visible divide-x lg:divide-x-0 lg:divide-y divide-[#F0F0F0] scrollbar-none [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                                 {categories.map((cat) => {
                                     const IconComp = cat.icon;
                                     return (
@@ -161,13 +159,13 @@ const FAQ = () => {
                                                 setSearchTerm('');
                                                 setActiveIndex(0);
                                             }}
-                                            className={`w-full px-4 py-2 text-left flex items-center gap-2 transition-all duration-300 group text-xs ${activeCategory === cat.id
-                                                ? 'bg-gradient-to-r from-[#259CA8]/10 to-[#259CA8]/5 text-[#135783] border-l-4 border-[#259CA8] font-semibold'
+                                            className={`flex-shrink-0 lg:w-full px-4 py-2.5 lg:py-2 text-left flex items-center gap-2 transition-all duration-300 group text-xs ${activeCategory === cat.id
+                                                ? 'bg-gradient-to-r from-[#259CA8]/10 to-[#259CA8]/5 text-[#135783] border-b-2 lg:border-b-0 lg:border-l-4 border-[#259CA8] font-semibold'
                                                 : 'text-[#4B5563] hover:bg-[#F9FAFB]'
                                                 }`}
                                         >
-                                            <IconComp className={`w-3 h-3 flex-shrink-0 transition-colors duration-300 ${activeCategory === cat.id ? 'text-[#259CA8]' : 'text-[#9CA3AF] group-hover:text-[#259CA8]'}`} />
-                                            <span className="font-medium">{cat.label}</span>
+                                            <IconComp className={`w-3.5 h-3.5 flex-shrink-0 transition-colors duration-300 ${activeCategory === cat.id ? 'text-[#259CA8]' : 'text-[#9CA3AF] group-hover:text-[#259CA8]'}`} />
+                                            <span className="font-medium whitespace-nowrap">{cat.label}</span>
                                         </button>
                                     );
                                 })}
@@ -177,15 +175,15 @@ const FAQ = () => {
 
                     {/* FAQ Accordion Section */}
                     <div className="lg:col-span-3">
-                        <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-[#E5E7EB]">
+                        <div className="bg-white rounded-xl lg:rounded-2xl shadow-md overflow-hidden border border-[#E5E7EB]">
 
                             {/* Category Header */}
-                            <div className="bg-gradient-to-r from-[#135783] via-[#259CA8] to-[#135783] p-4 text-white">
-                                <div className="flex items-center gap-2 mb-1">
-                                    <CategoryIcon className="w-6 h-6" />
-                                    <h2 className="text-lg md:text-xl font-bold">{currentCategory.title}</h2>
+                            <div className="bg-gradient-to-r from-[#135783] via-[#259CA8] to-[#135783] p-3 md:p-4 text-white">
+                                <div className="flex items-center gap-2">
+                                    <CategoryIcon className="w-5 h-5 md:w-6 h-6" />
+                                    <h2 className="text-base md:text-lg font-bold">{currentCategory.title}</h2>
                                 </div>
-                                <p className="text-white/90 text-xs font-medium ml-8">
+                                <p className="text-white/90 text-[10px] md:text-xs font-medium ml-7 md:ml-8 mt-0.5">
                                     {filteredQuestions.length} {filteredQuestions.length === 1 ? 'question' : 'questions'} available
                                 </p>
                             </div>
@@ -203,12 +201,12 @@ const FAQ = () => {
                                                 className="w-full px-4 py-3 text-left flex items-start justify-between gap-3 group focus:outline-none focus:bg-[#F0F9FA]"
                                             >
                                                 <div className="flex-1">
-                                                    <h3 className="text-sm font-semibold text-[#1F2937] group-hover:text-[#259CA8] transition-colors duration-300 leading-snug">
+                                                    <h3 className="text-xs md:text-sm font-semibold text-[#1F2937] group-hover:text-[#259CA8] transition-colors duration-300 leading-snug">
                                                         {item.question}
                                                     </h3>
                                                 </div>
                                                 <div className={`flex-shrink-0 mt-0.5 transition-all duration-300 ${activeIndex === index ? 'rotate-180' : ''}`}>
-                                                    <ChevronDown className={`w-4 h-4 transition-colors duration-300 ${activeIndex === index ? 'text-[#259CA8]' : 'text-[#D1D5DB] group-hover:text-[#259CA8]'}`} />
+                                                    <ChevronDown className={`w-3.5 h-3.5 md:w-4 h-4 transition-colors duration-300 ${activeIndex === index ? 'text-[#259CA8]' : 'text-[#D1D5DB] group-hover:text-[#259CA8]'}`} />
                                                 </div>
                                             </button>
 
@@ -219,7 +217,7 @@ const FAQ = () => {
                                             >
                                                 <div className="px-4 pb-3 pt-0">
                                                     <div className="border-l-4 border-[#259CA8] pl-3">
-                                                        <p className="text-[#4B5563] leading-relaxed text-xs font-medium">
+                                                        <p className="text-[#4B5563] leading-relaxed text-[11px] md:text-xs font-medium">
                                                             {item.answer}
                                                         </p>
                                                     </div>
@@ -243,11 +241,14 @@ const FAQ = () => {
                         </div>
 
                         {/* Additional CTA */}
-                        <div className="mt-4 bg-gradient-to-r from-[#259CA8]/10 via-white to-[#135783]/10 rounded-2xl border-2 border-[#259CA8]/20 p-4 text-center shadow-md">
-                            <p className="text-[#4B5563] mb-2 text-sm font-medium">Can't find your answer?</p>
+                        <div className="mt-4 bg-gradient-to-r from-[#259CA8]/10 via-white to-[#135783]/10 rounded-xl md:rounded-2xl border border-[#259CA8]/20 p-3 md:p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-sm">
+                            <div className="text-center sm:text-left">
+                                <p className="text-[#1F2937] text-sm font-semibold">Can't find your answer?</p>
+                                <p className="text-[#4B5563] text-xs font-medium">Our team is here to help you with any questions.</p>
+                            </div>
                             <button
                                 onClick={scrollToTop}
-                                className="bg-gradient-to-r from-[#259CA8] to-[#135783] text-white font-bold py-2 px-6 rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300 text-sm"
+                                className="w-full sm:w-auto bg-gradient-to-r from-[#259CA8] to-[#135783] text-white font-bold py-2 px-5 rounded-lg md:rounded-xl hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 text-xs md:text-sm whitespace-nowrap"
                             >
                                 Contact Our Team
                             </button>
