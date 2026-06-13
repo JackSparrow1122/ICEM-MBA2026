@@ -11,6 +11,16 @@ function MechHero() {
     []
   );
 
+  const iframeSrc = useMemo(() => {
+    if (typeof window !== "undefined") {
+      const token = window.crypto?.randomUUID ? window.crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+      window.sessionStorage.setItem("icem_npf_thank_you_token", token);
+      const redirectUrl = encodeURIComponent(window.location.origin + `/thank-you?npf_token=${encodeURIComponent(token)}`);
+      return `https://widgets.nopaperforms.com/register?&r=${redirectUrl}&w=9fa0f32fe4f405fa68dc3df39ef6a11b`;
+    }
+    return "https://widgets.nopaperforms.com/register?&r=https://indiraicem.ac.in/thank-you/&w=9fa0f32fe4f405fa68dc3df39ef6a11b";
+  }, []);
+
   const [showSkeleton, setShowSkeleton] = useState(true);
   const [message, setMessage] = useState("Loading form...");
   const timerRef = useRef(null);
@@ -96,7 +106,7 @@ function MechHero() {
         {/* Left Text */}
         <div className="w-full lg:w-7/12 text-center lg:text-left space-y-6">
           <p className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight">
-            Join One of India's Most Trusted   {" "}
+            Join One of India&apos;s Most Trusted   {" "}
             <span className="text-[#259CA8]">Engineering</span> Programme
           </p>
 
@@ -145,7 +155,7 @@ function MechHero() {
               </div>
             )}
             <iframe
-              src="https://widgets.nopaperforms.com/register?&r=https://indiraicem.ac.in/thank-you/&w=9fa0f32fe4f405fa68dc3df39ef6a11b"
+              src={iframeSrc}
               width="100%"
               height="490"
               frameBorder="0"

@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 import Navbar from './pages/Navbar';
 import ApplyNowButton from './components/ApplyNowButton';
 import ICEMVanila from './pages/ICEMVanilla';
+import ThankYou from './pages/ThankYou';
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -48,6 +49,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ICEMVanila title="icemvanilla" />} />
           <Route path="/icemvanilla" element={<ICEMVanila title="icemvanilla" />} />
+          <Route path="/thank-you" element={<ThankYou />} />
         </Routes>
         <ApplyNowButton />
       </div>

@@ -1,12 +1,17 @@
-import React from "react";
+import { useLocation } from "react-router-dom";
 
 function ApplyNowButton() {
+  const location = useLocation();
   const handleClick = () => {
     window.scrollTo({
       top: 0, // Scroll to the top of the page
       behavior: "smooth", // Smooth scroll effect
     });
   };
+
+  if (location.pathname === "/thank-you" || location.pathname === "/thank-you/") {
+    return null;
+  }
 
   return (
     <div className="fixed right-[-48px] top-1/2 transform -translate-y-1/2 z-50">
