@@ -30,12 +30,16 @@ function ThankYou() {
 
     setIsValidated(true);
 
-    // 3. Track successful form submission using Google Tag Manager dataLayer
+    // 3. Track successful form submission using Google Tag Manager dataLayer and Google Ads
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: "form_submission_success",
       page_path: "/thank-you",
     });
+
+    if (typeof window.gtag === "function") {
+      window.gtag('event', 'conversion', { 'send_to': 'AW-16606532987/IVt0COaGu7kZEPuqzu49' });
+    }
 
     // 4. Setup redirect countdown timer
     const timer = setInterval(() => {
