@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import { useState } from "react";
 import {
   ChevronDown,
   HelpCircle,
@@ -13,14 +13,7 @@ const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeCategory, setActiveCategory] = useState("about");
 
-  const scrollToTop = () => {
-    const applySection = document.getElementById("apply");
-    if (applySection) {
-      applySection.scrollIntoView({ behavior: "smooth" });
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
+
 
   const faqData = {
     about: {
@@ -165,9 +158,7 @@ const FAQ = () => {
   const currentCategory = faqData[activeCategory];
   const CategoryIcon = currentCategory ? currentCategory.icon : HelpCircle;
 
-  const filteredQuestions = useMemo(() => {
-    return currentCategory ? currentCategory.questions : [];
-  }, [activeCategory]);
+  const filteredQuestions = currentCategory ? currentCategory.questions : [];
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? -1 : index);
@@ -237,7 +228,7 @@ const FAQ = () => {
               {/* Category Title Header */}
               <div className="bg-gradient-to-r from-[#003c84] via-[#135783] to-[#259CA8] p-5 md:p-6 text-white flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <CategoryIcon className="w-5 h-5 md:w-6 h-6" />
+                  <CategoryIcon className="w-5 h-5 md:w-6 md:h-6" />
                   <div>
                     <h3 className="text-base md:text-lg font-bold">
                       {currentCategory.title}
