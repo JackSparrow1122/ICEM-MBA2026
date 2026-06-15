@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { ChevronDown, Search, HelpCircle, Users, DollarSign, Briefcase, Building2, Globe } from 'lucide-react';
+import { ChevronDown, Search, HelpCircle, Users, DollarSign, Briefcase, Building2, BookOpen, AlertCircle } from 'lucide-react';
 
 const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -7,89 +7,117 @@ const FAQ = () => {
     const [searchTerm, setSearchTerm] = useState('');
 
     const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const applySection = document.getElementById('apply');
+        if (applySection) {
+            applySection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     };
 
     const faqData = {
         about: {
             title: 'About ICEM',
             icon: HelpCircle,
-            color: 'from-[#135783] to-[#259CA8]',
             questions: [
                 {
                     id: 1,
-                    question: 'Is ICEM affiliated and approved?',
-                    answer: 'Yes, ICEM is an Autonomous Institute affiliated to Savitribai Phule Pune University (SPPU) and approved by AICTE, New Delhi.'
+                    question: 'Is ICEM Pune autonomous and SPPU affiliated?',
+                    answer: 'Yes, Indira College of Engineering and Management (ICEM) is an Autonomous Institute. It is approved by AICTE, New Delhi, recognized by the Government of Maharashtra, and permanently affiliated with Savitribai Phule Pune University (SPPU). Autonomous status allows us to design and update our curriculum dynamically to meet industry requirements.'
+                },
+                {
+                    id: 2,
+                    question: 'What are the benefits of studying at an Autonomous engineering college?',
+                    answer: 'Autonomy allows ICEM to offer an industry-aligned syllabus, incorporate emerging technologies (like Generative AI, Cloud Computing, and IoT) into the core coursework, conduct exams on time, publish results quickly, and offer flexible credit-based choice systems that enhance employment readiness.'
+                },
+                {
+                    id: 3,
+                    question: 'Where is the ICEM campus located and when was it established?',
+                    answer: 'ICEM was established in 2007 under the prestigious Indira Group of Institutes (IGI). The campus is located in a scenic, pollution-free environment in Parandwadi, near Somatne Phata, Pune, Maharashtra, which is highly accessible from both Pune city and Mumbai.'
                 }
             ]
         },
         admissions: {
-            title: 'Admissions Process',
+            title: 'Admissions & Eligibility',
             icon: Users,
-            color: 'from-[#135783] to-[#259CA8]',
             questions: [
                 {
-                    id: 2,
-                    question: 'Can I visit the campus before applying?',
-                    answer: 'Absolutely. ICEM welcomes prospective students and parents to visit the campus. Please contact the admission office to schedule a campus tour.'
+                    id: 4,
+                    question: 'What is the eligibility criteria for first-year B.E. admissions?',
+                    answer: 'Candidates must have passed 10+2 (HSC) or equivalent with Physics and Mathematics as compulsory subjects, along with Chemistry/Biotechnology/Biology/Technical Vocational subjects, obtaining at least 45% marks (40% for backward class categories/PWD belonging to Maharashtra State). A valid score in MHT-CET or JEE Main is mandatory.'
+                },
+                {
+                    id: 5,
+                    question: 'Does ICEM offer Direct Second Year (DSE) admissions for diploma holders?',
+                    answer: 'Yes, diploma holders who have completed an AICTE-approved Diploma in Engineering & Technology with at least 45% marks (40% for reserved category/Maharashtra PWD) are eligible for Direct Second Year (DSE) admission through the CAP rounds.'
+                },
+                {
+                    id: 6,
+                    question: 'Can I visit the campus and consult the admission team in person?',
+                    answer: 'Absolutely! We highly encourage students and parents to visit the campus for a guided tour of our labs, library, and hostels. Our admission counselling center is open Monday to Saturday from 9:30 AM to 5:30 PM. You can also connect with us online.'
                 }
             ]
         },
         fees: {
-            title: 'Scholarships',
+            title: 'Scholarships & Fees',
             icon: DollarSign,
-            color: 'from-[#135783] to-[#135783]',
             questions: [
                 {
-                    id: 3,
-                    question: 'Are there scholarships available?',
-                    answer: 'Yes, scholarships are available for eligible students under government schemes and merit-based scholarships offered by the institute.'
+                    id: 7,
+                    question: 'What government scholarships and schemes are available?',
+                    answer: 'Students admitted through CAP rounds can avail of various government scholarships, including Rajarshi Chhatrapati Shahu Maharaj Shikshan Shulkh Shishyavrutti Yojna (EBC), hostel allowance (Dr. Punjabrao Deshmukh scheme), and fee concessions for SC, ST, NT, VJ, SBC, and OBC categories as per Maharashtra state rules.'
+                },
+                {
+                    id: 8,
+                    question: 'What is the Tuition Fee Waiver Scheme (TFWS) and how do I apply?',
+                    answer: 'TFWS is a merit-based scheme for students with a family income of less than ₹8 LPA. Eligible candidates receive a 100% waiver on tuition fees. Applications must be submitted through the DTE CAP registration portal by selecting the TFWS option during choice filling.'
+                },
+                {
+                    id: 9,
+                    question: 'Are there flexible fee payment options or installment facilities?',
+                    answer: 'Yes, to support families, ICEM allows the payment of academic and hostel fees in structured installments. Parents can request installment options by submitting a formal request to the administrative department during admission.'
                 }
             ]
         },
         placements: {
-            title: 'Placements & Career',
+            title: 'Placements & Internships',
             icon: Briefcase,
-            color: 'from-[#259CA8] to-[#135783]',
             questions: [
                 {
-                    id: 4,
-                    question: 'What is the placement record at ICEM?',
-                    answer: 'ICEM has a consistent placement record with top recruiters including Emerson, CrowdStrike, Tetra Pak, Infosys, TCS, Accenture, and many more. The highest package offered has been up to 27 LPA.'
+                    id: 10,
+                    question: 'What is the placement record and highest package offered at ICEM?',
+                    answer: 'ICEM has a robust placement record. The highest package offered is 27 LPA, with average packages ranging between 4.5 LPA and 6 LPA. Our graduates are placed in top-tier multinational companies, core engineering firms, and emerging startups.'
                 },
                 {
-                    id: 5,
-                    question: 'Does ICEM have a dedicated placement cell?',
-                    answer: 'Yes, ICEM has a proactive Training and Placement Cell that provides soft skills training, aptitude preparation, technical grooming, and connects students with recruiters throughout the year.'
+                    id: 11,
+                    question: 'Who are the primary recruiters visiting the ICEM campus?',
+                    answer: 'Our regular campus recruiters include industry giants and tech leaders such as Emerson, CrowdStrike, Tetra Pak, Forbes Marshall, TCS, Capgemini, Cognizant, Wipro, Infosys, and Tech Mahindra.'
                 },
                 {
-                    id: 6,
-                    question: 'Are internships mandatory?',
-                    answer: 'Yes, students are required to complete internships during their course of study. The placement cell assists in securing internships with reputed organizations.'
+                    id: 12,
+                    question: 'How does the Training & Placement Cell prepare students for recruitment?',
+                    answer: 'Our dedicated T&P Cell conducts structured grooming programs starting from the second year. This includes training in soft skills, business communication, aptitude solving, programming bootcamps, resume-building workshops, and mock interview drills conducted by industry experts.'
                 }
             ]
         },
         infrastructure: {
-            title: 'Infrastructure & Facilities',
+            title: 'Infrastructure & Labs',
             icon: Building2,
-            color: 'from-[#135783] to-[#259CA8]',
             questions: [
                 {
-                    id: 7,
-                    question: 'What facilities are available on campus?',
-                    answer: 'ICEM offers state-of-the-art infrastructure including - Apple Labs and high-performance computing labs, smart digital classrooms, central library with online resources, indoor and outdoor sports facilities, separate hostels for boys and girls, canteen, gym, and transport facilities'
-                }
-            ]
-        },
-        studentlife: {
-            title: 'Campus Life & Support',
-            icon: Globe,
-            color: 'from-[#135783] to-[#259CA8]',
-            questions: [
+                    id: 13,
+                    question: 'What specialized laboratory facilities does ICEM provide?',
+                    answer: 'ICEM is equipped with advanced laboratories, including specialized Apple Mac Labs, high-performance computing labs, mechanical engineering workshops, electronics and IoT testbeds, and modern chemistry/physics laboratories designed to encourage research and practical learning.'
+                },
                 {
-                    id: 8,
-                    question: 'Does ICEM organize events and fests?',
-                    answer: 'Yes, ICEM hosts annual cultural and technical fests along with sports meets, hackathons, and guest lectures throughout the year.'
+                    id: 14,
+                    question: 'What are the on-campus hostel facilities like?',
+                    answer: 'We offer separate, secure hostels for boys and girls on campus. Facilities include 24/7 security with CCTV surveillance, high-speed Wi-Fi, clean drinking water, hot water geysers, dedicated study halls, recreational rooms, and a clean mess serving nutritious, hygienic vegetarian food.'
+                },
+                {
+                    id: 15,
+                    question: 'Does the institute run bus services for daily commuters?',
+                    answer: 'Yes, ICEM operates a dedicated fleet of college buses that cover major routes across Pune city, Pimpri-Chinchwad (PCMC), Talegaon, and surrounding suburbs, ensuring safe and hassle-free transit for students and staff.'
                 }
             ]
         }
@@ -98,165 +126,232 @@ const FAQ = () => {
     const categories = [
         { id: 'about', label: 'About ICEM', icon: HelpCircle },
         { id: 'admissions', label: 'Admissions', icon: Users },
-        { id: 'fees', label: 'Scholarships', icon: DollarSign },
+        { id: 'fees', label: 'Scholarships & Fees', icon: DollarSign },
         { id: 'placements', label: 'Placements', icon: Briefcase },
-        { id: 'infrastructure', label: 'Infrastructure', icon: Building2 },
-        { id: 'studentlife', label: 'Student Life', icon: Globe }
+        { id: 'infrastructure', label: 'Infrastructure', icon: Building2 }
     ];
 
     const currentCategory = faqData[activeCategory];
-    const CategoryIcon = currentCategory.icon;
+    const CategoryIcon = currentCategory ? currentCategory.icon : HelpCircle;
 
     // Filter questions based on search term
     const filteredQuestions = useMemo(() => {
-        if (!searchTerm.trim()) return currentCategory.questions;
+        if (!searchTerm.trim()) {
+            return currentCategory ? currentCategory.questions : [];
+        }
+        
+        // Search across all categories when search is active
+        const allQuestions = [];
+        Object.keys(faqData).forEach(cat => {
+            faqData[cat].questions.forEach(q => {
+                allQuestions.push({
+                    ...q,
+                    categoryName: faqData[cat].title
+                });
+            });
+        });
 
-        return currentCategory.questions.filter(q =>
+        return allQuestions.filter(q =>
             q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
             q.answer.toLowerCase().includes(searchTerm.toLowerCase())
         );
-    }, [searchTerm, activeCategory, currentCategory.questions]);
+    }, [searchTerm, activeCategory]);
 
     const toggleAccordion = (index) => {
         setActiveIndex(activeIndex === index ? -1 : index);
     };
 
     return (
-        <div className="py-8 md:py-12 bg-gradient-to-b from-white via-[#F1F5F9] to-[#F1F5F9] px-4 sm:px-6 md:px-8">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-[#f8fafc] to-[#f1f5f9] px-4 sm:px-6 lg:px-8 border-t border-[#e2e8f0]" id="faq">
             <div className="max-w-6xl mx-auto">
 
-                {/* Header Section */}
-                <div className="text-center mb-5 md:mb-7">
-                    <div className="inline-block mb-1.5">
-                        <div className="bg-gradient-to-r from-[#135783] via-[#259CA8] to-[#135783] p-1.5 rounded-full inline-block shadow-md">
-                            <HelpCircle className="w-5 h-5 text-white" />
-                        </div>
-                    </div>
-                    <h1 className="text-2xl md:text-3xl font-bold mb-1.5 font-poppins bg-gradient-to-r from-[#135783] via-[#259CA8] to-[#135783] bg-clip-text text-transparent">
+                {/* Section Header */}
+                <div className="text-center mb-12 md:mb-16">
+                    <span className="px-4 py-1.5 bg-[#259CA8]/10 text-[#259CA8] text-xs md:text-sm font-bold tracking-wider uppercase rounded-full inline-block mb-3 border border-[#259CA8]/20 shadow-sm">
+                        Got Questions?
+                    </span>
+                    <h2 className="text-3xl md:text-5xl font-extrabold text-[#003c84] tracking-tight leading-none mb-4">
                         Frequently Asked Questions
-                    </h1>
-                    <p className="text-xs md:text-sm text-[#111827] max-w-xl mx-auto leading-relaxed">
-                        Find answers to common questions about Indira College of Engineering and Management (ICEM)
+                    </h2>
+                    <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                        Find detailed answers regarding admissions, autonomy, academic programs, scholarship schemes, and student career placements at ICEM Pune.
                     </p>
+
+                    {/* Interactive Search Bar */}
+                    <div className="mt-8 max-w-xl mx-auto relative group">
+                        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <Search className="w-5 h-5 text-gray-400 group-focus-within:text-[#259CA8] transition-colors duration-300" />
+                        </div>
+                        <input
+                            type="text"
+                            placeholder="Search keywords (e.g., Placement, Scholarship, Apple Lab...)"
+                            value={searchTerm}
+                            onChange={(e) => {
+                                setSearchTerm(e.target.value);
+                                setActiveIndex(0); // reset active index on typing
+                            }}
+                            className="w-full pl-12 pr-10 py-3.5 md:py-4 bg-white border border-[#cbd5e1] rounded-2xl text-gray-800 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#259CA8]/30 focus:border-[#259CA8] shadow-sm hover:border-[#94a3b8] transition-all duration-300"
+                        />
+                        {searchTerm && (
+                            <button
+                                onClick={() => setSearchTerm('')}
+                                className="absolute inset-y-0 right-0 pr-4 flex items-center text-xs font-semibold text-gray-400 hover:text-gray-600 transition-colors"
+                            >
+                                Clear
+                            </button>
+                        )}
+                    </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-4">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
-                    {/* Category Selector */}
-                    <div className="lg:col-span-1">
-                        <div className="bg-white rounded-xl lg:rounded-2xl shadow-md overflow-hidden lg:sticky lg:top-24 border border-[#E5E7EB]">
-                            <div className="hidden lg:block bg-gradient-to-r from-[#135783] to-[#0d3f61] p-3">
-                                <h2 className="text-white font-bold text-sm tracking-wide">Categories</h2>
-                            </div>
-                            <nav className="flex lg:flex-col overflow-x-auto lg:overflow-x-visible divide-x lg:divide-x-0 lg:divide-y divide-[#F0F0F0] scrollbar-none [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                                {categories.map((cat) => {
-                                    const IconComp = cat.icon;
-                                    return (
-                                        <button
-                                            key={cat.id}
-                                            onClick={() => {
-                                                setActiveCategory(cat.id);
-                                                setSearchTerm('');
-                                                setActiveIndex(0);
-                                            }}
-                                            className={`flex-shrink-0 lg:w-full px-4 py-2.5 lg:py-2 text-left flex items-center gap-2 transition-all duration-300 group text-xs ${activeCategory === cat.id
-                                                ? 'bg-gradient-to-r from-[#259CA8]/10 to-[#259CA8]/5 text-[#135783] border-b-2 lg:border-b-0 lg:border-l-4 border-[#259CA8] font-semibold'
-                                                : 'text-[#4B5563] hover:bg-[#F9FAFB]'
-                                                }`}
-                                        >
-                                            <IconComp className={`w-3.5 h-3.5 flex-shrink-0 transition-colors duration-300 ${activeCategory === cat.id ? 'text-[#259CA8]' : 'text-[#9CA3AF] group-hover:text-[#259CA8]'}`} />
-                                            <span className="font-medium whitespace-nowrap">{cat.label}</span>
-                                        </button>
-                                    );
-                                })}
-                            </nav>
-                        </div>
-                    </div>
-
-                    {/* FAQ Accordion Section */}
-                    <div className="lg:col-span-3">
-                        <div className="bg-white rounded-xl lg:rounded-2xl shadow-md overflow-hidden border border-[#E5E7EB]">
-
-                            {/* Category Header */}
-                            <div className="bg-gradient-to-r from-[#135783] via-[#259CA8] to-[#135783] p-3 md:p-4 text-white">
-                                <div className="flex items-center gap-2">
-                                    <CategoryIcon className="w-5 h-5 md:w-6 h-6" />
-                                    <h2 className="text-base md:text-lg font-bold">{currentCategory.title}</h2>
-                                </div>
-                                <p className="text-white/90 text-[10px] md:text-xs font-medium ml-7 md:ml-8 mt-0.5">
-                                    {filteredQuestions.length} {filteredQuestions.length === 1 ? 'question' : 'questions'} available
-                                </p>
-                            </div>
-
-                            {/* Accordion Items */}
-                            <div className="divide-y divide-[#F0F0F0]">
-                                {filteredQuestions.length > 0 ? (
-                                    filteredQuestions.map((item, index) => (
-                                        <div
-                                            key={item.id}
-                                            className="transition-all duration-300 hover:bg-[#FAFBFC]"
-                                        >
+                    {/* Categories Left Rail (Only show if not searching) */}
+                    {!searchTerm && (
+                        <div className="lg:col-span-4 sticky top-24">
+                            <div className="bg-white rounded-3xl p-4 shadow-xl border border-gray-100/80 backdrop-blur-md">
+                                <h3 className="text-[#003c84] font-extrabold text-sm uppercase tracking-wider px-3 mb-3 flex items-center gap-2">
+                                    <BookOpen className="w-4 h-4 text-[#259CA8]" />
+                                    Admission Topics
+                                </h3>
+                                <div className="space-y-1.5">
+                                    {categories.map((cat) => {
+                                        const IconComponent = cat.icon;
+                                        const isActive = activeCategory === cat.id;
+                                        return (
                                             <button
-                                                onClick={() => toggleAccordion(index)}
-                                                className="w-full px-4 py-3 text-left flex items-start justify-between gap-3 group focus:outline-none focus:bg-[#F0F9FA]"
+                                                key={cat.id}
+                                                onClick={() => {
+                                                    setActiveCategory(cat.id);
+                                                    setActiveIndex(0);
+                                                }}
+                                                className={`w-full text-left flex items-center gap-3 px-4 py-3.5 rounded-2xl transition-all duration-300 group ${
+                                                    isActive
+                                                        ? 'bg-gradient-to-r from-[#003c84] to-[#135783] text-white shadow-md shadow-[#003c84]/15'
+                                                        : 'text-gray-600 hover:bg-gray-50 hover:text-[#003c84]'
+                                                }`}
                                             >
-                                                <div className="flex-1">
-                                                    <h3 className="text-xs md:text-sm font-semibold text-[#1F2937] group-hover:text-[#259CA8] transition-colors duration-300 leading-snug">
-                                                        {item.question}
-                                                    </h3>
-                                                </div>
-                                                <div className={`flex-shrink-0 mt-0.5 transition-all duration-300 ${activeIndex === index ? 'rotate-180' : ''}`}>
-                                                    <ChevronDown className={`w-3.5 h-3.5 md:w-4 h-4 transition-colors duration-300 ${activeIndex === index ? 'text-[#259CA8]' : 'text-[#D1D5DB] group-hover:text-[#259CA8]'}`} />
-                                                </div>
+                                                <IconComponent className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 ${
+                                                    isActive ? 'text-white' : 'text-gray-400 group-hover:text-[#259CA8]'
+                                                }`} />
+                                                <span className="font-semibold text-sm">{cat.label}</span>
                                             </button>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        </div>
+                    )}
 
-                                            {/* Answer Section */}
+                    {/* Accordion Questions Right Section */}
+                    <div className={searchTerm ? 'lg:col-span-12 w-full' : 'lg:col-span-8 w-full'}>
+                        <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+                            
+                            {/* Category Title / Search Status Header */}
+                            <div className="bg-gradient-to-r from-[#003c84] via-[#135783] to-[#259CA8] p-5 md:p-6 text-white flex items-center justify-between">
+                                <div className="flex items-center gap-3">
+                                    {searchTerm ? (
+                                        <Search className="w-5 h-5 md:w-6 h-6 animate-pulse" />
+                                    ) : (
+                                        <CategoryIcon className="w-5 h-5 md:w-6 h-6" />
+                                    )}
+                                    <div>
+                                        <h3 className="text-base md:text-lg font-bold">
+                                            {searchTerm ? `Search Results for "${searchTerm}"` : currentCategory.title}
+                                        </h3>
+                                        <p className="text-white/80 text-[11px] md:text-xs font-medium mt-0.5">
+                                            Showing {filteredQuestions.length} {filteredQuestions.length === 1 ? 'question' : 'questions'}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Accordion List */}
+                            <div className="divide-y divide-gray-100">
+                                {filteredQuestions.length > 0 ? (
+                                    filteredQuestions.map((item, index) => {
+                                        const isOpen = activeIndex === index;
+                                        return (
                                             <div
-                                                className={`overflow-hidden transition-all duration-400 ease-in-out ${activeIndex === index ? 'max-h-96' : 'max-h-0'
-                                                    }`}
+                                                key={item.id}
+                                                className={`transition-all duration-300 ${
+                                                    isOpen ? 'bg-slate-50/50' : 'hover:bg-slate-50/30'
+                                                }`}
                                             >
-                                                <div className="px-4 pb-3 pt-0">
-                                                    <div className="border-l-4 border-[#259CA8] pl-3">
-                                                        <p className="text-[#4B5563] leading-relaxed text-[11px] md:text-xs font-medium">
-                                                            {item.answer}
-                                                        </p>
+                                                <button
+                                                    onClick={() => toggleAccordion(index)}
+                                                    className="w-full px-5 md:px-8 py-5 text-left flex items-start justify-between gap-4 group focus:outline-none"
+                                                >
+                                                    <div className="flex-1">
+                                                        {searchTerm && item.categoryName && (
+                                                            <span className="text-[10px] font-bold text-[#259CA8] uppercase tracking-wider block mb-1">
+                                                                {item.categoryName}
+                                                            </span>
+                                                        )}
+                                                        <h4 className={`text-sm md:text-base font-bold transition-colors duration-300 leading-snug ${
+                                                            isOpen ? 'text-[#003c84]' : 'text-gray-800 group-hover:text-[#259CA8]'
+                                                        }`}>
+                                                            {item.question}
+                                                        </h4>
+                                                    </div>
+                                                    <div className={`flex-shrink-0 mt-0.5 p-1 rounded-full bg-slate-100 text-gray-500 transition-all duration-300 ${
+                                                        isOpen ? 'rotate-180 bg-[#259CA8]/10 text-[#259CA8]' : 'group-hover:bg-slate-200'
+                                                    }`}>
+                                                        <ChevronDown className="w-4 h-4" />
+                                                    </div>
+                                                </button>
+
+                                                {/* Modern Smooth Height CSS Grid Transition */}
+                                                <div
+                                                    className={`grid transition-all duration-300 ease-in-out ${
+                                                        isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                                                    }`}
+                                                >
+                                                    <div className="overflow-hidden">
+                                                        <div className="px-5 md:px-8 pb-5 pt-1">
+                                                            <div className="border-l-2 border-[#259CA8] pl-4 md:pl-5 py-1">
+                                                                <p className="text-gray-600 text-xs md:text-sm leading-relaxed font-medium">
+                                                                    {item.answer}
+                                                                </p>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    ))
+                                        );
+                                    })
                                 ) : (
-                                    <div className="px-4 py-8 text-center">
-                                        <Search className="w-10 h-10 text-[#259CA8]/20 mx-auto mb-2" />
-                                        <p className="text-[#6B7280] text-sm font-medium mb-2">No questions match your search.</p>
+                                    <div className="px-8 py-16 text-center">
+                                        <AlertCircle className="w-12 h-12 text-gray-300 mx-auto mb-3" />
+                                        <p className="text-gray-500 font-bold text-sm mb-1">No matching FAQs found</p>
+                                        <p className="text-gray-400 text-xs mb-4">Try checking your spelling or search another keyword.</p>
                                         <button
                                             onClick={() => setSearchTerm('')}
-                                            className="text-[#259CA8] hover:text-[#135783] font-semibold underline transition-colors duration-300 text-xs"
+                                            className="px-4 py-2 bg-gradient-to-r from-[#259CA8] to-[#003c84] text-white font-bold text-xs rounded-xl shadow-md hover:scale-105 active:scale-95 transition-all duration-300"
                                         >
-                                            Clear search
+                                            View All FAQs
                                         </button>
                                     </div>
                                 )}
                             </div>
                         </div>
 
-                        {/* Additional CTA */}
-                        <div className="mt-4 bg-gradient-to-r from-[#259CA8]/10 via-white to-[#135783]/10 rounded-xl md:rounded-2xl border border-[#259CA8]/20 p-3 md:p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-sm">
-                            <div className="text-center sm:text-left">
-                                <p className="text-[#1F2937] text-sm font-semibold">Can't find your answer?</p>
-                                <p className="text-[#4B5563] text-xs font-medium">Our team is here to help you with any questions.</p>
+                        {/* Interactive Help Desk Footer */}
+                        <div className="mt-6 bg-white rounded-3xl p-5 border border-gray-100 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4">
+                            <div className="text-center md:text-left">
+                                <h4 className="text-gray-800 font-extrabold text-sm md:text-base">Have more specific queries?</h4>
+                                <p className="text-gray-500 text-xs md:text-sm font-semibold">Get assistance with our admission coordinators right now.</p>
                             </div>
                             <button
                                 onClick={scrollToTop}
-                                className="w-full sm:w-auto bg-gradient-to-r from-[#259CA8] to-[#135783] text-white font-bold py-2 px-5 rounded-lg md:rounded-xl hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 text-xs md:text-sm whitespace-nowrap"
+                                className="w-full md:w-auto px-6 py-3 bg-[#259CA8] hover:bg-[#135783] text-white font-extrabold text-xs md:text-sm tracking-wide rounded-2xl shadow-lg hover:shadow-[#259CA8]/25 hover:translate-y-[-1px] active:translate-y-[1px] transition-all duration-300 whitespace-nowrap cursor-pointer"
                             >
-                                Contact Our Team
+                                Enquire Now
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
