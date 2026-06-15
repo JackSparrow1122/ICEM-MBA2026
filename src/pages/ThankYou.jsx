@@ -2,6 +2,20 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "./Footer";
 
+function getCookie(name) {
+  if (typeof document === "undefined") return null;
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+  return null;
+}
+
+function deleteCookie(name) {
+  if (typeof document === "undefined") return;
+  document.cookie = `${name}=; path=/; domain=.indiraicem.ac.in; expires=Thu, 01 Jan 1970 00:00:00 GMT; Secure; SameSite=Lax`;
+  document.cookie = `${name}=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; Secure; SameSite=Lax`;
+}
+
 function ThankYou() {
   const navigate = useNavigate();
   const [seconds, setSeconds] = useState(6);
@@ -18,11 +32,18 @@ function ThankYou() {
     // 2. Validate token on top-level window load
     const token = new URLSearchParams(window.location.search).get("npf_token");
     const storedToken = sessionStorage.getItem("icem_npf_thank_you_token");
+    const cookieToken = getCookie("icem_npf_thank_you_token");
     
     // Consume the token immediately so it cannot be reused
     sessionStorage.removeItem("icem_npf_thank_you_token");
+    deleteCookie("icem_npf_thank_you_token");
 
-    if (!token || !storedToken || token !== storedToken) {
+    const isValid = Boolean(
+      token && 
+      ((storedToken && token === storedToken) || (cookieToken && token === cookieToken))
+    );
+
+    if (!isValid) {
       // Direct access attempt or invalid token, redirect to homepage
       navigate("/");
       return;

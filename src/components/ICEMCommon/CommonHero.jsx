@@ -14,8 +14,19 @@ function MechHero() {
   const iframeSrc = useMemo(() => {
     if (typeof window !== "undefined") {
       const token = window.crypto?.randomUUID ? window.crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+      
+      // 1. Store in sessionStorage (for local fallback)
       window.sessionStorage.setItem("icem_npf_thank_you_token", token);
-      const redirectUrl = encodeURIComponent(window.location.origin + `/thank-you?npf_token=${encodeURIComponent(token)}`);
+      
+      // 2. Store in cookie with wildcard subdomain so the main website (indiraicem.ac.in) can read it
+      const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+      const cookieDomain = isLocal ? "" : "; domain=.indiraicem.ac.in";
+      document.cookie = `icem_npf_thank_you_token=${token}; path=/${cookieDomain}; max-age=120; Secure; SameSite=Lax`;
+      
+      // 3. Set redirect URL: main website in production, local origin for development
+      const origin = isLocal ? window.location.origin : "https://indiraicem.ac.in";
+      const redirectUrl = encodeURIComponent(`${origin}/thank-you?npf_token=${encodeURIComponent(token)}`);
+      
       return `https://widgets.nopaperforms.com/register?&r=${redirectUrl}&w=9fa0f32fe4f405fa68dc3df39ef6a11b`;
     }
     return "https://widgets.nopaperforms.com/register?&r=https://indiraicem.ac.in/thank-you/&w=9fa0f32fe4f405fa68dc3df39ef6a11b";
