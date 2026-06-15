@@ -191,9 +191,9 @@ const FAQ = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[max-content_1fr] gap-8 items-start">
           {/* Categories Left Rail */}
-          <div className="lg:col-span-4 sticky top-24">
+          <div className="sticky top-24 w-full lg:w-auto">
             <div className="bg-white rounded-3xl p-4 shadow-xl border border-gray-100/80 backdrop-blur-md">
               <h3 className="text-[#003c84] font-extrabold text-sm uppercase tracking-wider px-3 mb-3 flex items-center gap-2">
                 <BookOpen className="w-4 h-4 text-[#259CA8]" />
@@ -223,7 +223,7 @@ const FAQ = () => {
                             : "text-gray-400 group-hover:text-[#259CA8]"
                         }`}
                       />
-                      <span className="font-semibold text-sm">{cat.label}</span>
+                      <span className="font-semibold text-sm whitespace-nowrap">{cat.label}</span>
                     </button>
                   );
                 })}
@@ -232,7 +232,7 @@ const FAQ = () => {
           </div>
 
           {/* Accordion Questions Right Section */}
-          <div className="lg:col-span-8 w-full">
+          <div className="w-full">
             <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
               {/* Category Title Header */}
               <div className="bg-gradient-to-r from-[#003c84] via-[#135783] to-[#259CA8] p-5 md:p-6 text-white flex items-center justify-between">
@@ -311,24 +311,6 @@ const FAQ = () => {
                   );
                 })}
               </div>
-            </div>
-
-            {/* Interactive Help Desk Footer */}
-            <div className="mt-6 bg-white rounded-3xl p-5 border border-gray-100 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="text-center md:text-left">
-                <h4 className="text-gray-800 font-extrabold text-sm md:text-base">
-                  Have more specific queries?
-                </h4>
-                <p className="text-gray-500 text-xs md:text-sm font-semibold">
-                  Get assistance with our admission coordinators right now.
-                </p>
-              </div>
-              <button
-                onClick={scrollToTop}
-                className="w-full md:w-auto px-6 py-3 bg-[#259CA8] hover:bg-[#135783] text-white font-extrabold text-xs md:text-sm tracking-wide rounded-2xl shadow-lg hover:shadow-[#259CA8]/25 hover:translate-y-[-1px] active:translate-y-[1px] transition-all duration-300 whitespace-nowrap cursor-pointer"
-              >
-                Enquire Now
-              </button>
             </div>
           </div>
         </div>
