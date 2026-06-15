@@ -43,7 +43,7 @@ function App() {
     <Router>
       <div className="relative">
         <Helmet>
-          <title>ICEM | ICEMVanilla</title>
+          <title>ICEM Pune - Admissions Open 2026 | Best Engineering College in Maharashtra | Direct B.Tech Admission</title>
         </Helmet>
         <Navbar />
         <Routes>
