@@ -18,51 +18,33 @@ function deleteCookie(name) {
 
 function ThankYou() {
   const navigate = useNavigate();
-  const [seconds, setSeconds] = useState(6);
-  const [isValidated, setIsValidated] = useState(false);
+  const [seconds, setSeconds] = useState(10);
 
   useEffect(() => {
     // 1. If loaded inside an iframe (from NPF widget redirect), break out and load on parent window.
-    // We do NOT validate/consume the token yet so that the top-level window can validate it.
     if (window.self !== window.top) {
       window.top.location.href = window.location.href;
       return;
     }
 
-    // 2. Validate token on top-level window load
-    const token = new URLSearchParams(window.location.search).get("npf_token");
-    const storedToken = sessionStorage.getItem("icem_npf_thank_you_token");
-    const cookieToken = getCookie("icem_npf_thank_you_token");
-    
-    // Consume the token immediately so it cannot be reused
-    sessionStorage.removeItem("icem_npf_thank_you_token");
-    deleteCookie("icem_npf_thank_you_token");
+    // 2. Track successful form submission using Google Tag Manager dataLayer and Google Ads
+    // Only track once per browser session/tab to avoid duplicate conversion counts on refresh
+    const hasTracked = sessionStorage.getItem("icem_conversion_tracked");
+    if (!hasTracked) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "form_submission_success",
+        page_path: "/thank-you",
+      });
 
-    const isValid = Boolean(
-      token && 
-      ((storedToken && token === storedToken) || (cookieToken && token === cookieToken))
-    );
+      if (typeof window.gtag === "function") {
+        window.gtag('event', 'conversion', { 'send_to': 'AW-16606532987/IVt0COaGu7kZEPuqzu49' });
+      }
 
-    if (!isValid) {
-      // Direct access attempt or invalid token, redirect to homepage
-      navigate("/");
-      return;
+      sessionStorage.setItem("icem_conversion_tracked", "true");
     }
 
-    setIsValidated(true);
-
-    // 3. Track successful form submission using Google Tag Manager dataLayer and Google Ads
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: "form_submission_success",
-      page_path: "/thank-you",
-    });
-
-    if (typeof window.gtag === "function") {
-      window.gtag('event', 'conversion', { 'send_to': 'AW-16606532987/IVt0COaGu7kZEPuqzu49' });
-    }
-
-    // 4. Setup redirect countdown timer
+    // 3. Setup redirect countdown timer
     const timer = setInterval(() => {
       setSeconds((prev) => {
         if (prev <= 1) {
@@ -77,8 +59,8 @@ function ThankYou() {
     return () => clearInterval(timer);
   }, [navigate]);
 
-  if (!isValidated) {
-    return null; // Keep screen clean while checking token validity or breaking out of iframe
+  if (window.self !== window.top) {
+    return null; // Keep screen clean while breaking out of iframe
   }
 
   return (
