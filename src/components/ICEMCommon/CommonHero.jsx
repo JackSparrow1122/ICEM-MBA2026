@@ -118,7 +118,7 @@ function MechHero() {
         <div className="w-full lg:w-7/12 text-center lg:text-left space-y-6">
           <p className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight">
             Join One of India&apos;s Most Trusted   {" "}
-            <span className="text-[#F37121]">Engineering</span> Programme
+            <span className="text-[#F37121]">MBA</span> Programme
           </p>
 
 

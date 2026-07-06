@@ -13,27 +13,27 @@ const Tour = () => {
   const facilities = [
     {
       id: 1,
-      title: 'Computer Engineering Lab',
+      title: 'Computer & Language Lab',
       image: iMacLab,
-      description: 'State-of-the-art computer lab'
+      description: 'Modern computing facilities for analytics and language learning'
     },
     {
       id: 2,
-      title: 'Artificial Intelligence & Data Science',
+      title: 'Learning Resource Center',
       image: spaceLab,
-      description: 'Advanced research facility'
+      description: 'Rich collection of management books, journals, and e-resources'
     },
     {
       id: 3,
-      title: 'Mechanical Lab',
+      title: 'Seminar Hall & Auditoriums',
       image: mechanicalLab,
-      description: 'Cutting-edge machinery and tools'
+      description: 'A venue for guest lectures, industry seminars, and workshops'
     },
     {
       id: 4,
-      title: 'Apple Lab',
+      title: 'Discussion & Brainstorming Rooms',
       image: innovationLab,
-      description: 'Where ideas come to life'
+      description: 'Dedicated spaces for group presentations, case study analysis, and projects'
     },
     {
       id: 5,

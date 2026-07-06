@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import backgroundImage from "../../assets/images/plane.avif";
 
 const steps = [
-  "Check eligibility criteria (12th Science with PCM).",
+  "Check eligibility criteria (Graduation with min 50% and valid entrance exam score like MAH-CET/CAT/CMAT/XAT).",
   "Apply online through our official website.",
   "Appear for counseling and secure your seat!",
 ];

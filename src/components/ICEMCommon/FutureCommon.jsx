@@ -32,7 +32,7 @@ const LifeAtICEM = () => {
             Be Future-Ready with <span className="text-[#F37121]">ICEM!</span>
           </h1>
           <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-            Join the community of aspiring engineers at ICEM and turn your passion into a profession! Whether you dream of coding the next-gen apps, building AI solutions, designing advanced mechanical structures, or diving deep into telecommunications, ICEM provides the perfect launchpad for success.
+            Join the community of aspiring business leaders at ICEM and turn your passion into a profession! Whether you dream of managing marketing campaigns, analysis of financial structures, leading human resource teams, or designing efficient operations & supply chain management, ICEM provides the perfect launchpad for success.
           </p>
         </div>
 

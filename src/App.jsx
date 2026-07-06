@@ -41,7 +41,7 @@ function App() {
   return (
     <Router>
       <div className="relative">
-        <title>ICEM Pune - Admissions Open 2026 | Best Engineering College in Maharashtra | Direct B.Tech Admission</title>
+        <title>ICEM Pune - MBA Admissions Open 2026 | Top MBA College in Pune, Maharashtra</title>
         <Navbar />
         <Routes>
           <Route path="/" element={<ICEMVanila title="icemvanilla" />} />

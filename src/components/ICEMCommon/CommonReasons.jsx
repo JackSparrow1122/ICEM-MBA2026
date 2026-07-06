@@ -15,7 +15,7 @@ const features = [
   },
   {
     title: "State-of-the-Art Infrastructure",
-    description: "Apple Labs, research centers, and cutting-edge tech!",
+    description: "Smart classrooms, seminar halls, and a rich library!",
     Icon: FaTrophy,
   },
   {
@@ -25,12 +25,12 @@ const features = [
   },
   {
     title: "Vibrant Campus Life",
-    description: "Hackathons, Tech Fests, and Sports!",
+    description: "Management Fests, Leadership Summits, and Sports!",
     Icon: FaFire,
   },
   {
     title: "Holistic Learning",
-    description: "A mix of technical, soft skills, and leadership training!",
+    description: "A mix of management, soft skills, and leadership training!",
     Icon: FaGraduationCap,
   },
 ];
@@ -42,13 +42,13 @@ export default function WhyChooseICEM() {
       <div className="text-center mb-12 px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Why Choose <span className="text-[#F37121]">ICEM</span> for Your{" "}
-          <span className="text-[#F37121]">Engineering</span> Journey?
+          <span className="text-[#F37121]">MBA</span> Journey?
         </h2>
         <p className="max-w-3xl mx-auto text-gray-700 text-lg">
           At Indira College of Engineering and Management (ICEM), an Autonomous
-          institute, we empower innovators, problem solvers, and leaders! With
+          institute, we empower innovators, problem solvers, and business leaders! With
           world-class faculty, industry-aligned curriculum, and top-notch
-          placements, ICEM is where your engineering dreams take flight.
+          placements, ICEM is where your MBA dreams take flight.
         </p>
       </div>
 
@@ -63,8 +63,8 @@ export default function WhyChooseICEM() {
               <Icon className="w-6 h-6" />
             </div>
             <h3 className="font-bold text-lg text-gray-900 mb-2 transition-colors duration-300 group-hover:text-[#F37121]">
-              {title}
-            </h3>
+              {title
+            }</h3>
             <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
           </div>
         ))}
@@ -72,3 +72,4 @@ export default function WhyChooseICEM() {
     </section>
   );
 }
+

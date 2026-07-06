@@ -25,7 +25,7 @@ const InfoCard = React.memo(({ icon, text }) => (
 ));
 
 
-function ComputerEngineering() {
+function MBAStudying() {
   useEffect(() => {
     const debounceAOS = setTimeout(() => {
       AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
@@ -36,27 +36,27 @@ function ComputerEngineering() {
   const cards = [
     {
       icon: <FaUniversity />,
-      text: '2 Decades of Academic Excellence in Engineering Education',
+      text: '2 Decades of Academic Excellence in Management & Engineering Education',
     },
     {
       icon: <FaTools />,
-      text: 'Hands-on Training through Industry Visits, Internships & Live Projects',
+      text: 'Hands-on Training through Industry Visits, Summer Internships (SIP) & Live Projects',
     },
     {
       icon: <FaBuilding />,
-      text: '450+ Leading Recruiters across IT, Core, and Emerging Tech Domains',
+      text: '450+ Leading Recruiters across Management, IT, Finance, and Consulting Domains',
     },
     {
       icon: <FaChalkboardTeacher />,
-      text: 'Mentorship from Industry Experts across Mechanical, IT, AI, and Electronics',
+      text: 'Mentorship from Experienced Academicians & Corporate Professionals in Marketing, Finance, HR, and Operations',
     },
     {
       icon: <FaMicroscope />,
-      text: 'Advanced Labs for CAD, AI-ML, Networking, Robotics & Cloud Computing',
+      text: 'Interactive Case Studies, Seminars, Workshops, and Business Simulation Games',
     },
     {
       icon: <FaRocket />,
-      text: 'State-of-the-Art Infrastructure with Advanced Labs & Apple Labs, Sports Facilities & Vibrant Campus Life',
+      text: 'State-of-the-Art Campus with Smart Classrooms, Seminar Halls, Library & Vibrant Student-led Clubs',
     },
   ];
 
@@ -64,22 +64,22 @@ function ComputerEngineering() {
     <>
       <div className="max-w-7xl mx-auto px-4 md:px-16 py-12 poppins-regular overflow-hidden flex flex-col gap-8">
         <div className="w-full space-y-4" data-aos="fade-up">
-          {/* Engineering Excellence Badge */}
+          {/* MBA Excellence Badge */}
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#F37121]">
             <span className="w-8 h-0.5 bg-[#F37121]"></span>
-            Engineering Excellence
+            MBA Excellence
           </div>
           
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-            Your Gateway to the Best <span className="text-[#F37121]">Engineering</span> College in Pune!
+            Your Gateway to the Best <span className="text-[#F37121]">MBA</span> College in Pune!
           </h1>
           
           <h2 className="text-lg md:text-xl font-semibold text-[#F37121]">
-            Build, Innovate & Excel with ICEM Engineering!
+            Lead, Innovate & Excel with ICEM MBA!
           </h2>
           
           <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-5xl">
-            Indira College of Engineering & Management (ICEM) is one of the top engineering colleges in Pune, offering AICTE-approved B.E. programmes in Computer, IT, Mechanical, ENTC, and AI & Data Science. With 450+ recruiters, industry-aligned curriculum, and a campus equipped with Apple Labs, smart classrooms, R&D zones, and sports facilities—ICEM ensures holistic development.
+            Indira College of Engineering & Management (ICEM) is one of the premier institutes in Pune, offering AICTE-approved, SPPU-affiliated Master of Business Administration (MBA) programmes. With a dedicated Training & Placement cell, 450+ recruiters, industry-integrated curriculum, case study pedagogy, and regular corporate interactions—ICEM shapes the next generation of business leaders.
           </p>
         </div>
 
@@ -94,4 +94,5 @@ function ComputerEngineering() {
   );
 }
 
-export default ComputerEngineering;
+export default MBAStudying;
+

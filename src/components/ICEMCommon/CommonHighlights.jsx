@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import {
-  FaLaptopCode,
   FaChartLine,
-  FaGraduationCap,
+  FaLaptopCode,
+  FaHandshake,
 } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -33,18 +33,18 @@ function CommonHighlights() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         <HighlightCard
           icon={<FaChartLine />}
-          title="National Rankings"
-          description="Ranked 49th in Top 100 Private Engineering Institutes and 61st in Top 140 Engineering Institutes by Times of India Engineering Colleges."
+          title="Business Leadership & Strategy"
+          description="Develop a profound understanding of organizational dynamics, financial strategies, and competitive positioning to make impactful management decisions."
         />
         <HighlightCard
           icon={<FaLaptopCode />}
-          title="Smart India Hackathon"
-          description="Winners of Smart India Hackathon for 3 consecutive years organized by Ministry of HRD, AICTE & NASSCOM."
+          title="Data & Digital Integration"
+          description="Gain hands-on experience with business intelligence tools, analytics platforms, and emerging digital trends to solve modern organizational challenges."
         />
         <HighlightCard
-          icon={<FaGraduationCap />}
-          title="National Education Award"
-          description="Received Outstanding Education Institute (West) Award by National Education Awards 2018."
+          icon={<FaHandshake />}
+          title="Corporate & Industry Connect"
+          description="Learn from senior corporate leaders, work on real-world business cases, and participate in live simulations with leading brands."
         />
       </div>
     </section>
@@ -52,3 +52,5 @@ function CommonHighlights() {
 }
 
 export default CommonHighlights;
+
+

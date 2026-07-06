@@ -1,27 +1,38 @@
 import React from "react";
 // Import React Icons
-import { FaChalkboardTeacher, FaHourglassHalf, FaRupeeSign, FaUsers } from 'react-icons/fa';
+import { FaClock, FaBriefcase, FaGraduationCap, FaClipboardList } from 'react-icons/fa';
 
 const data = [
   {
-    icon: <FaChalkboardTeacher className="text-[#F37121] text-4xl" />, // Notepad icon for Program Format
-    value: "Programme Format",
-    description: "Offline",
+    icon: <FaClock className="text-[#F37121] text-4xl" />, // Clock icon for Duration
+    value: "Course Duration",
+    description: "The MBA Programme lasts 2 years.",
   },
   {
-    icon: <FaHourglassHalf className="text-[#F37121] text-4xl" />, // Calendar icon for Duration
-    value: "Duration",
-    description: "4 Years",
+    icon: <FaBriefcase className="text-[#F37121] text-4xl" />, // Briefcase icon for Internship
+    value: "Internship",
+    description: "Internships with leading organizations across industries.",
   },
   {
-    icon: <FaRupeeSign className="text-[#F37121] text-4xl" />, // Money icon for Fees
-    value: "Programme Fees",
-    description: "Rs.1,02,868 /-",
+    icon: <FaGraduationCap className="text-[#F37121] text-4xl" />, // Graduation cap icon for Placements
+    value: "Placements",
+    description: "Excellent placement record with top companies nationwide.",
   },
   {
-    icon: <FaUsers className="text-[#F37121] text-4xl" />, // Users icon for Recruiters
-    value: "450+",
-    description: "Total Recruiters",
+    icon: <FaClipboardList className="text-[#F37121] text-4xl" />, // Clipboard icon for Eligibility
+    value: "Eligibility",
+    description: (
+      <span>
+        Click{" "}
+        <a
+          href="#faq"
+          className="text-[#F37121] hover:underline font-bold transition-all"
+        >
+          here
+        </a>{" "}
+        to see eligibility.
+      </span>
+    ),
   },
 ];
 
@@ -59,7 +70,7 @@ export default function CompPointers() {
                   <div className="text-base font-bold text-gray-800 tracking-tight transition-colors duration-300 group-hover:text-[#F37121]">
                     {item.value}
                   </div>
-                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-0.5">
+                  <div className="text-sm text-gray-500 mt-0.5 font-medium leading-relaxed">
                     {item.description}
                   </div>
                 </div>

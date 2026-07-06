@@ -12,7 +12,7 @@ const CompBrochure = () => {
         <div className="max-w-full md:max-w-2/3 mb-4 md:mb-0">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Syllabus</h2>
           <p className="text-lg text-gray-200 hidden sm:block">
-          Master core engineering domains including robotics, thermodynamics, CAD/CAM, fluid mechanics, and advanced manufacturing systems.
+          Master core management domains including Marketing, Financial Management, Human Resources Management, Operations & Supply Chain Management, and Business Analytics.
           </p>
         </div>
 
