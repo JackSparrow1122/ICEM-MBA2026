@@ -64,9 +64,9 @@ function ThankYou() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-between pt-8 md:pt-16">
+    <div className="min-h-screen bg-[#F7F3EF] flex flex-col justify-between pt-8 md:pt-16">
       <div className="flex-grow flex items-center justify-center px-4 py-12">
-        <div className="max-w-md w-full bg-white rounded-3xl shadow-xl p-8 md:p-10 text-center border border-gray-100 transition-all duration-300 hover:shadow-2xl">
+        <div className="max-w-md w-full bg-[#FCFAEE] rounded-3xl shadow-xl p-8 md:p-10 text-center border border-gray-100 transition-all duration-300 hover:shadow-2xl">
           {/* Success Checkmark Icon */}
           <div className="w-20 h-20 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-6 text-emerald-500 animate-bounce">
             <svg
@@ -85,7 +85,7 @@ function ThankYou() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-3xl font-extrabold text-[#003c84] mb-3">
+          <h1 className="text-3xl font-extrabold text-gray-900 mb-3">
             Thank You!
           </h1>
 
@@ -98,10 +98,10 @@ function ThankYou() {
           </p>
 
           {/* Countdown timer */}
-          <div className="py-2 px-4 bg-gray-50 rounded-2xl inline-block mb-8">
+          <div className="py-2 px-4 bg-[#F7F3EF] rounded-2xl inline-block mb-8">
             <p className="text-sm text-gray-500 font-medium">
               Redirecting to home page in{" "}
-              <span className="text-[#259CA8] font-bold text-base">{seconds}</span>{" "}
+              <span className="text-[#F37121] font-bold text-base">{seconds}</span>{" "}
               seconds...
             </p>
           </div>
@@ -110,13 +110,13 @@ function ThankYou() {
           <div className="space-y-3">
             <button
               onClick={() => window.history.back()}
-              className="w-full bg-[#003c84] hover:bg-[#135783] text-white py-3 px-6 rounded-xl font-bold transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer"
+              className="w-full bg-[#F37121] hover:bg-[#D75A13] text-white py-3 px-6 rounded-xl font-bold transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer"
             >
               Go Back
             </button>
             <a
               href="/"
-              className="block w-full bg-gray-50 hover:bg-gray-100 text-[#003c84] border border-gray-200 py-3 px-6 rounded-xl font-bold transition-all duration-300 cursor-pointer"
+              className="block w-full bg-[#FCFAEE] hover:bg-[#F7F3EF] text-[#F37121] border border-gray-200 py-3 px-6 rounded-xl font-bold transition-all duration-300 cursor-pointer"
             >
               Return to Home
             </a>

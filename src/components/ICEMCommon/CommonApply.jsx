@@ -13,7 +13,7 @@ const AdmissionProcess = () => {
   };
 
   return (
-    <div className="relative bg-[#259CA8] px-4 md:px-8 lg:px-16 py-10 text-white shadow-lg overflow-hidden">
+    <div className="relative bg-[#F37121] px-4 md:px-8 lg:px-16 py-10 text-white shadow-lg overflow-hidden">
       {/* ✅ Background image visible only on md and up */}
       <div
         className="hidden md:block absolute inset-0 bg-no-repeat bg-center bg-contain"
@@ -21,7 +21,7 @@ const AdmissionProcess = () => {
       ></div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#135783] opacity-85 mix-blend-overlay"></div>
+      <div className="absolute inset-0 bg-[#D75A13] opacity-85 mix-blend-overlay"></div>
 
       {/* Content */}
       <div className="relative z-10 text-center">
@@ -39,7 +39,7 @@ const AdmissionProcess = () => {
               key={index}
               className="relative p-8 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl transition-all duration-300 hover:bg-white/15 hover:-translate-y-1 flex flex-col items-center text-center space-y-4"
             >
-              <div className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white text-[#135783] font-bold text-xl shadow-lg">
+              <div className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white text-[#F37121] font-bold text-xl shadow-lg">
                 {String(index + 1).padStart(2, '0')}
               </div>
               <p className="text-lg text-white font-medium leading-relaxed">{text}</p>
@@ -51,7 +51,7 @@ const AdmissionProcess = () => {
         <div className="mt-10">
           <button
             onClick={scrollToTop}
-            className="bg-white text-[#135783] font-bold py-4 px-8 rounded-full shadow-lg hover:bg-[#135783] hover:text-white transition-all duration-300 ease-in-out"
+            className="bg-white text-[#F37121] font-bold py-4 px-8 rounded-full shadow-lg hover:bg-[#D75A13] hover:text-white transition-all duration-300 ease-in-out"
           >
             Apply Now
           </button>

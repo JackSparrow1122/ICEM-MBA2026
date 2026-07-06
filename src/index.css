@@ -1,7 +1,13 @@
 @import "tailwindcss";
 
 
+body {
+  background-color: #FCFAEE;
+  color: #1f2937;
+}
+
 body, .mech-hero-wrapper {
   font-family: "Baskervville", serif;
 }
+
 

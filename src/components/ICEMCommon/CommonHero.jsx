@@ -98,7 +98,7 @@ function MechHero() {
     >
       <style>{`
         ::selection {
-          background-color: #135783;
+          background-color: #F37121;
           color: #fff8f0;
         }
         @keyframes blink {
@@ -118,7 +118,7 @@ function MechHero() {
         <div className="w-full lg:w-7/12 text-center lg:text-left space-y-6">
           <p className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight">
             Join One of India&apos;s Most Trusted   {" "}
-            <span className="text-[#259CA8]">Engineering</span> Programme
+            <span className="text-[#F37121]">Engineering</span> Programme
           </p>
 
 
@@ -126,8 +126,8 @@ function MechHero() {
           <div className="space-y-4">
             <p className="text-lg md:text-xl text-gray-200">
               2 Decades of Excellence | 100% Placement Assistance | SPPU Affiliated            </p>
-            <div className="inline-block px-4 py-2 bg-[#259CA8]/20 border border-[#259CA8]/30 rounded-full">
-              <span className="text-[#259CA8] font-bold text-sm sm:text-base tracking-wide">
+            <div className="inline-block px-4 py-2 bg-[#F37121]/20 border border-[#F37121]/30 rounded-full">
+              <span className="text-[#F37121] font-bold text-sm sm:text-base tracking-wide">
                 Admissions Open 2026              </span>
             </div>
           </div>
@@ -135,7 +135,7 @@ function MechHero() {
           {/* Apply Now Button */}
           <div className="mt-8 text-center lg:text-left hidden md:block">
             <button className="relative inline-flex items-center group text-lg font-semibold text-white">
-              <span className="relative z-10 flex items-center gap-2 px-8 py-3 bg-[#259CA8] hover:bg-[#135783] rounded-full transition-all duration-300 ease-in-out shadow-lg hover:shadow-[#259CA8]/35">
+              <span className="relative z-10 flex items-center gap-2 px-8 py-3 bg-[#F37121] hover:bg-[#D75A13] rounded-full transition-all duration-300 ease-in-out shadow-lg hover:shadow-[#F37121]/35">
                 Apply Now
                 <FaLongArrowAltRight className="text-white text-xl transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
               </span>
@@ -148,7 +148,7 @@ function MechHero() {
           <div
             className="p-4 w-full max-w-md shadow-2xl rounded-2xl relative bg-white text-black min-h-[530px]"
           >
-            <h3 className="text-lg font-bold text-center mb-2 text-[#003c84]">
+            <h3 className="text-lg font-bold text-center mb-2 text-[#F37121]">
               Enquire Now
             </h3>
             {showSkeleton && (

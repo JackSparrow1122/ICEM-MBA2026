@@ -12,10 +12,10 @@ import 'aos/dist/aos.css';
 
 const InfoCard = React.memo(({ icon, text }) => (
   <div
-    className="bg-white p-6 border border-gray-100 shadow-md shadow-gray-200/30 flex items-center gap-5 rounded-2xl hover:shadow-lg hover:border-[#259CA8]/30 transition-all duration-300 hover:-translate-y-0.5 group"
+    className="bg-white p-6 border border-gray-100 shadow-md shadow-gray-200/30 flex items-center gap-5 rounded-2xl hover:shadow-lg hover:border-[#F37121]/30 transition-all duration-300 hover:-translate-y-0.5 group"
     data-aos="zoom-in"
   >
-    <div className="flex-shrink-0 text-[#259CA8] transition-transform duration-300 group-hover:scale-110">
+    <div className="flex-shrink-0 text-[#F37121] transition-transform duration-300 group-hover:scale-110">
       {React.cloneElement(icon, { className: "w-12 h-12 text-current mr-0" })}
     </div>
     <span className="text-sm sm:text-base text-left text-gray-700 font-medium leading-relaxed">
@@ -65,16 +65,16 @@ function ComputerEngineering() {
       <div className="max-w-7xl mx-auto px-4 md:px-16 py-12 poppins-regular overflow-hidden flex flex-col gap-8">
         <div className="w-full space-y-4" data-aos="fade-up">
           {/* Engineering Excellence Badge */}
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#259CA8]">
-            <span className="w-8 h-0.5 bg-[#259CA8]"></span>
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#F37121]">
+            <span className="w-8 h-0.5 bg-[#F37121]"></span>
             Engineering Excellence
           </div>
           
-          <h1 className="text-3xl md:text-5xl font-bold text-[#135783] leading-tight">
-            Your Gateway to the Best <span className="text-[#259CA8]">Engineering</span> College in Pune!
+          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+            Your Gateway to the Best <span className="text-[#F37121]">Engineering</span> College in Pune!
           </h1>
           
-          <h2 className="text-lg md:text-xl font-semibold text-[#259CA8]">
+          <h2 className="text-lg md:text-xl font-semibold text-[#F37121]">
             Build, Innovate & Excel with ICEM Engineering!
           </h2>
           

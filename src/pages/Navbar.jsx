@@ -53,10 +53,10 @@ function Navbar() {
         {`
           @keyframes glow {
             0%, 100% {
-              text-shadow: 0 0 5px #fff, 0 0 5px #117577, 0 0 5px #117577;
+              text-shadow: 0 0 5px #fff, 0 0 5px #F37121, 0 0 5px #F37121;
             }
             50% {
-              text-shadow: 0 0 10px #fff, 0 0 5px #117577, 0 0 5px #117577;
+              text-shadow: 0 0 10px #fff, 0 0 5px #F37121, 0 0 5px #F37121;
             }
           }
           .animate-glow {

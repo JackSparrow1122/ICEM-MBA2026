@@ -63,8 +63,8 @@ const CompRecruiter = () => {
           ))}
         </div>
         {/* Gradient overlays for fade effect */}
-        <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#f2f7fc] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#f2f7fc] to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#FCFAEE] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#FCFAEE] to-transparent z-10 pointer-events-none" />
       </div>
     );
   };
@@ -75,10 +75,10 @@ const CompRecruiter = () => {
   const row3Logos = [...logos.slice(5), ...logos.slice(0, 5)];
 
   return (
-    <div className="logo-slider-section py-8 roboto-regular bg-white">
+    <div className="logo-slider-section py-8 roboto-regular bg-[#FCFAEE]">
       <div className="text-center mb-8">
-        <h2 className="text-3xl lg:text-4xl xl:text-4xl font-bold text-[#135783]">
-          Top <span className='text-[#259CA8]'>Recruiters</span>
+        <h2 className="text-3xl lg:text-4xl xl:text-4xl font-bold text-gray-900">
+          Top <span className='text-[#F37121]'>Recruiters</span>
         </h2>
       </div>
 

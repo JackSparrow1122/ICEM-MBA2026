@@ -24,12 +24,12 @@ const LifeAtICEM = () => {
   }, []);
 
   return (
-    <div className="w-full bg-[#fbfbfa] px-4 md:px-16 py-12 border-t border-b border-gray-100">
+    <div className="w-full bg-[#F7F3EF] px-4 md:px-16 py-12 border-t border-b border-gray-100">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
         {/* Left: Text */}
         <div className="w-full lg:w-1/2 text-center lg:text-left space-y-4">
           <h1 className="text-3xl md:text-4xl lg:text-5xl text-gray-900 font-bold leading-tight">
-            Be Future-Ready with <span className="text-[#259CA8]">ICEM!</span>
+            Be Future-Ready with <span className="text-[#F37121]">ICEM!</span>
           </h1>
           <p className="text-base md:text-lg text-gray-600 leading-relaxed">
             Join the community of aspiring engineers at ICEM and turn your passion into a profession! Whether you dream of coding the next-gen apps, building AI solutions, designing advanced mechanical structures, or diving deep into telecommunications, ICEM provides the perfect launchpad for success.
@@ -39,7 +39,7 @@ const LifeAtICEM = () => {
         {/* Right: Lazy iframe */}
         <div
           ref={videoRef}
-          className="w-full lg:w-1/2 aspect-video rounded-3xl overflow-hidden shadow-2xl border border-gray-200/50 bg-gray-50 transition-all duration-300 hover:shadow-[#259CA8]/15"
+          className="w-full lg:w-1/2 aspect-video rounded-3xl overflow-hidden shadow-2xl border border-gray-200/50 bg-gray-50 transition-all duration-300 hover:shadow-[#F37121]/15"
         >
           {loadVideo && (
             <iframe
