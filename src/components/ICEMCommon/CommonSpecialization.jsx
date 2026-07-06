@@ -52,9 +52,9 @@ const CompOffringICEM = () => {
   ];
 
   return (
-    <div className="relative px-4 md:px-8 lg:px-16 py-4 bg-[#FCFAEE] overflow-hidden">
+    <div className="relative px-4 md:px-8 lg:px-16 py-4 bg-white overflow-hidden">
       <h2
-        className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900"
+        className="text-3xl md:text-4xl font-bold text-center mb-4 "
         data-aos="fade-up"
       >
         Engineering Specializations Offered at ICEM
@@ -76,7 +76,7 @@ const CompOffringICEM = () => {
               <div className="relative z-10">{item.icon}</div>
             </div>
             <div className="bg-white p-4 text-start">
-              <h3 className="text-lg md:text-lg font-bold text-gray-900 mb-2">
+              <h3 className="text-lg md:text-lg font-bold  mb-2">
                 {item.title}
               </h3>
               <p className="text-sm md:text-sm text-gray-600">{item.description}</p>
