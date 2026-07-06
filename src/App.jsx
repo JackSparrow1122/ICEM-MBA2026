@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import './App.css';
 import './index.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import Navbar from './pages/Navbar';
 import ApplyNowButton from './components/ApplyNowButton';
 import ICEMVanila from './pages/ICEMVanilla';
@@ -42,9 +41,7 @@ function App() {
   return (
     <Router>
       <div className="relative">
-        <Helmet>
-          <title>ICEM Pune - Admissions Open 2026 | Best Engineering College in Maharashtra | Direct B.Tech Admission</title>
-        </Helmet>
+        <title>ICEM Pune - Admissions Open 2026 | Best Engineering College in Maharashtra | Direct B.Tech Admission</title>
         <Navbar />
         <Routes>
           <Route path="/" element={<ICEMVanila title="icemvanilla" />} />

@@ -85,6 +85,32 @@ const successors = [
   },
 ];
 
+const PrevArrow = ({ currentSlide, slideCount, ...props }) => {
+  const { style, onClick } = props;
+  return (
+    <div
+      className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-600 text-white rounded-full z-10 cursor-pointer"
+      style={style}
+      onClick={onClick}
+    >
+      <i className="fas fa-chevron-left"></i>
+    </div>
+  );
+};
+
+const NextArrow = ({ currentSlide, slideCount, ...props }) => {
+  const { style, onClick } = props;
+  return (
+    <div
+      className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-600 text-white rounded-full z-10 cursor-pointer"
+      style={style}
+      onClick={onClick}
+    >
+      <i className="fas fa-chevron-right"></i>
+    </div>
+  );
+};
+
 const MechJourny = () => {
   const settings = {
     infinite: true,
@@ -99,16 +125,8 @@ const MechJourny = () => {
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 768, settings: { slidesToShow: 1 } },
     ],
-    prevArrow: (
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-600 text-white rounded-full z-10 cursor-pointer">
-        <i className="fas fa-chevron-left"></i>
-      </div>
-    ),
-    nextArrow: (
-      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-600 text-white rounded-full z-10 cursor-pointer">
-        <i className="fas fa-chevron-right"></i>
-      </div>
-    ),
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
   };
 
   return (

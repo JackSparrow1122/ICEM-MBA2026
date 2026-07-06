@@ -11,7 +11,7 @@ const Headling = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .marquee-track {
           display: inline-block;
           min-width: 100%;
