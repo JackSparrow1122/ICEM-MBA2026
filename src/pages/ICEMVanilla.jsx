@@ -12,9 +12,12 @@ import CommonApply from '../components/ICEMCommon/CommonApply'
 import Headline from '../components/ICEMCommon/Headling'
 import CommonBanner from '../components/ICEMCommon/CommonBanner'
 import CommonTestimonials from '../components/ICEMCommon/CommonTestimonials'
+import CommonInovation from '../components/ICEMCommon/CommonInovation'
 import FutureWithIcem from '../components/ICEMCommon/FutureCommon'
 import FAQ from '../components/ICEMCommon/FAQ'
 import Footer from '../pages/Footer'
+
+
 const ICEMCommon = () => {
   return (
     <div>
@@ -28,6 +31,7 @@ const ICEMCommon = () => {
       <CommonHighlights />
       <CommonBrochure />
       <CommonPossibilities />
+      <CommonInovation />
       <CommonApply />
       <FutureWithIcem />
       <Headline />

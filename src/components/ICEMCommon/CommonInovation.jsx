@@ -1,37 +1,37 @@
-import React, { memo } from 'react';
-import ProgramImage from '../../assets/images/Com-Images/Untitled design.avif';
+import React, { memo, useCallback } from 'react';
 
-const ComCreative = () => {
+const CompBanner = () => {
+  const scrollToTop = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   return (
-    <div className="px-4 md:px-8 lg:px-16 py-4 mb-2">
-      <div className="flex flex-col md:flex-row items-center justify-between">
-        {/* Image Section */}
-        <div className="w-full sm:w-1/2 mb-4 sm:mb-0">
-          <img
-            src={ProgramImage}
-            alt="Computer Engineering"
-            loading="lazy"
-            className="w-full h-auto rounded-lg object-cover"
-          />
-        </div>
+    <div className="px-4 md:px-16 py-8">
+      <div className="bg-gradient-to-br from-[#F37121] to-[#D75A13] rounded-3xl shadow-2xl px-6 py-12 md:py-16 text-white border border-[#FCFAEE]/20 max-w-6xl mx-auto relative overflow-hidden group">
+        {/* Decorative background blur element */}
+        <div className="absolute -right-12 -bottom-12 w-48 h-48 bg-[#FCFAEE]/10 rounded-full blur-2xl group-hover:bg-[#FCFAEE]/20 transition-colors duration-500"></div>
 
-        {/* Text Section */}
-        <div className="w-full sm:w-1/2 mt-4 sm:mt-0 text-center sm:text-left">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#135783]">
-            Where Algorithms Drive Innovation!
-          </h2>
-          <p className="text-md sm:text-2xl md:text-xl text-gray-600 tracking-wide mt-4">
-            <strong className="text-[#259CA8] text-2xl">Ever wondered?</strong> <br />
-            How apps like <strong>Instagram</strong> process millions of images per second? <br />
-            How <strong>AI chatbots</strong> can talk just like humans? <br />
-            How <strong>self-driving cars</strong> and <strong>blockchain security</strong> handle all the technicalities? <br />
-            That’s the magic of Computer Engineering! <br />
-            At ICEM, we shape future tech leaders who build smart software, intelligent systems, and innovative solutions.
-          </p>
+        <div className="text-center max-w-4xl mx-auto relative z-10 space-y-6">
+          {/* Heading */}
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
+            Everything about ICEM's MBA Programme, in one place.
+            Download Brochure           </h2>
+
+
+
+          {/* CTA Button */}
+          <div className="flex justify-center pt-2">
+            <button
+              onClick={scrollToTop}
+              className="bg-[#FCFAEE] text-[#F37121] font-bold py-4 px-10 rounded-full shadow-lg shadow-[#F37121]/30 hover:bg-white hover:text-[#D75A13] transition-all duration-300 ease-in-out hover:scale-105 active:scale-[0.98]"
+            >
+              Apply Now
+            </button>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default memo(ComCreative);
+export default memo(CompBanner);
