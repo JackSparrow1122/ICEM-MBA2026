@@ -29,9 +29,10 @@ const ICEMCommon = () => {
       <CommonStudying />
       <CommonSpecialization />
       <CommonHighlights />
-      <CommonBrochure />
       <CommonPossibilities />
-      <CommonInovation />
+      <CommonBrochure />
+
+      {/* <CommonInovation /> */}
       <CommonApply />
       <FutureWithIcem />
       <Headline />

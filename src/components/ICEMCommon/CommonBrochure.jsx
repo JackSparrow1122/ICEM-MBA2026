@@ -9,11 +9,8 @@ const CompBrochure = () => {
       className="flex justify-between items-center bg-contain bg-center text-white shadow-lg py-2  px-4 md:px-8 lg:px-16 poppins-regular"
     >
       <div className="w-full bg-[#F37121] p-6 rounded-3xl flex flex-col md:flex-row justify-between items-center">
-        <div className="max-w-full md:max-w-2/3 mb-4 md:mb-0">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Syllabus</h2>
-          <p className="text-lg text-gray-200 hidden sm:block">
-          Master core management domains including Marketing, Financial Management, Human Resources Management, Operations & Supply Chain Management, and Business Analytics.
-          </p>
+        <div className="mb-4 md:mb-0">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-0 md:whitespace-nowrap">Take the first step toward your MBA journey today.</h2>
         </div>
 
         <a
