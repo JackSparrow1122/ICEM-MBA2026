@@ -11,6 +11,7 @@ const specializationsData = [
     fees: "₹1,50,000/year",
     description:
       "This specialization delves into consumer behaviour, digital marketing strategies, brand management, and integrated marketing communications. It equips students with the skills to analyse markets, build powerful brands, and design data-driven campaigns that deliver measurable business results.",
+    ctaText: "Apply Now for Marketing Management",
     structure: [
       "Marketing Management & Consumer Behaviour",
       "Digital Marketing & Social Media Strategy",
@@ -26,7 +27,8 @@ const specializationsData = [
     duration: "2 Years",
     fees: "₹1,50,000/year",
     description:
-      "This specialization provides an in-depth understanding of corporate finance, investment analysis, financial markets, and risk management. It prepares students to make strategic financial decisions and navigate the global financial ecosystem.",
+      "This specialization provides an in-depth understanding of corporate finance, investment analysis, financial markets, and risk management. It prepares students to make strategic financial decisions and navigate the global financial ecosystem with confidence.",
+    ctaText: "Apply Now for Financial Management",
     structure: [
       "Corporate Finance & Financial Statement Analysis",
       "Investment Analysis & Portfolio Management",
@@ -37,12 +39,13 @@ const specializationsData = [
   },
   {
     id: "hr",
-    title: "Human Resources",
+    title: "Human Resources Management",
     displayName: "MBA in Human Resources Management",
     duration: "2 Years",
     fees: "₹1,50,000/year",
     description:
-      "This specialization focuses on strategic HR, talent hiring, organizational behaviour, performance management, and employee development. It prepares future HR leaders.",
+      "This specialization focuses on strategic HR, talent acquisition, organizational behaviour, performance management, and employee development, preparing graduates to step confidently into future HR leadership roles.",
+    ctaText: "Apply Now for Human Resources Management",
     structure: [
       "Talent Management & Acquisition",
       "Organizational Behaviour & Development",
@@ -53,12 +56,13 @@ const specializationsData = [
   },
   {
     id: "operations",
-    title: "Operations ",
+    title: "Operations & Supply Chain",
     displayName: "MBA in Operations & Supply Chain Management",
     duration: "2 Years",
     fees: "₹1,50,000/year",
     description:
-      "This specialization covers supply chain dynamics, logistics, operations management, and project planning. It prepares students to manage large-scale systems efficiently.",
+      "This specialization covers supply chain dynamics, logistics, operations management, and project planning, preparing students to manage large-scale systems with efficiency and precision.",
+    ctaText: "Apply Now for Operations & Supply Chain Management",
     structure: [
       "Operations Strategy & Supply Chain Management",
       "Logistics & Transportation Management",
@@ -132,7 +136,7 @@ const CommonSpecialization = () => {
             Explore MBA Specializations
           </h2>
           <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-            Choose from the range of most comprehensive MBA courses available in Maharashtra.
+            Choose from the most comprehensive range of MBA courses available in Maharashtra.
           </p>
         </div>
 
@@ -140,14 +144,14 @@ const CommonSpecialization = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mt-8" data-aos="fade-up">
 
           {/* Left Sidebar Menu */}
-          <div className="lg:col-span-3 flex lg:flex-col overflow-x-auto lg:overflow-x-visible pb-3 lg:pb-0 gap-2 border-b lg:border-b-0 lg:border-r border-gray-100 lg:pr-6 scrollbar-none whitespace-nowrap">
+          <div className="lg:col-span-4 flex lg:flex-col overflow-x-auto lg:overflow-x-visible pb-3 lg:pb-0 gap-2 border-b lg:border-b-0 lg:border-r border-gray-100 lg:pr-6 scrollbar-none whitespace-nowrap">
             {specializationsData.map((spec) => {
               const isActive = activeTab === spec.id;
               return (
                 <button
                   key={spec.id}
                   onClick={() => setActiveTab(spec.id)}
-                  className={`inline-block text-left py-2.5 px-5 lg:py-3.5 lg:px-6 rounded-full transition-all duration-300 font-bold text-sm lg:text-base ${isActive
+                  className={`w-auto lg:w-full text-left py-2.5 px-5 lg:py-3.5 lg:px-6 rounded-full transition-all duration-300 font-bold text-sm lg:text-base ${isActive
                     ? "bg-gradient-to-r from-[#F37121] to-[#D75A13] text-white shadow-md shadow-[#F37121]/15 scale-[1.02]"
                     : "text-slate-500 hover:bg-gray-50 hover:text-[#F37121]"
                     }`}
@@ -159,7 +163,7 @@ const CommonSpecialization = () => {
           </div>
 
           {/* Right Content Pane */}
-          <div key={activeTab} className="lg:col-span-9 space-y-6 min-h-[450px]">
+          <div key={activeTab} className="lg:col-span-8 space-y-6 min-h-[450px]">
             {/* Specialization Title */}
             <h3 className="text-3xl md:text-4xl font-extrabold text-[#003c84] tracking-tight">
               {activeSpec.title}
@@ -195,6 +199,8 @@ const CommonSpecialization = () => {
               </div>
             </div>
 
+
+
             {/* Recruiters for Specialization */}
             <div>
               <h4 className="text-base font-bold text-[#003c84] mb-4 tracking-wide">
@@ -226,7 +232,7 @@ const CommonSpecialization = () => {
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 className="w-full py-4 text-center text-white font-bold rounded-2xl bg-[#F37121] hover:bg-[#D75A13] active:scale-[0.99] transition-all duration-300 shadow-lg shadow-[#F37121]/20 text-base md:text-lg"
               >
-                Apply Now for {activeSpec.title}
+                {activeSpec.ctaText}
               </button>
             </div>
 

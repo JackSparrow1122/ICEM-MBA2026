@@ -1,29 +1,35 @@
 import React, { useEffect } from 'react';
 import {
-  FaUniversity,
+  FaAward,
+  FaBullseye,
   FaTools,
-  FaBuilding,
   FaChalkboardTeacher,
   FaMicroscope,
-  FaRocket,
+  FaBuilding,
+  FaFire,
+  FaGraduationCap,
 } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const InfoCard = React.memo(({ icon, text }) => (
+const InfoCard = React.memo(({ icon, title, description }) => (
   <div
-    className="bg-white p-6 border border-gray-100 shadow-md shadow-gray-200/30 flex items-center gap-5 rounded-2xl hover:shadow-lg hover:border-[#F37121]/30 transition-all duration-300 hover:-translate-y-0.5 group"
+    className="bg-white p-6 border border-gray-100 shadow-md shadow-gray-200/30 flex items-start gap-5 rounded-2xl hover:shadow-lg hover:border-[#F37121]/30 transition-all duration-300 hover:-translate-y-0.5 group"
     data-aos="zoom-in"
   >
-    <div className="flex-shrink-0 text-[#F37121] transition-transform duration-300 group-hover:scale-110">
+    <div className="flex-shrink-0 text-[#F37121] transition-transform duration-300 group-hover:scale-110 mt-1">
       {React.cloneElement(icon, { className: "w-12 h-12 text-current mr-0" })}
     </div>
-    <span className="text-sm sm:text-base text-left text-gray-700 font-medium leading-relaxed">
-      {text}
-    </span>
+    <div className="flex flex-col text-left">
+      <h3 className="text-base font-bold text-gray-800 tracking-tight transition-colors duration-300 group-hover:text-[#F37121]">
+        {title}
+      </h3>
+      <p className="text-sm text-gray-500 mt-1.5 font-medium leading-relaxed">
+        {description}
+      </p>
+    </div>
   </div>
 ));
-
 
 function MBAStudying() {
   useEffect(() => {
@@ -35,28 +41,44 @@ function MBAStudying() {
 
   const cards = [
     {
-      icon: <FaUniversity />,
-      text: '2 Decades of Academic Excellence in Management & Engineering Education',
+      icon: <FaAward />,
+      title: '2 Decades of Academic Excellence',
+      description: 'Two decades of academic excellence in management and engineering education.',
+    },
+    {
+      icon: <FaBullseye />,
+      title: 'Guaranteed Placement Assistance',
+      description: 'Backed by a network of 350+ recruiters across management, IT, finance, and consulting domains.',
     },
     {
       icon: <FaTools />,
-      text: 'Hands-on Training through Industry Visits, Summer Internships (SIP) & Live Projects',
-    },
-    {
-      icon: <FaBuilding />,
-      text: '450+ Leading Recruiters across Management, IT, Finance, and Consulting Domains',
+      title: 'Industry-Tied, Hands-On Training',
+      description: 'Practical exposure through industry visits, Summer Internship Programmes (SIP), and live projects.',
     },
     {
       icon: <FaChalkboardTeacher />,
-      text: 'Mentorship from Experienced Academicians & Corporate Professionals in Marketing, Finance, HR, and Operations',
+      title: 'Expert Mentorship',
+      description: 'Guidance from experienced academicians and corporate professionals across Marketing, Finance, HR, and Operations.',
     },
     {
       icon: <FaMicroscope />,
-      text: 'Interactive Case Studies, Seminars, Workshops, and Business Simulation Games',
+      title: 'Experiential Learning',
+      description: 'Interactive case studies, seminars, workshops, and business simulation games.',
     },
     {
-      icon: <FaRocket />,
-      text: 'State-of-the-Art Campus with Smart Classrooms, Seminar Halls, Library & Vibrant Student-led Clubs',
+      icon: <FaBuilding />,
+      title: 'Futuristic Infrastructure',
+      description: 'Smart classrooms, dedicated seminar halls, and a well-equipped library.',
+    },
+    {
+      icon: <FaFire />,
+      title: 'Vibrant Campus Life',
+      description: 'Management fests, leadership summits, and a full calendar of sporting events.',
+    },
+    {
+      icon: <FaGraduationCap />,
+      title: 'Holistic Learning',
+      description: 'A balanced blend of management education, soft skills training, and leadership development.',
     },
   ];
 
@@ -67,26 +89,27 @@ function MBAStudying() {
           {/* MBA Excellence Badge */}
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#F37121]">
             <span className="w-8 h-0.5 bg-[#F37121]"></span>
-            MBA Excellence
+            Why MBA at ICEM?
           </div>
-          
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-            Your Gateway to the Best <span className="text-[#F37121]">MBA</span> College in Pune!
-          </h1>
-          
-          <h2 className="text-lg md:text-xl font-semibold text-[#F37121]">
-            Lead, Innovate & Excel with ICEM MBA!
+
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+            Why <span className="text-[#003c84]">MBA</span> at <span className="text-[#F37121]">ICEM</span>?
           </h2>
-          
+
           <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-5xl">
-            Indira College of Engineering & Management (ICEM) is one of the premier institutes in Pune, offering AICTE-approved, SPPU-affiliated Master of Business Administration (MBA) programmes. With a dedicated Training & Placement cell, 450+ recruiters, industry-integrated curriculum, case study pedagogy, and regular corporate interactions—ICEM shapes the next generation of business leaders.
+            Indira College of Engineering & Management (ICEM) stands among the best MBA colleges in India, offering an AICTE-approved, SPPU-affiliated Master of Business Administration programme designed for the modern business landscape. World-class faculty, an industry-aligned curriculum, and a strong placement record empower students to become innovators, problem solvers, and future business leaders.
           </p>
         </div>
 
-        {/* 6-Card Grid below the text */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+        {/* 8-Card Grid below the text */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-4">
           {cards.map((card, index) => (
-            <InfoCard key={index} icon={card.icon} text={card.text} />
+            <InfoCard
+              key={index}
+              icon={card.icon}
+              title={card.title}
+              description={card.description}
+            />
           ))}
         </div>
       </div>

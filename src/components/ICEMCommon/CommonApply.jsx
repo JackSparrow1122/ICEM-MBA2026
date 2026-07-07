@@ -2,9 +2,9 @@ import React, { memo } from "react";
 import backgroundImage from "../../assets/images/plane.avif";
 
 const steps = [
-  "Check eligibility criteria (Graduation with min 50% and valid entrance exam score like MAH-CET/CAT/CMAT/XAT).",
-  "Apply online through our official website.",
-  "Appear for counseling and secure your seat!",
+  "Check Eligibility — Graduation with a minimum of 50% and a valid entrance exam score (MAH-CET/CAT/CMAT/XAT).",
+  "Apply Online — Submit your application through the official ICEM website.",
+  "Counseling & Confirmation — Appear for counseling and secure your seat.",
 ];
 
 const AdmissionProcess = () => {
@@ -29,7 +29,7 @@ const AdmissionProcess = () => {
           Admission Process: How to Apply?
         </h2>
         <p className="text-lg mb-8">
-          Getting into ICEM is easy! Follow these steps:
+          Getting into ICEM is a simple, structured process. Follow these steps:
         </p>
 
         {/* Steps */}

@@ -11,7 +11,6 @@ import CommonHighlights from '../components/ICEMCommon/CommonHighlights'
 import CommonApply from '../components/ICEMCommon/CommonApply'
 import Headline from '../components/ICEMCommon/Headling'
 import CommonBanner from '../components/ICEMCommon/CommonBanner'
-import CommonReasons from '../components/ICEMCommon/CommonReasons'
 import CommonTestimonials from '../components/ICEMCommon/CommonTestimonials'
 import FutureWithIcem from '../components/ICEMCommon/FutureCommon'
 import FAQ from '../components/ICEMCommon/FAQ'
@@ -20,16 +19,15 @@ const ICEMCommon = () => {
   return (
     <div>
       <CommonHero />
+      <CommonPointers />
       <CommonPlacement />
       <CommonRecruters />
       <CommonBanner />
-      <CommonReasons />
-      <CommonSpecialization />
-      <CommonBrochure />
-      <CommonPointers />
       <CommonStudying />
-      <CommonPossibilities />
+      <CommonSpecialization />
       <CommonHighlights />
+      <CommonBrochure />
+      <CommonPossibilities />
       <CommonApply />
       <FutureWithIcem />
       <Headline />

@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import {
-  FaChartLine,
+  FaBoxes,
   FaLaptopCode,
-  FaHandshake,
+  FaGlobe,
 } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -27,24 +27,24 @@ function CommonHighlights() {
 
   return (
     <section className="px-4 md:px-8 lg:px-16 py-8" data-aos="fade-up">
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-[#F37121] mb-8">
-        ICEM Highlights
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-[#FA5600] mb-8">
+        Programme Highlights
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         <HighlightCard
-          icon={<FaChartLine />}
-          title="Business Leadership & Strategy"
-          description="Develop a profound understanding of organizational dynamics, financial strategies, and competitive positioning to make impactful management decisions."
+          icon={<FaBoxes />}
+          title="End-to-End Supply Chain View"
+          description="Understand sourcing, production, logistics, distribution, and last-mile operations."
         />
         <HighlightCard
           icon={<FaLaptopCode />}
-          title="Data & Digital Integration"
-          description="Gain hands-on experience with business intelligence tools, analytics platforms, and emerging digital trends to solve modern organizational challenges."
+          title="Quantitative Problem-Solving"
+          description="Learn forecasting, optimization, and ERP tools for real-world problem solving."
         />
         <HighlightCard
-          icon={<FaHandshake />}
-          title="Corporate & Industry Connect"
-          description="Learn from senior corporate leaders, work on real-world business cases, and participate in live simulations with leading brands."
+          icon={<FaGlobe />}
+          title="Global Perspective"
+          description="Explore international logistics, trade regulations, and risk mitigation strategies."
         />
       </div>
     </section>

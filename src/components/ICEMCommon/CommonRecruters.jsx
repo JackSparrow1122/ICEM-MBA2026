@@ -10,91 +10,13 @@ const pageContent = {
 
   "/": {
 
-    headline: "Continue Your Path With Leading Organizations",
+    headline: "Trusted by 350+ Top Recruiters Across India ",
 
-    body: "At Indira College of Engineering & Management, there is a strong focus on preparing every student to be industry ready. With numerous recruiters visiting our campus each year, our graduates gain access to a network of opportunities, resources, and the support needed to excel in a rapidly evolving job market.",
-
-  },
-
-  "/programs/computer-engineering": {
-
-    headline: "Campus Recruitment",
-
-    body: "Our Computer Engineering graduates are highly sought after for their strong foundational knowledge and problem-solving abilities. They secure prestigious roles in top IT product firms, multinational corporations, financial institutions, and dynamic startups.",
+    body: "From global technology leaders to Fortune 500 giants, ICEM's placement network connects graduates with careers that matter. ",
 
   },
 
-  "/programs/mechanical-engineering": {
 
-    headline: "Meet Your Future Employers",
-
-    body: "At Indira College of Engineering & Management, we ensure our Mechanical Engineering graduates are industry ready. Our strong corporate relationships provide students with access to premier opportunities with leading national and multinational companies in the core engineering sector.",
-
-  },
-
-  "/programs/entc": {
-
-    headline: "Recruited by Industry Pioneers",
-
-    body: "Our ENTC graduates are highly sought after for their strong analytical and design skills. They secure pivotal roles in top telecommunications service providers, electronics manufacturing companies, and R&D centers driving innovation in connectivity.",
-
-  },
-
-  "/programs/it": {
-
-    headline: "Leading the IT Talent Pipeline",
-
-    body: "Our IT graduates are highly valued for their strong technical and problem-solving skills. They are recruited by top IT service providers, consulting giants, and the IT divisions of leading corporations across the globe.",
-
-  },
-
-  "/programs/mca": {
-
-    headline: "Recruited by Technology Innovators",
-
-    body: "Our MCA graduates are valued for their strong analytical abilities and software development expertise. They are consistently recruited by leading technology firms for core development and specialist roles.",
-
-  },
-
-  "/programs/mtech-mech": {
-
-    headline: "Recruited for Innovation and R&D",
-
-    body: "Our M.Tech (Mechanical) graduates are recruited by leading organizations for their specialized analytical and research capabilities.",
-
-  },
-
-  "/programs/mtech-comp": {
-
-    headline: "Leading the Way in Tech Innovation",
-
-    body: "Our M.Tech (CS) graduates are highly sought after for their deep technical knowledge and research acumen by the world's most innovative tech companies.",
-
-  },
-
-  "/programs/imca": {
-
-    headline: "Forge a Career with Technology Leaders",
-
-    body: "Our Integrated MCA graduates are valued for their extensive training and readiness to handle complex development tasks. They are consistently recruited by leading technology companies for core software and application development roles.",
-
-  },
-
-  "/programs/imba": {
-
-    headline: "Launch Your Management Career",
-
-    body: "Graduates of our Integrated MBA programme are highly valued for their mature perspective and comprehensive training. They are recruited by leading companies for roles that require a blend of foundational knowledge and strategic understanding.",
-
-  },
-
-  "/programs/mba": {
-
-    headline: "INDIRA DEGREE OPENS DOORS. WIDE.",
-
-    body: "At Indira College of Engineering & Management, there is a strong focus on preparing every student to be industry ready. With numerous recruiters visiting our campus each year, our graduates gain access to a network of opportunities, resources, and the support needed to excel in a rapidly evolving job market.",
-
-  },
 
 };
 

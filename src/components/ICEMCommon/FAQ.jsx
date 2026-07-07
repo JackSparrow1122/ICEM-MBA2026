@@ -80,7 +80,7 @@ const FAQ = () => {
           answer: (
             <span className="space-y-4 block text-left">
               <span className="block mb-2">For details about First Year Engineering Admission and Eligibility Criteria, refer to the official competent authority: <a href="https://cetcell.mahacet.org/" target="_blank" rel="noopener noreferrer" className="text-[#F37121] hover:underline font-bold">CET Cell Website</a>.</span>
-              
+
               <span className="block mb-3">
                 <strong className="text-gray-900 block mb-1">A. Maharashtra State Candidature Candidates:</strong>
                 <span className="list-disc pl-5 block space-y-1 text-xs md:text-sm text-gray-600">
@@ -246,18 +246,16 @@ const FAQ = () => {
                         setActiveCategory(cat.id);
                         setActiveIndex(0);
                       }}
-                      className={`w-full text-left flex items-center gap-3 px-4 py-3.5 rounded-2xl transition-all duration-300 group ${
-                        isActive
+                      className={`w-full text-left flex items-center gap-3 px-4 py-3.5 rounded-2xl transition-all duration-300 group ${isActive
                           ? "bg-gradient-to-r from-[#F37121] to-[#D75A13] text-white shadow-md shadow-[#F37121]/15"
                           : "text-gray-600 hover:bg-gray-50 hover:text-[#F37121]"
-                      }`}
+                        }`}
                     >
                       <IconComponent
-                        className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 ${
-                          isActive
+                        className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 ${isActive
                             ? "text-white"
                             : "text-gray-400 group-hover:text-[#F37121]"
-                        }`}
+                          }`}
                       />
                       <span className="font-semibold text-sm whitespace-nowrap">{cat.label}</span>
                     </button>
@@ -295,9 +293,8 @@ const FAQ = () => {
                   return (
                     <div
                       key={item.id}
-                      className={`transition-all duration-300 ${
-                        isOpen ? "bg-slate-50/50" : "hover:bg-slate-50/30"
-                      }`}
+                      className={`transition-all duration-300 ${isOpen ? "bg-slate-50/50" : "hover:bg-slate-50/30"
+                        }`}
                     >
                       <button
                         onClick={() => toggleAccordion(index)}
@@ -305,21 +302,19 @@ const FAQ = () => {
                       >
                         <div className="flex-1">
                           <h4
-                            className={`text-sm md:text-base font-bold transition-colors duration-300 leading-snug ${
-                              isOpen
+                            className={`text-sm md:text-base font-bold transition-colors duration-300 leading-snug ${isOpen
                                 ? "text-[#F37121]"
                                 : "text-gray-800 group-hover:text-[#F37121]"
-                            }`}
+                              }`}
                           >
                             {item.question}
                           </h4>
                         </div>
                         <div
-                          className={`flex-shrink-0 mt-0.5 p-1 rounded-full bg-slate-100 text-gray-500 transition-all duration-300 ${
-                            isOpen
+                          className={`flex-shrink-0 mt-0.5 p-1 rounded-full bg-slate-100 text-gray-500 transition-all duration-300 ${isOpen
                               ? "rotate-180 bg-[#F37121]/10 text-[#F37121]"
                               : "group-hover:bg-slate-200"
-                          }`}
+                            }`}
                         >
                           <ChevronDown className="w-4 h-4" />
                         </div>
@@ -327,11 +322,10 @@ const FAQ = () => {
 
                       {/* Modern Smooth Height CSS Grid Transition */}
                       <div
-                        className={`grid transition-all duration-300 ease-in-out ${
-                          isOpen
+                        className={`grid transition-all duration-300 ease-in-out ${isOpen
                             ? "grid-rows-[1fr] opacity-100"
                             : "grid-rows-[0fr] opacity-0"
-                        }`}
+                          }`}
                       >
                         <div className="overflow-hidden">
                           <div className="px-5 md:px-8 pb-5 pt-1">

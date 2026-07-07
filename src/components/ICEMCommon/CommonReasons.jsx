@@ -1,59 +1,73 @@
 import React from "react";
 import {
+  FaAward,
   FaBullseye,
-  FaTrophy,
   FaSatelliteDish,
+  FaChalkboardTeacher,
+  FaTrophy,
+  FaBuilding,
   FaFire,
   FaGraduationCap,
 } from "react-icons/fa";
 
 const features = [
   {
+    title: "2 Decades of Academic Excellence",
+    description: "Two decades of academic excellence in management and engineering education.",
+    Icon: FaAward,
+  },
+  {
     title: "Guaranteed Placement Assistance",
-    description: "Secure your career with top recruiters!",
+    description: "Backed by a network of 350+ recruiters across management, IT, finance, and consulting domains.",
     Icon: FaBullseye,
   },
   {
-    title: "State-of-the-Art Infrastructure",
-    description: "Smart classrooms, seminar halls, and a rich library!",
-    Icon: FaTrophy,
-  },
-  {
-    title: "Industry-Tied Programs",
-    description: "Get hands-on experience with live projects!",
+    title: "Industry-Tied, Hands-On Training",
+    description: "Practical exposure through industry visits, Summer Internship Programmes (SIP), and live projects.",
     Icon: FaSatelliteDish,
   },
   {
+    title: "Expert Mentorship",
+    description: "Guidance from experienced academicians and corporate professionals across Marketing, Finance, HR, and Operations.",
+    Icon: FaChalkboardTeacher,
+  },
+  {
+    title: "Experiential Learning",
+    description: "Interactive case studies, seminars, workshops, and business simulation games.",
+    Icon: FaTrophy,
+  },
+  {
+    title: "Futuristic Infrastructure",
+    description: "Smart classrooms, dedicated seminar halls, and a well-equipped library.",
+    Icon: FaBuilding,
+  },
+  {
     title: "Vibrant Campus Life",
-    description: "Management Fests, Leadership Summits, and Sports!",
+    description: "Management fests, leadership summits, and a full calendar of sporting events.",
     Icon: FaFire,
   },
   {
     title: "Holistic Learning",
-    description: "A mix of management, soft skills, and leadership training!",
+    description: "A balanced blend of management education, soft skills training, and leadership development.",
     Icon: FaGraduationCap,
   },
 ];
 
 export default function WhyChooseICEM() {
   return (
-    <section className="bg-[#F7F3EF] py-4 px-4 md:px-16 ">
+    <section className="bg-[#F7F3EF] py-16 px-4 md:px-16 border-t border-b border-gray-150/60">
       {/* Heading Section */}
       <div className="text-center mb-12 px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Why Choose <span className="text-[#F37121]">ICEM</span> for Your{" "}
-          <span className="text-[#F37121]">MBA</span> Journey?
+        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">
+          Why <span className="text-[#F37121]">MBA</span> at <span className="text-[#003c84]">ICEM</span>?
         </h2>
-        <p className="max-w-3xl mx-auto text-gray-700 text-lg">
-          At Indira College of Engineering and Management (ICEM), an Autonomous
-          institute, we empower innovators, problem solvers, and business leaders! With
-          world-class faculty, industry-aligned curriculum, and top-notch
-          placements, ICEM is where your MBA dreams take flight.
+        <p className="max-w-4xl mx-auto text-gray-700 text-base md:text-lg leading-relaxed font-medium">
+          Indira College of Engineering & Management (ICEM) stands among the best MBA colleges in India, offering an AICTE-approved, SPPU-affiliated Master of Business Administration programme designed for the modern business landscape. World-class faculty, an industry-aligned curriculum, and a strong placement record empower students to become innovators, problem solvers, and future business leaders.
         </p>
       </div>
 
       {/* Features Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6">
         {features.map(({ title, description, Icon }, index) => (
           <div
             key={index}
@@ -62,10 +76,10 @@ export default function WhyChooseICEM() {
             <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#F37121]/10 text-[#F37121] mb-4 transition-all duration-300 group-hover:bg-[#F37121] group-hover:text-white">
               <Icon className="w-6 h-6" />
             </div>
-            <h3 className="font-bold text-lg text-gray-900 mb-2 transition-colors duration-300 group-hover:text-[#F37121]">
-              {title
-            }</h3>
-            <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
+            <h3 className="font-bold text-lg text-gray-900 mb-2 transition-colors duration-300 group-hover:text-[#F37121] leading-snug">
+              {title}
+            </h3>
+            <p className="text-sm text-gray-600 leading-relaxed font-medium">{description}</p>
           </div>
         ))}
       </div>

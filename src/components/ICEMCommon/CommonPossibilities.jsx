@@ -8,6 +8,8 @@ import innovationLab from '../../assets/IT.webp';
 import swimmingPool from '../../assets/Canteen1.webp';
 import gymFacility from '../../assets/Gym4.webp';
 import uniMall from '../../assets/health.webp';
+import topPlace from '../../assets/images/topplace.jpeg';
+import homeMobile from '../../assets/images/homemobile.jpeg';
 
 const Tour = () => {
   const facilities = [
@@ -15,43 +17,55 @@ const Tour = () => {
       id: 1,
       title: 'Computer & Language Lab',
       image: iMacLab,
-      description: 'Modern computing facilities for analytics and language learning'
+      description: 'Modern computing facilities for analytics and language learning.'
     },
     {
       id: 2,
-      title: 'Learning Resource Center',
-      image: spaceLab,
-      description: 'Rich collection of management books, journals, and e-resources'
+      title: 'Centers of Excellence (COEs)',
+      image: topPlace,
+      description: 'Advanced labs for collaborative research, innovation, and specialization training.'
     },
     {
       id: 3,
-      title: 'Seminar Hall & Auditoriums',
-      image: mechanicalLab,
-      description: 'A venue for guest lectures, industry seminars, and workshops'
+      title: 'Learning Resource Center',
+      image: spaceLab,
+      description: 'Rich collection of management books, physical & electronic journals, and online resources.'
     },
     {
       id: 4,
-      title: 'Discussion & Brainstorming Rooms',
-      image: innovationLab,
-      description: 'Dedicated spaces for group presentations, case study analysis, and projects'
+      title: 'Seminar Hall & Auditoriums',
+      image: mechanicalLab,
+      description: 'State-of-the-art venues for guest lectures, industry seminars, and academic workshops.'
     },
     {
       id: 5,
-      title: 'Canteen',
-      image: swimmingPool,
-      description: 'Professional sports facility'
+      title: 'Discussion & Brainstorming Rooms',
+      image: innovationLab,
+      description: 'Dedicated spaces for group presentations, case study analysis, and collaborative projects.'
     },
     {
       id: 6,
-      title: 'Gym Facility',
-      image: gymFacility,
-      description: 'Modern fitness center'
+      title: 'Canteen',
+      image: swimmingPool,
+      description: 'Spacious campus cafeteria offering hygienic food and beverages.'
     },
     {
       id: 7,
+      title: 'Playground',
+      image: homeMobile,
+      description: 'Outdoor sports fields for football, cricket, basketball, and athletic events.'
+    },
+    {
+      id: 8,
+      title: 'Gym Facility',
+      image: gymFacility,
+      description: 'Modern fitness center equipped with advanced exercise machinery.'
+    },
+    {
+      id: 9,
       title: 'Health & Wellness Center',
       image: uniMall,
-      description: 'Student entrepreneurship hub'
+      description: 'On-campus medical assistance and overall health support.'
     },
   ];
 
@@ -64,18 +78,17 @@ const Tour = () => {
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Heading Section */}
         <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight">
-            Where <span className="bg-gradient-to-r from-[#F37121] to-[#D75A13] bg-clip-text text-transparent">Possibilities Are Infinite</span>
-          </h1>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight text-gray-900">
+            Where <span className="bg-gradient-to-r from-[#F37121] to-[#D75A13] bg-clip-text text-transparent">Possibilities Are Infinite!</span>
+          </h2>
           <p className="text-gray-600 text-sm md:text-base lg:text-lg max-w-3xl mx-auto">
-            From tech labs to wellness centers, we have it all
+            From tech labs to wellness centers, ICEM offers a complete campus experience.
           </p>
         </div>
 
-        {/* Facilities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-5 mb-8">
-          {/* First 3 cards - larger */}
-          {facilities.slice(0, 3).map((facility, index) => (
+        {/* Facilities Grid - Row 1 (First 3 cards - larger) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-5 mb-5">
+          {facilities.slice(0, 3).map((facility) => (
             <div
               key={facility.id}
               className="group relative h-[300px] md:h-[280px] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer"
@@ -88,14 +101,14 @@ const Tour = () => {
               />
 
               {/* Dark Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"></div>
 
               {/* Text Content at Bottom */}
               <div className="absolute inset-0 flex flex-col justify-end p-5 md:p-6">
                 <h3 className="text-lg md:text-xl font-bold text-white mb-1 group-hover:text-[#F37121] transition-colors duration-300">
                   {facility.title}
                 </h3>
-                <p className="text-xs md:text-sm text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-xs md:text-sm text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 leading-relaxed">
                   {facility.description}
                 </p>
               </div>
@@ -103,12 +116,12 @@ const Tour = () => {
           ))}
         </div>
 
-        {/* Second Row - 4 cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mb-8">
-          {facilities.slice(3).map((facility, index) => (
+        {/* Facilities Grid - Row 2 (Remaining 6 cards - slightly smaller) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+          {facilities.slice(3).map((facility) => (
             <div
               key={facility.id}
-              className="group relative h-[250px] md:h-[240px] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer"
+              className="group relative h-[260px] md:h-[250px] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer"
             >
               {/* Image Background */}
               <img
@@ -118,21 +131,20 @@ const Tour = () => {
               />
 
               {/* Dark Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"></div>
 
               {/* Text Content at Bottom */}
               <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-5">
                 <h3 className="text-base md:text-lg font-bold text-white mb-1 group-hover:text-[#F37121] transition-colors duration-300">
                   {facility.title}
                 </h3>
-                <p className="text-xs text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-xs md:text-sm text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 leading-relaxed">
                   {facility.description}
                 </p>
               </div>
             </div>
           ))}
         </div>
-
 
       </div>
     </section>
