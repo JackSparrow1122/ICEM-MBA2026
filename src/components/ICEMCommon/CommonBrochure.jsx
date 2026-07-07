@@ -10,7 +10,7 @@ const CompBrochure = () => {
     >
       <div className="w-full bg-[#F37121] p-6 rounded-3xl flex flex-col md:flex-row justify-between items-center">
         <div className="mb-4 md:mb-0">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-0 md:whitespace-nowrap">Take the first step toward your MBA journey today.</h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-0 md:whitespace-nowrap">Everything about ICEM's MBA Programme, in one place.</h2>
         </div>
 
         <a
