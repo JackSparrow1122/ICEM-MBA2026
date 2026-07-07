@@ -8,8 +8,8 @@ import innovationLab from '../../assets/IT.webp';
 import swimmingPool from '../../assets/Canteen1.webp';
 import gymFacility from '../../assets/Gym4.webp';
 import uniMall from '../../assets/health.webp';
-import topPlace from '../../assets/images/topplace.jpeg';
-import homeMobile from '../../assets/images/homemobile.jpeg';
+import topPlace from '../../assets/centers.jpg';
+import homeMobile from '../../assets/ground.jpg';
 
 const Tour = () => {
   const facilities = [
