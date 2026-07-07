@@ -1,6 +1,6 @@
 import React from 'react';
-import placementImage from '../../assets/images/topplace.jpeg';
-import placementImageMobile from '../../assets/images/homemobile.jpeg';
+import placementImage from '../../assets/images/md.avif';
+import placementImageMobile from '../../assets/images/mob.avif';
 
 function CommonPlacement() {
   return (
