@@ -2,11 +2,9 @@ import { useLocation } from "react-router-dom";
 
 function ApplyNowButton() {
   const location = useLocation();
-  const handleClick = () => {
-    window.scrollTo({
-      top: 0, // Scroll to the top of the page
-      behavior: "smooth", // Smooth scroll effect
-    });
+  const handleClick = (e) => {
+    e.preventDefault();
+    window.dispatchEvent(new CustomEvent("open-apply-modal"));
   };
 
   if (location.pathname === "/thank-you" || location.pathname === "/thank-you/") {
@@ -16,7 +14,7 @@ function ApplyNowButton() {
   return (
     <div className="fixed right-[-48px] top-1/2 transform -translate-y-1/2 z-50">
       <a
-        href="#apply"
+        href="#hero-form"
         onClick={handleClick} // Call handleClick on click
         className="bg-gradient-to-b from-[#F37121] to-[#D75A13] text-white py-1 px-6 shadow-lg transition duration-300 flex items-center justify-center transform -rotate-90 hover:underline hover:scale-110 cursor-pointer">
          Apply Now

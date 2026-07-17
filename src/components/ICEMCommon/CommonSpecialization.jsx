@@ -229,7 +229,9 @@ const CommonSpecialization = () => {
             {/* CTA Button */}
             <div className="pt-4">
               <button
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                onClick={() => {
+                  window.dispatchEvent(new CustomEvent("open-apply-modal"));
+                }}
                 className="w-full py-4 text-center text-white font-bold rounded-2xl bg-[#F37121] hover:bg-[#D75A13] active:scale-[0.99] transition-all duration-300 shadow-lg shadow-[#F37121]/20 text-base md:text-lg"
               >
                 {activeSpec.ctaText}

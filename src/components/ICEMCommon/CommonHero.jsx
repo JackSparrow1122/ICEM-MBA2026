@@ -134,7 +134,12 @@ function MechHero() {
 
           {/* Apply Now Button */}
           <div className="mt-8 text-center lg:text-left hidden md:block">
-            <button className="relative inline-flex items-center group text-lg font-semibold text-white">
+            <button
+              onClick={() => {
+                window.dispatchEvent(new CustomEvent("open-apply-modal"));
+              }}
+              className="relative inline-flex items-center group text-lg font-semibold text-white"
+            >
               <span className="relative z-10 flex items-center gap-2 px-8 py-3 bg-[#F37121] hover:bg-[#D75A13] rounded-full transition-all duration-300 ease-in-out shadow-lg hover:shadow-[#F37121]/35">
                 Apply Now
                 <FaLongArrowAltRight className="text-white text-xl transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
@@ -144,7 +149,7 @@ function MechHero() {
         </div>
 
         {/* Right Form */}
-        <div className="w-full lg:w-5/12 flex justify-center lg:justify-end">
+        <div id="hero-form" className="w-full lg:w-5/12 flex justify-center lg:justify-end">
           <div
             className="p-4 w-full max-w-md shadow-2xl rounded-2xl relative bg-white text-black min-h-[530px]"
           >

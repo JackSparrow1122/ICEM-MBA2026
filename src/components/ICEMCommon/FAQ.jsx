@@ -214,6 +214,15 @@ const FAQ = () => {
       className="py-16 md:py-24 bg-gradient-to-b from-[#FCFAEE] to-[#F7F3EF] px-4 sm:px-6 lg:px-8 border-t border-[#e2e8f0]"
       id="faq"
     >
+      <style>{`
+        .scrollbar-none::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-none {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
@@ -229,13 +238,13 @@ const FAQ = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-[max-content_1fr] gap-8 items-start">
           {/* Categories Left Rail */}
-          <div className="sticky top-24 w-full lg:w-auto">
-            <div className="bg-white rounded-3xl p-4 shadow-xl border border-gray-100/80 backdrop-blur-md">
-              <h3 className="text-gray-800 font-extrabold text-sm uppercase tracking-wider px-3 mb-3 flex items-center gap-2">
+          <div className="lg:sticky lg:top-24 w-full lg:w-auto">
+            <div className="bg-white rounded-2xl lg:rounded-3xl p-3 lg:p-4 shadow-xl border border-gray-100/80 backdrop-blur-md">
+              <h3 className="text-gray-800 font-extrabold text-xs lg:text-sm uppercase tracking-wider px-3 mb-3 items-center gap-2 hidden lg:flex">
                 <BookOpen className="w-4 h-4 text-[#F37121]" />
                 Admission Topics
               </h3>
-              <div className="space-y-1.5">
+              <div className="flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible scrollbar-none py-1 lg:py-0">
                 {categories.map((cat) => {
                   const IconComponent = cat.icon;
                   const isActive = activeCategory === cat.id;
@@ -246,18 +255,18 @@ const FAQ = () => {
                         setActiveCategory(cat.id);
                         setActiveIndex(0);
                       }}
-                      className={`w-full text-left flex items-center gap-3 px-4 py-3.5 rounded-2xl transition-all duration-300 group ${isActive
+                      className={`flex items-center gap-2 lg:gap-3 px-3 py-2 lg:px-4 lg:py-3.5 rounded-xl lg:rounded-2xl transition-all duration-300 group shrink-0 lg:w-full lg:text-left ${isActive
                           ? "bg-gradient-to-r from-[#F37121] to-[#D75A13] text-white shadow-md shadow-[#F37121]/15"
-                          : "text-gray-600 hover:bg-gray-50 hover:text-[#F37121]"
+                          : "text-gray-600 bg-gray-50/50 lg:bg-transparent hover:bg-gray-50 hover:text-[#F37121] border border-gray-100 lg:border-0"
                         }`}
                     >
                       <IconComponent
-                        className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 ${isActive
+                        className={`w-4 h-4 lg:w-5 lg:h-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 ${isActive
                             ? "text-white"
                             : "text-gray-400 group-hover:text-[#F37121]"
                           }`}
                       />
-                      <span className="font-semibold text-sm whitespace-nowrap">{cat.label}</span>
+                      <span className="font-semibold text-xs lg:text-sm whitespace-nowrap">{cat.label}</span>
                     </button>
                   );
                 })}

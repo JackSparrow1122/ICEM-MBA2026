@@ -20,8 +20,8 @@ const steps = [
 ];
 
 const AdmissionProcess = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const handleApplyClick = () => {
+    window.dispatchEvent(new CustomEvent("open-apply-modal"));
   };
 
   return (
@@ -51,7 +51,7 @@ const AdmissionProcess = () => {
 
             <div className="pt-4">
               <button
-                onClick={scrollToTop}
+                onClick={handleApplyClick}
                 className="inline-flex items-center gap-3 bg-gradient-to-r from-[#F37121] to-[#D75A13] text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-[#F37121]/20 hover:scale-105 hover:shadow-xl transition-all duration-300 group"
               >
                 Apply Now for MBA

@@ -6,6 +6,7 @@ import Navbar from './pages/Navbar';
 import ApplyNowButton from './components/ApplyNowButton';
 import ICEMVanila from './pages/ICEMVanilla';
 import ThankYou from './pages/ThankYou';
+import ApplyModal from './components/ApplyModal';
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -49,6 +50,7 @@ function App() {
           <Route path="/thank-you" element={<ThankYou />} />
         </Routes>
         <ApplyNowButton />
+        <ApplyModal />
       </div>
     </Router>
   );

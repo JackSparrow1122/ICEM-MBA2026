@@ -1,8 +1,8 @@
 import React, { memo, useCallback } from 'react';
 
 const CompBanner = () => {
-  const scrollToTop = useCallback(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const handleApplyClick = useCallback(() => {
+    window.dispatchEvent(new CustomEvent("open-apply-modal"));
   }, []);
 
   return (
@@ -17,7 +17,7 @@ const CompBanner = () => {
         </div>
 
         <button
-          onClick={scrollToTop}
+          onClick={handleApplyClick}
           className="bg-[#D75A13] border-2 border-white text-white px-8 py-3 rounded-3xl hover:bg-[#F37121] transition duration-300 flex items-center justify-center cursor-pointer font-bold"
         >
           <span>Apply Now</span>
